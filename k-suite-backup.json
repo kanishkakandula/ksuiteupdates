@@ -1,0 +1,3957 @@
+{
+  "categories": [
+    {
+      "id": "mqly4dz7iy550",
+      "name": "Linux",
+      "color": "#3ecf8e",
+      "icon": "ti-terminal",
+      "type": "snippet"
+    },
+    {
+      "id": "mqly4dz7ddalq",
+      "name": "Git",
+      "color": "#f5a623",
+      "icon": "ti-brand-git",
+      "type": "snippet"
+    },
+    {
+      "id": "mqly4dz7oziom",
+      "name": "Docker",
+      "color": "#4f8ef7",
+      "icon": "ti-brand-docker",
+      "type": "snippet"
+    },
+    {
+      "id": "mqly4dz764hce",
+      "name": "SQL",
+      "color": "#a78bfa",
+      "icon": "ti-database",
+      "type": "snippet"
+    },
+    {
+      "id": "mqly4dz7t3w8c",
+      "name": "CMD",
+      "color": "#f97316",
+      "icon": "ti-terminal-2",
+      "type": "cmd"
+    },
+    {
+      "id": "mqly4dz7etror",
+      "name": "Troubleshoot",
+      "color": "#e05252",
+      "icon": "ti-lifebuoy",
+      "type": "troubleshoot"
+    },
+    {
+      "id": "mqgt4k04blf8g",
+      "name": "FW Codes",
+      "color": "#6366f1",
+      "icon": "ti-atom",
+      "type": "snippet"
+    },
+    {
+      "id": "mqhua2r8h648x",
+      "name": "How to do things",
+      "color": "#8b5cf6",
+      "icon": "ti-rocket",
+      "type": "snippet"
+    },
+    {
+      "id": "mqhudgmrtfd5w",
+      "name": "SDM",
+      "color": "#84cc16",
+      "icon": "ti-brackets",
+      "type": "cmd"
+    },
+    {
+      "id": "mqi0lof9fisx6",
+      "name": "Influx",
+      "color": "#f5a623",
+      "icon": "ti-activity",
+      "type": "snippet"
+    },
+    {
+      "id": "mqi0i285jpnl0",
+      "name": "Mongo DB",
+      "color": "#10b981",
+      "icon": "ti-database-export",
+      "type": "snippet"
+    },
+    {
+      "id": "mql28z70136be",
+      "name": "Installations",
+      "color": "#4f8ef7",
+      "icon": "ti-plug",
+      "type": "guide"
+    },
+    {
+      "id": "mqnrk0cp011ot",
+      "name": "Lucy",
+      "color": "#10b981",
+      "icon": "ti-git-merge",
+      "type": "snippet"
+    },
+    {
+      "id": "mqnjapmx24la1",
+      "name": "Quick Links",
+      "color": "#e05252",
+      "icon": "ti-tag",
+      "type": "links"
+    }
+  ],
+  "commands": [
+    {
+      "id": "mqly4dz7vt4xd",
+      "title": "Run Docker Compose",
+      "desc": "Start all services in detached mode",
+      "code": "docker compose up -d",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz8413be",
+      "title": "Git Status",
+      "desc": "Check working tree status",
+      "code": "git status",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz883lwn",
+      "title": "Git Log (pretty)",
+      "desc": "Compact commit history",
+      "code": "git log --oneline --graph --decorate",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz878q6h",
+      "title": "Find large files",
+      "desc": "Files over 100MB",
+      "code": "find / -type f -size +100M 2>/dev/null",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz8ozghx",
+      "title": "Show all tables",
+      "desc": "PostgreSQL — list tables",
+      "code": "\\dt",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz87d9ob",
+      "title": "Ping Google",
+      "desc": "Test internet connectivity",
+      "code": "ping google.com",
+      "catId": "mqly4dz7t3w8c",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz8caua9",
+      "title": "Show IP Config",
+      "desc": "Show all network adapters and IPs",
+      "code": "ipconfig /all",
+      "catId": "mqly4dz7t3w8c",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz86pze5",
+      "title": "NPM permission error",
+      "desc": "Fix: EACCES permission denied on ~/.npm",
+      "code": "sudo chown -R $(whoami) ~/.npm",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqly4dz8o0v6q",
+      "title": "Port already in use",
+      "desc": "Kill process using port 3000",
+      "code": "lsof -ti:3000 | xargs kill -9",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql32e6541pwg",
+      "title": "Install SQL for OS 22.04",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mql30i31vjyg7",
+          "title": "",
+          "content": "curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -",
+          "type": "cmd"
+        },
+        {
+          "id": "mql30njwmiejl",
+          "title": "",
+          "content": "sudo add-apt-repository \"$(curl https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list)\"",
+          "type": "cmd"
+        },
+        {
+          "id": "mql30se55yjlo",
+          "title": "",
+          "content": "sudo apt update",
+          "type": "cmd"
+        },
+        {
+          "id": "mql30vl8mykrg",
+          "title": "",
+          "content": "sudo apt install -y mssql-server",
+          "type": "cmd"
+        },
+        {
+          "id": "mql30ywcixn7f",
+          "title": "",
+          "content": "sudo /opt/mssql/bin/mssql-conf setup",
+          "type": "cmd"
+        },
+        {
+          "id": "mql312lhmj540",
+          "title": "",
+          "content": "systemctl status mssql-server",
+          "type": "cmd"
+        },
+        {
+          "id": "mql317115yf8v",
+          "title": "",
+          "content": "sudo systemctl enable mssql-server",
+          "type": "cmd"
+        },
+        {
+          "id": "mql31afxhc5w6",
+          "title": "",
+          "content": "Install SQL Server Command-Line Tools (Optional but recommended)",
+          "type": "tip"
+        },
+        {
+          "id": "mql31ob952360",
+          "title": "",
+          "content": "curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -",
+          "type": "cmd"
+        },
+        {
+          "id": "mql31vvhmkq26",
+          "title": "",
+          "content": "sudo add-apt-repository \"$(curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list)\"",
+          "type": "cmd"
+        },
+        {
+          "id": "mql3204t3hqgi",
+          "title": "",
+          "content": "sudo apt update",
+          "type": "cmd"
+        },
+        {
+          "id": "mql32351w0ybw",
+          "title": "",
+          "content": "sudo apt install -y mssql-tools unixodbc-dev",
+          "type": "cmd"
+        },
+        {
+          "id": "mql3265hjfe8o",
+          "title": "",
+          "content": "echo 'export PATH=\"$PATH:/opt/mssql-tools/bin\"' >> ~/.bashrc",
+          "type": "cmd"
+        },
+        {
+          "id": "mql32958w2r8h",
+          "title": "",
+          "content": "source ~/.bashrc",
+          "type": "cmd"
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1781882891069,
+      "files": []
+    },
+    {
+      "id": "mql2yoj98gjh1",
+      "title": "Install .net for OS 22.04",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mql2xrdhtte6a",
+          "title": "",
+          "content": "sudo apt update",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2xy5p4e5lv",
+          "title": "",
+          "content": "sudo apt install -y wget apt-transport-https software-properties-common",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2y2elc4up0",
+          "title": "",
+          "content": "wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2y6jgmsqe5",
+          "title": "",
+          "content": "sudo dpkg -i packages-microsoft-prod.deb",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2y9x1loe7v",
+          "title": "",
+          "content": "rm packages-microsoft-prod.deb",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2ydis2zz4e",
+          "title": "",
+          "content": "sudo apt update",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2ygkccu1jl",
+          "title": "",
+          "content": "sudo apt install -y dotnet-sdk-8.0",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2yk4k2mm1g",
+          "title": "",
+          "content": "dotnet --version",
+          "type": "cmd"
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1781882717877,
+      "files": []
+    },
+    {
+      "id": "mql2kt5pux58d",
+      "title": "Install GIT",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "links": [],
+      "steps": [
+        {
+          "id": "mql2k0b0yatgi",
+          "title": "",
+          "content": "sudo apt update",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2k9l8taf7h",
+          "title": "",
+          "content": "sudo apt install git",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2kfw4ywbwo",
+          "title": "",
+          "content": "Press \"Y\" to Yes",
+          "type": "note"
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1781882070685,
+      "images": [],
+      "files": []
+    },
+    {
+      "id": "mql2blukhc7pv",
+      "title": "Install Openvpn in Ubuntu",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "links": [],
+      "steps": [
+        {
+          "id": "mql294vh7yopa",
+          "title": "Install openvpn",
+          "content": "sudo apt-get install openvpn",
+          "type": "cmd"
+        },
+        {
+          "id": "mql2d131354p7",
+          "title": "",
+          "content": "Copy the client.ovpn to /etc/openvpn and rename if to client.conf",
+          "type": "note"
+        },
+        {
+          "id": "mql2d9at7cnkq",
+          "title": "Enable / Start or Stop",
+          "content": "sudo systemctl enable openvpn@client.service\nsudo systemctl start openvpn@client.service\nsudo systemctl stop openvpn@client.service",
+          "type": "cmd"
+        }
+      ],
+      "notes": "Troubleshoot\nSometimes fails to start, because of the version in ubuntu , if the ubuntu version is 24.04, do this in client.ovpn\n\ndata-ciphers AES-128-CBC\n\nsudo systemctl restart openvpn@client.service",
+      "isGuide": true,
+      "createdAt": 1781881641308,
+      "images": [],
+      "files": []
+    },
+    {
+      "id": "mqfc76lvj0dhv",
+      "title": "Run Docker Compose",
+      "desc": "Start all services in detached mode",
+      "code": "docker compose up -d",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfc76lvgk90q",
+      "title": "Git Status",
+      "desc": "Check working tree status",
+      "code": "git status",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfc76lvbctgw",
+      "title": "Git Log (pretty)",
+      "desc": "Compact commit history",
+      "code": "git log --oneline --graph --decorate",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfc76lvk8948",
+      "title": "Find large files",
+      "desc": "Files over 100MB",
+      "code": "find / -type f -size +100M 2>/dev/null",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfc76lvr7tsn",
+      "title": "Ping Google",
+      "desc": "Test internet connectivity",
+      "code": "ping google.com",
+      "catId": "mqly4dz7t3w8c",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfc76lv4w23p",
+      "title": "Show IP Config",
+      "desc": "Show all network adapters and IPs",
+      "code": "ipconfig /all",
+      "catId": "mqly4dz7t3w8c",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfc76lvoz9xz",
+      "title": "NPM permission error",
+      "desc": "Fix: EACCES permission denied on ~/.npm",
+      "code": "sudo chown -R $(whoami) ~/.npm",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfc76lvuz0lh",
+      "title": "Port already in use",
+      "desc": "Kill process using port 3000",
+      "code": "lsof -ti:3000 | xargs kill -9",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfcoxtff0ss3",
+      "title": "DX-Get column names for search index in FieldsMap",
+      "desc": "",
+      "code": "Declare @AppKey int=3\n\nSELECT M.AppName,M.AppKey,JSON_VALUE(j.value, '$.searchIndex') as SearchIndex, JSON_VALUE(j.value, '$.column') AS ColumnValue,\n'Select '+JSON_VALUE(j.value, '$.column')+',* from DXAppTransactions_'+cast(@AppKey as varchar(50)) as SelectQuery\nFROM DXAppInstances A\ninner join DXAppMaster M on M.AppKey=A.AppKey\nCROSS APPLY OPENJSON(A.FieldsMap) AS j\nwhere  A.Status='Online'\nand A.AppKey=@AppKey",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqfdcjrwsrnd1",
+      "title": "DX-Disable all Notifications",
+      "desc": "",
+      "code": "Update DXAppInstances set Notifications=Replace(Notifications,'\"isEnableNotification\":true','\"isEnableNotification\":false') where AppInstanceKey=197",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqgt54twuoa42",
+      "title": "$SD to ServiceDesk",
+      "desc": "",
+      "code": "$SD('et_subtaskstatus');\nTo\nServiceDesk.getField('et_subtaskstatus');\n-----------------------------------------------\n$SD('et_inspectioncheck').setColumn('et_id_InspectionCheck',EditTable.ColumnTypes.TextColumn({\n                    'key_field':'Status'\n                    ,'id':'inspectioncheck'\n                })); \n\nTO\n\nServiceDesk.getField('et_subtaskstatus').setColumn('et_id_SubTaskStatus',EditTable.ColumnTypes.TextColumn({\n                    'key_field':'Status'\n                    ,'id':'subtaskstatus'\n                }));\n------------------------------------------------------",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqgt5ydoeu0jy",
+      "title": "Clone",
+      "desc": "",
+      "code": "git clone 'http://10.0.1.33/EutechDevelopers/ProductAppset.git'",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqgt732co25aw",
+      "title": "Zip Folder or File",
+      "desc": "",
+      "code": "tar -zcvf ivivaweb.tar.gz ivivaweb",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhrp2kxh5k9e",
+      "title": "DX-MaxfieldLimit Update",
+      "desc": "Update the Max Field Limit in DX",
+      "code": "Declare @AppKey varchar(500)\n\n\nDeclare @AccountName Varchar(500)='product'\nDECLARE @ColumnCount INT = 351; -- Change this to your desired count\n\n\n\nDECLARE cur CURSOR FOR\n\nSelect AppKey from DXAppMaster\n\nOPEN cur    \n    FETCH NEXT FROM cur\n    INTO @AppKey\n    While @@FETCH_STATUS = 0\n    Begin\n\tUpdate asp.dbo.AccountSettings set [Value]=50 where [Name]='MaxFieldLimit' and Account=@AccountName\n      declare @tb table (col varchar(500))\n\t\tinsert into @tb \n\t\tSELECT column_name\n\t\tFROM information_schema.columns\n\t\tWHERE table_name = 'DXAppTransactions_'+@AppKey\n\t\tAND column_name LIKE 'Field%'\n\n\n\t\tDECLARE @ColumnNamePrefix NVARCHAR(50) = 'Field';\n\n\n\t\tDECLARE @SQL NVARCHAR(MAX) = '';\n\t\tDeclare @Counter int\n\t\t-- Loop to generate ALTER TABLE statements to add columns\n\t\tselect @Counter=[Value] from asp.dbo.AccountSettings where [Name]='MaxFieldLimit' and Account=@AccountName\n\t\tdeclare @IsMaxFieldLimitCol int=1\n\t\tif not exists(select [Value] from asp.dbo.AccountSettings where [Name]='MaxFieldLimit' and Account=@AccountName)\n\t\tbegin\n\t\t\tset @Counter=1\n\t\t\tset @IsMaxFieldLimitCol=0\n\t\tend\n\n\t\t--Update asp.dbo.AccountSettings set [Value]=@Counter where [Name]='MaxFieldLimit' and Account=@AccountName\n\n\n\t\tWHILE @Counter <= @ColumnCount\n\t\tBEGIN\n\t\t\tDECLARE @ColumnName NVARCHAR(50) = @ColumnNamePrefix + CAST(@Counter AS NVARCHAR(10));\n\t\t\tif not exists(select * from @tb where col=@ColumnName)\n\t\t\tbegin\n\t\t\t\tSET @SQL = @SQL + 'ALTER TABLE '+@AccountName+'.dbo.DXAppTransactions_'+@AppKey+' ADD ' + QUOTENAME(@ColumnName) + ' VARCHAR(max);' + CHAR(13);\n\t\t\tend\n    \n\t\t\tSET @Counter = @Counter + 1;\n\t\tEND\n\t\tif @IsMaxFieldLimitCol=0\n\t\tbegin\n\t\t\tInsert into asp.dbo.AccountSettings (Account,[Name],[Value]) values (@AccountName,'MaxFieldLimit',@Counter-2)\n\t\tend\n\t\telse\n\t\tbegin\n\t\t\tUpdate asp.dbo.AccountSettings set [Value]=@Counter-2 where [Name]='MaxFieldLimit' and Account=@AccountName\n\t\tend\n\t\t-- Execute the dynamic SQL\n\t\tEXEC sp_executesql @SQL;\n\n    FETCH NEXT FROM cur\n    INTO @AppKey\n   END;\nCLOSE cur;\nDEALLOCATE cur;",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhrpsh4pqi69",
+      "title": "Backup a table - Simple way",
+      "desc": "",
+      "code": "SELECT * into Usx\nFROM UserMaster",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhrqydla0j2v",
+      "title": "Case switch for Order By - Sort Order",
+      "desc": "Add Case Switch for Order By",
+      "code": "select *, __rowid__=row_number() over (order by \n\t\t\t\t\t\tCASE WHEN @__sort__ = 'Select' AND @__sortorder__= 'ascending'  THEN RosterKey END ASC,\n\t\t\t\t\t\tCASE WHEN @__sort__ = 'Select' AND @__sortorder__= 'descending'  THEN RosterKey END DESC)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhrrvv5sqoj6",
+      "title": "Check DB Exists in SQL",
+      "desc": "",
+      "code": "DECLARE @dbname nvarchar(128)\nSET @dbname = N'TrackMe'\n\nIF (EXISTS (SELECT name \nFROM master.dbo.sysdatabases \nWHERE ('[' + name + ']' = @dbname \nOR name = @dbname)))\n\n-- code mine :)\nPRINT 'db exists'",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhrs90wxclc8",
+      "title": "Check indexes for Table",
+      "desc": "",
+      "code": "EXECUTE sp_helpindex UserMaster",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhrsqgy40mgl",
+      "title": "Check whether a table exists",
+      "desc": "",
+      "code": "if  exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[UserMaster]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)\n BEGIN\n SELECT 'User Master table is exists'\nEND",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhrvew8tvaue",
+      "title": "Child Locations",
+      "desc": "Get Child Locations for given Location Key",
+      "code": "select L.LocationKey\nfrom\nLocationMaster L\ninner join LocationMaster P on L.LValue >= P.LValue\nand L.RValue <= P.RValue\nwhere\nP.LocationKey = 2",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhs0s4xftfc3",
+      "title": "Concatenate the words",
+      "desc": "",
+      "code": "SELECT CONCAT('This i', 's some text', '.')\nOutput:  This is some text.\n     SELECT CONCAT('-', 0.95)\nOutput:  -0.95",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhshkaq8152k",
+      "title": "Create columns as XML Tags",
+      "desc": "",
+      "code": "Declare @t table (t varchar(50),r varchar(50))\nInsert into @t values (1,2)\nInsert into @t values (1,3)\n\n\nSELECT \n   t, \nr\nFROM @t  \nORDER BY 1, 2 \nFOR XML PATH('')",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsht4yo2c7l",
+      "title": "Create Database",
+      "desc": "",
+      "code": "IF NOT EXISTS (SELECT * \n     FROM   master..sysdatabases \n     WHERE  name = N'your_database_name')\n  BEGIN\n    CREATE DATABASE your_database_name\n  END",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsi4zdgv4r9",
+      "title": "Create Stored Procedures",
+      "desc": "",
+      "code": "CREATE PROCEDURE [dbo].[RPT_CM_PMSScoreReport]\n  @ContractKey    NVARCHAR(500),\n  @ItemKey      NVARCHAR(500)\n  \nAS\nBEGIN\n\nDeclare @plusminussign varchar(50),@minutesonly int,@reporttzoffset varchar(500),@reporttimezone varchar(500)\nselect @reporttzoffset=Value from AccountSettings where [Key]='ReportOffSetMinutes'\nselect @reporttimezone=Value from AccountSettings where [Key]='ReportTimezone'\nset @plusminussign = substring(@reporttzoffset,0,2)\nset @minutesonly = cast(substring(@reporttzoffset,2,4) as Int)\n\n\nEND",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsjsd64vu35",
+      "title": "Cross Join",
+      "desc": "",
+      "code": "Declare @tb table (UserKey int,Username varchar(22))\nInsert into @tb values (1,'Kanishka')\nInsert into @tb values (2,'John')\n\nDeclare @max int=10000,@last int=0\ndeclare @m int set @m = CAST(@max as int);\n\n;with tb_A as (\nSELECT * FROM @tb \n) \n        \nSELECT top(@m) *,TC.totCount as __totalcount__\nFROM\n(\nSELECT *, __rowid__=ROW_NUMBER() over (ORDER BY  UserKey) \nFROM tb_A \n        \n) C\nCROSS JOIN (SELECT COUNT(UserKey) AS totCount FROM tb_A B) TC\n      \nWHERE\nC.__rowid__ > @last ORDER BY C.__rowid__",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsk4bfd2fsw",
+      "title": "CSV or Coma seperate values",
+      "desc": "",
+      "code": "/*Works only for SQL 2017 and above*/\nSELECT\n    city, \n    STRING_AGG(email,';') email_list\nFROM\n    sales.customers\nGROUP BY\n    city;",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsknllm17h4",
+      "title": "Current Identity",
+      "desc": "Get Current Identity of a Table",
+      "code": "select IDENT_CURRENT('UserMaster')",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhslam26ronn",
+      "title": "Cursor",
+      "desc": "Cursor Query",
+      "code": "Declare @tb table (pk int)\nDeclare @pk int\nDECLARE cur CURSOR FOR\n\nSELECT ProblemKey FROM FMProblemMaster WHERE DisciplineKey=4 and SeverityKey=6 and ServiceCategoryKey=3\n\nOPEN cur    \n    FETCH NEXT FROM cur\n    INTO @pk\n    While @@FETCH_STATUS = 0\n    Begin\n      insert into @tb values (@pk)\n\n    FETCH NEXT FROM cur\n    INTO @pk\n   END;\nCLOSE cur;\nDEALLOCATE cur;",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhslx8x2ioc8",
+      "title": "Date Only",
+      "desc": "Date Formats",
+      "code": "SELECT dateadd(dd,0, datediff(dd,0,getdate()))",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsmte252ctw",
+      "title": "Day of this Week (Wednesday)",
+      "desc": "Get the day of the given date",
+      "code": "SELECT DATEADD(week, DATEDIFF(week, 0, GETDATE()), 2) AS WednesdayOfWeek",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsnt82yashi",
+      "title": "Delete FROM two tables FROM one query",
+      "desc": "",
+      "code": "DELETE messages , usersmessages  FROM messages  INNER JOIN usersmessages  \nWHERE messages.messageid= usersmessages.messageid and messages.messageid = '1'",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhso10bwb6cf",
+      "title": "Dense Rank",
+      "desc": "",
+      "code": "Declare @Categories table (CategoryKey int,CategoryName varchar(333))\nInsert into @Categories\nSELECT 1,'Seafood'\nUnion ALL\nSELECT 2,'DryFood'\nUnion ALL\nSELECT 3,'Vegetables'\nUnion ALL\nSELECT 4,'Fruits'\nDeclare @Product table (ProductKey int,CategoryKey int, ProductName varchar(333),Price int)\nInsert into @Product\nSELECT 1,1,'KPF',1000\nunion all\nSELECT 2,1,'SEE',2000\nunion all\nSELECT 3,2,'POO',3000\nunion all\nSELECT 4,2,'LTF',4000\nunion all\nSELECT 5,3,'FFE',5000\nunion all\nSELECT 6,4,'BOO',6000\n\n\n--Dense_rank\nSELECT dense_rank() over (ORDER BY C.CategoryName) categorywiserownum, C.CategoryName,P.ProductName\nFROM\n@Product P\ninner join @Categories C on C.CategoryKey=P.CategoryKey",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsohze9a12r",
+      "title": "Drop and Create Table",
+      "desc": "",
+      "code": "truncate table usermaster",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsp1h6wbdam",
+      "title": "Duplicate Records",
+      "desc": "Show Duplicate Records of a table",
+      "code": "SELECT     PointAddress, COUNT(PointAddress)AS dupes  \nFROM         IBMSPoints  \nGROUP BY PointAddress  \nHAVING      (COUNT(PointAddress) > 1)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhspql6lcvj3",
+      "title": "Duplicate Records Using Joins",
+      "desc": "Show Duplicate Records of a table using joined tables",
+      "code": "SELECT A.AssetID,T.PointTemplateName,P.PointAddress FROM IBMSPoints P \ninner join AssetMaster A on A.AssetKey=P.AssetKey\ninner join IBMSPointTemplates T on T.PointTemplateKey=P.PointTemplateKey\nWHERE P.PointAddress in (\nSELECT     PointAddress \nFROM         IBMSPoints  \nGROUP BY PointAddress  \nHAVING      (COUNT(PointAddress) > 1)\n)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsqnmynlu2f",
+      "title": "DX-Get Column Names with Field,DXAppTransaction",
+      "desc": "",
+      "code": "DECLARE @sql NVARCHAR(MAX) = '';\n\n-- Step 1: Build mapping of ColumnValue (FieldXX) to SearchIndex\n;WITH ColumnMap AS (\n    SELECT \n        JSON_VALUE(j.value, '$.searchIndex') AS SearchIndex,\n        JSON_VALUE(j.value, '$.column') AS ColumnValue\n    FROM DXAppInstances A\n    INNER JOIN DXAppMaster M ON M.AppKey = A.AppKey\n    CROSS APPLY OPENJSON(A.FieldsMap) AS j\n    WHERE A.Status = 'Online'\n      AND A.AppKey = 1\n)\n-- Step 2: Generate dynamic select with aliasing\nSELECT @sql = STRING_AGG(QUOTENAME(ColumnValue) + ' AS ' + QUOTENAME(SearchIndex), ', ')\nFROM ColumnMap;\n\n-- Step 3: Build final query\nSET @sql = 'SELECT *,' + @sql + ' FROM DXAppTransactions_1;';\n\n-- Step 4: Execute\nEXEC sp_executesql @sql;",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsr7yiq6yby",
+      "title": "Find All Empty Columns in a Database",
+      "desc": "",
+      "code": "/*Returns a list of all columns in current database\n where the column's value is null for all records.*/\ndeclare @tempTable TABLE\n(\n    TableSchema nvarchar(256),\n    TableName nvarchar(256),\n    ColumnName sysname,\n    NotNullCnt bigint\n);\n \ndeclare @sql nvarchar(4000);\ndeclare @tableSchema nvarchar(256);\ndeclare @tableName nvarchar(256);\ndeclare @columnName sysname;\ndeclare @cnt bigint;\n \ndeclare columnCursor cursor FOR\n    SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS\n    WHERE IS_NULLABLE = 'YES';\n \nopen columnCursor;\n \nfetch next FROM columnCursor INTO @tableSchema, @tableName, @columnName;\n \nwhile @@FETCH_STATUS = 0\nbegin\n    /*use dynamic sql to get count of records where column is not null*/\n    SET @sql = 'select @cnt = COUNT(*) from [' + @tableSchema + '].[' + @tableName +\n        '] where [' + @columnName + '] is not null';\n   /* print @sql; --uncomment for debugging*/\n    exec sp_executesql @sql, N'@cnt bigint output', @cnt = @cnt output;\n \n    INSERT INTO @tempTable SELECT @tableSchema, @tableName, @columnName, @cnt;\n \n    fetch next FROM columnCursor INTO @tableSchema, @tableName, @columnName;\nend\n \nclose columnCursor;\ndeallocate columnCursor;\n \nSELECT * FROM @tempTable WHERE NotNullCnt = 0;",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhssiaqd8xdd",
+      "title": "Find all stored procedures containing text like",
+      "desc": "",
+      "code": "SELECT DISTINCT SO.Name\n   FROM sysobjects SO (NOLOCK)\n   INNER JOIN syscomments SC (NOLOCK) ON SO.Id = SC.ID\n   AND SO.Type = 'P'\n   AND SC.Text LIKE '%report%'\n   ORDER BY SO.Name",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhst1mya5w1r",
+      "title": "Find all stored procedures with name like",
+      "desc": "",
+      "code": "SELECT DISTINCT SO.Name\n   FROM sysobjects SO (NOLOCK)\n   WHERE SO.Type = 'P'\n   AND SO.Name LIKE '%report%'\n   ORDER BY SO.Name",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsthca9se67",
+      "title": "Find which DB uses more CPU at that moment",
+      "desc": "",
+      "code": "WITH CPU_Per_Db\n\nAS\n\n(SELECT\n\ndmpa.DatabaseID\n\n, DB_Name(dmpa.DatabaseID) AS [Database]\n\n, SUM(dmqs.total_worker_time) AS CPUTimeAsMS\n\nFROM sys.dm_exec_query_stats dmqs\n\nCROSS APPLY\n\n(SELECT\n\nCONVERT(INT, value) AS [DatabaseID]\n\nFROM sys.dm_exec_plan_attributes(dmqs.plan_handle)\n\nWHERE attribute = N'dbid') dmpa\n\nGROUP BY dmpa.DatabaseID)\n\nSELECT\n\n[Database]\n\n,[CPUTimeAsMS]\n\n,CAST([CPUTimeAsMS]  1.0 / SUM([CPUTimeAsMS]) OVER()  100.0 AS DECIMAL(5, 2)) AS [CPUTimeAs]\n\nFROM CPU_Per_Db\n\nORDER BY [CPUTimeAsMS] DESC;",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsttg2d23kv",
+      "title": "First Day of Current Month",
+      "desc": "",
+      "code": "SELECT CONVERT(VARCHAR(25),DATEADD(dd,-(DAY(GETDATE())-1),GETDATE()),101) AS Date_Value",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsu07egsk9h",
+      "title": "First Day of Current Week",
+      "desc": "",
+      "code": "SELECT DATEADD(wk,DATEDIFF(wk,0,GETDATE()),0)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsu7waakngr",
+      "title": "First Day of Current Year",
+      "desc": "",
+      "code": "First Day of Current Year\tSELECT DATEADD(yy,DATEDIFF(yy,0,GETDATE()),0)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsv4z5f96ij",
+      "title": "First Day of Last Week",
+      "desc": "",
+      "code": "SELECT DATEADD(wk,DATEDIFF(wk,7,GETDATE()),0)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsvboyf2b9o",
+      "title": "First Day of Next Month",
+      "desc": "",
+      "code": "First Day of Next Month\tSELECT CONVERT(VARCHAR(25),DATEADD(dd,-(DAY(DATEADD(mm,1,GETDATE()))-1),DATEADD(mm,1,GETDATE())),101)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsvktm70oyh",
+      "title": "First Day of Previous Month",
+      "desc": "",
+      "code": "SELECT DATEADD(mm,-1,DATEADD(mm,DATEDIFF(mm,0,GETDATE()),0))",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsvoo2mddt0",
+      "title": "First Day of Previous Year",
+      "desc": "",
+      "code": "SELECT DATEADD(yy,-1,DATEADD(yy,DATEDIFF(yy,0,GETDATE()),0))",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhswd9uj5pze",
+      "title": "Get all the Column Names and Tables",
+      "desc": "",
+      "code": "SELECT\n  \tTABLE_NAME,\nCOLUMN_NAME\nFROM\n  \tINFORMATION_SCHEMA.COLUMNS",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhswq6aa7fvk",
+      "title": "Get all the Column Names from a Table",
+      "desc": "",
+      "code": "SELECT\n\tCOLUMN_NAME\nFROM\n  \tINFORMATION_SCHEMA.COLUMNS\nWHERE\n\tTABLE_NAME = 'UserMaster'",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsx4pmuuhty",
+      "title": "Get All the Data which contains Column Value",
+      "desc": "",
+      "code": "DECLARE @SearchStr nvarchar(100)\nSET @SearchStr = 'admin'\n \n\nCREATE TABLE #Results (ColumnName nvarchar(370), ColumnValue nvarchar(3630))\n \nSET NOCOUNT ON\n \nDECLARE @TableName nvarchar(256), @ColumnName nvarchar(128), @SearchStr2 nvarchar(110)\nSET  @TableName = ''\nSET @SearchStr2 = QUOTENAME('%' + @SearchStr + '%','''')\n \nWHILE @TableName IS NOT NULL\n \nBEGIN\n    SET @ColumnName = ''\n    SET @TableName = \n    (\n        SELECT MIN(QUOTENAME(TABLE_SCHEMA) + '.' + QUOTENAME(TABLE_NAME))\n        FROM     INFORMATION_SCHEMA.TABLES\n        WHERE         TABLE_TYPE = 'BASE TABLE'\n            AND    QUOTENAME(TABLE_SCHEMA) + '.' + QUOTENAME(TABLE_NAME) > @TableName\n            AND    OBJECTPROPERTY(\n                    OBJECT_ID(\n                        QUOTENAME(TABLE_SCHEMA) + '.' + QUOTENAME(TABLE_NAME)\n                         ), 'IsMSShipped'\n                           ) = 0\n    )\n \n    WHILE (@TableName IS NOT NULL) AND (@ColumnName IS NOT NULL)\n         \n    BEGIN\n        SET @ColumnName =\n        (\n            SELECT MIN(QUOTENAME(COLUMN_NAME))\n            FROM     INFORMATION_SCHEMA.COLUMNS\n            WHERE         TABLE_SCHEMA    = PARSENAME(@TableName, 2)\n                AND    TABLE_NAME    = PARSENAME(@TableName, 1)\n                AND    DATA_TYPE IN ('char', 'varchar', 'nchar', 'nvarchar', 'int', 'decimal')\n                AND    QUOTENAME(COLUMN_NAME) > @ColumnName\n        )\n \n        IF @ColumnName IS NOT NULL\n         \n        BEGIN\n            INSERT INTO #Results\n            EXEC\n            (\n                'SELECT ''' + @TableName + '.' + @ColumnName + ''', LEFT(' + @ColumnName + ', 3630) FROM ' + @TableName + ' (NOLOCK) ' +\n                ' WHERE ' + @ColumnName + ' LIKE ' + @SearchStr2\n            )\n        END\n    END   \nEND\n \nSELECT ColumnName, ColumnValue FROM #Results\n \nDROP TABLE #Results",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsxdcqpm062",
+      "title": "Get all the tables",
+      "desc": "",
+      "code": "SELECT\n  \tTABLE_NAME\nFROM\n  \tINFORMATION_SCHEMA.TABLES",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsylq1xpha9",
+      "title": "Get Multiple Rows to Single Row- Using Group by",
+      "desc": "",
+      "code": "Declare @your_table table (ReportId int,Email varchar(50))\nInsert into  @your_table values(1,'a')\nInsert into  @your_table values(2,'b')\nInsert into  @your_table values(3,'c')\nInsert into  @your_table values(1,'x')\n\nSELECT ReportId, Email = \n    STUFF((SELECT ', ' + Email\n           FROM @your_table b \n           WHERE b.ReportId = a.ReportId \n          FOR XML PATH('')), 1, 2, '')\nFROM @your_table a\nGROUP BY ReportId",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhsyv7mz6j2r",
+      "title": "Get Multiple Rows to Single Row- Using Table",
+      "desc": "",
+      "code": "Declare @tb table (v varchar(500),w varchar(500))\n\nInsert into @tb\nSELECT 'a','x'\nunion\nSELECT 'b','y'\nunion\nSELECT 'c','z'\n\nSELECT * FROM @tb\n\nDECLARE @str varchar(4000), @strv varchar(4000)\nSELECT @str = COALESCE(@str + ',', '') + v,@strv = COALESCE(@strv + ',', '') + w FROM @tb\nSELECT @str\n\nSELECT @str+','+@strv",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqht14xm3rim1",
+      "title": "Get Random Rows from a Table",
+      "desc": "",
+      "code": "select top(5) * from CWOMaster order by newid()",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [
+        {
+          "label": "See How this works - Youtube",
+          "url": "https://youtu.be/3YtTTiQ-m9Q"
+        }
+      ]
+    },
+    {
+      "id": "mqht36qqz39di",
+      "title": "Get row count in all the tables in DB",
+      "desc": "",
+      "code": "SELECT   TableName = o.name,\n\n         Rows = max(i.rows)\n\nFROM     sysobjects o\n\n         INNER JOIN sysindexes i\n\n           ON o.id = i.id\n\nWHERE    xtype = 'u'\n\n         AND OBJECTPROPERTY(o.id,N'IsUserTable') = 1\n\nGROUP BY o.name\n\nORDER BY Rows DESC\n\nGO",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu3o1vqd6io",
+      "title": "Get the table name from column name",
+      "desc": "",
+      "code": "SELECT * \nFROM information_schema.columns \nWHERE column_name = 'Userkey'",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu42tfdfamb",
+      "title": "Hours to Duration",
+      "desc": "",
+      "code": "Declare @minutes int = 19\ndeclare @hours  nvarchar(20)\n\nSET @hours = \n    CASE \n    WHEN @minutes >=120 THEN\n    (SELECT CAST((@minutes / 60) AS VARCHAR(2)) + 'hrs ' + CASE WHEN (@minutes % 60) > 0 THEN CAST((@minutes % 60) AS VARCHAR(2)) + 'min'  ELSE '' END)\n    WHEN @minutes >= 60 THEN\n        (SELECT CAST((@minutes / 60) AS VARCHAR(2)) + 'hr ' + CASE WHEN (@minutes % 60) > 0 THEN CAST((@minutes % 60) AS VARCHAR(2)) + 'min'  ELSE '' END)\n    ELSE \n        CAST((@minutes % 60) AS VARCHAR(2)) + 'min'\n    END\n    \n    \n    SELECT @hours",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu57qzetvtj",
+      "title": "Missing Index (Roshan.C)",
+      "desc": "From Roshan.C",
+      "code": "SELECT\n  migs.avg_total_user_cost * (migs.avg_user_impact / 100.0) * (migs.user_seeks + migs.user_scans) AS improvement_measure,\n  'CREATE INDEX [missing_index_' + CONVERT (varchar, mig.index_group_handle) + '_' + CONVERT (varchar, mid.index_handle)\n  + '_' + LEFT (PARSENAME(mid.statement, 1), 32) + ']'\n  + ' ON ' + mid.statement\n  + ' (' + ISNULL (mid.equality_columns,'')\n    + CASE WHEN mid.equality_columns IS NOT NULL AND mid.inequality_columns IS NOT NULL THEN ',' ELSE '' END\n    + ISNULL (mid.inequality_columns, '')\n  + ')'\n  + ISNULL (' INCLUDE (' + mid.included_columns + ')', '') AS create_index_statement,\n  migs.*, mid.database_id, mid.[object_id]\nFROM sys.dm_db_missing_index_groups mig\nINNER JOIN sys.dm_db_missing_index_group_stats migs ON migs.group_handle = mig.index_group_handle\nINNER JOIN sys.dm_db_missing_index_details mid ON mig.index_handle = mid.index_handle\nWHERE migs.avg_total_user_cost * (migs.avg_user_impact / 100.0) * (migs.user_seeks + migs.user_scans) > 10\nORDER BY migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans) DESC",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu5sl7t5n2f",
+      "title": "Optimize SQL Query-Speedup",
+      "desc": "",
+      "code": "Add 'OPTION (RECOMPILE)' at the end of the SQL Query\n\nExample :\nSelect * from table1\nwhere 1=1\nOPTION (RECOMPILE)",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu68tnzc7vh",
+      "title": "Parent Locations",
+      "desc": "Get Parent Locations for given LocationKey",
+      "code": "select L.LocationKey\nfrom\nLocationMaster L\ninner join LocationMaster P on L.LValue <= P.LValue\nand L.RValue >= P.RValue\nwhere\nP.LocationKey =51",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu6lz782trw",
+      "title": "Pivot - dynamic varchar columns",
+      "desc": "",
+      "code": "create table temp\n            (\n                date datetime,\n                category varchar(3),\n    amount money\n)\n\ninsert into temp values ('1/1/2012', 'ABC', 1000.00)\ninsert into temp values ('2/1/2012', 'DEF', 500.00)\ninsert into temp values ('2/1/2012', 'GHI', 800.00)\ninsert into temp values ('2/10/2012', 'DEF', 700.00)\ninsert into temp values ('3/1/2012', 'ABC', 1100.00)\n\n\nDECLARE @cols AS NVARCHAR(MAX),\n    @query  AS NVARCHAR(MAX);\n\n            SET @cols = STUFF((SELECT distinct ',' + QUOTENAME(c.category)\n                        FROM temp c\n                        FOR XML PATH(''), TYPE\n                        ).value('.', 'NVARCHAR(MAX)')\n                    ,1,1,'')\n\nset @query = 'SELECT date, ' + @cols + ' from \n            (\n                select date\n                    , amount\n                    , category\n                from temp\n           ) x\n            pivot\n            (\n                 max(amount)\n                for category in (' + @cols + ')\n            )\n                p '\n\n\nexecute(@query)\n\ndrop table temp",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu6rvvxkhcu",
+      "title": "Pivot with Four Columns",
+      "desc": "",
+      "code": "Declare @tb table (yr int,mnth varchar(50),amt int,f int)\n\n            Insert into @tb values (2011, 'Jan', 40, 1)\nInsert into @tb values (2011, 'Feb', 46, 1)\nInsert into @tb values (2011, 'Mar', 52, 1)\nInsert into @tb values (2011, 'Apr', 58, 1)\nInsert into @tb values (2011, 'May', 64, 1)\nInsert into @tb values (2011, 'Jun', 70, 1)\nInsert into @tb values (2011, 'Jul', 76, 1)\nInsert into @tb values (2011, 'Aug', 82, 1)\nInsert into @tb values (2011, 'Sep', 88, 1)\nInsert into @tb values (2011, 'Oct', 94, 1)\nInsert into @tb values (2012, 'Aug', 100, 1)\nInsert into @tb values (2012, 'Sep', 106, 1)\nInsert into @tb values (2012, 'Oct', 112, 2)\nInsert into @tb values (2012, 'Nov', 118, 1)\nInsert into @tb values (2012, 'Dec', 124, 1)\nInsert into @tb values (2012, 'Jan', 130, 1)\nInsert into @tb values (2012, 'Feb', 136, 3)\nInsert into @tb values (2012, 'Mar', 142, 1)\nInsert into @tb values (2012, 'Apr', 148, 1)\nInsert into @tb values (2012, 'May', 154, 1)\n\nSELECT*\nFROM (\n    SELECT\n        f, yr, mnth, amt\n    FROM @tb\n) as s\nPIVOT\n(\n    SUM(amt)\n    FOR[mnth] IN(jan, feb, mar, apr,\n    may, jun, jul, aug, sep, oct, nov, dec)\n)AS pivo",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu6yxfhp5n7",
+      "title": "Read JSON and get the Value",
+      "desc": "",
+      "code": "JSON_VALUE(T.Field15, '$.DisplayText') as ResidentDisplayText",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu7a8bjs7v9",
+      "title": "Rebuild Indexes Method 1 (Roshan.C)",
+      "desc": "",
+      "code": "DECLARE @TableName VARCHAR(100)\nDECLARE @sql NVARCHAR(500)\nDECLARE @fillfactor INT\nSET @fillfactor = 80\n\nDECLARE tableCursor CURSOR\nFOR \nselect [name]\nfrom dbo.sysobjects \nwhere  OBJECTPROPERTY(id, N'IsUserTable') = 1\nFOR READ ONLY\n\nOPEN tableCursor\nFETCH NEXT FROM tableCursor INTO @TableName\n\nWHILE (@@Fetch_Status >= 0)\nBEGIN\n    \n    SET @sql = 'ALTER INDEX ALL ON ' + @TableName + ' REBUILD WITH (FILLFACTOR = ' + CONVERT(VARCHAR(3),@fillfactor) + ')'\n\tEXEC (@sql)\n    \n    FETCH NEXT FROM tableCursor INTO @TableName\nEND\n\nCLOSE tableCursor\nDEALLOCATE tableCursor",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu7nezaqpwt",
+      "title": "Return tables by given Column Name",
+      "desc": "",
+      "code": "SELECT 'SELECT * FROM '+name as query,name as tablename \nFROM sysobjects WHERE id IN ( SELECT id FROM syscolumns WHERE name like '%PJCKey%' )",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu821vsiovj",
+      "title": "Running Total Using Sum and Order",
+      "desc": "",
+      "code": "Declare @Categories table (CategoryKey int,CategoryName varchar(333))\nInsert into @Categories\nSELECT 1,'Seafood'\nUnion ALL\nSELECT 2,'DryFood'\nUnion ALL\nSELECT 3,'Vegetables'\nUnion ALL\nSELECT 4,'Fruits'\nDeclare @Product table (ProductKey int,CategoryKey int, ProductName varchar(333),Price int)\nInsert into @Product\nSELECT 1,1,'KPF',1000\nunion all\nSELECT 2,1,'SEE',2000\nunion all\nSELECT 3,2,'POO',3000\nunion all\nSELECT 4,2,'LTF',4000\nunion all\nSELECT 5,3,'FFE',5000\nunion all\nSELECT 6,4,'BOO',6000\n\n\n--Add TotalPrice+RunningTotal and get next value\nSELECT t.CategoryName,t.TotalPrice,\nSUM(t.TotalPrice) over (ORDER BY t.CategoryName) as RunningTotal\nFROM ( SELECT C.CategoryName,SUM(P.Price) as TotalPrice\nFROM @Product P\ninner join @Categories C on C.CategoryKey=P.CategoryKey\nGROUP BY C.CategoryName) t",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhu8f8b8zn3t",
+      "title": "SAAS - Get Account Details with Activity Count",
+      "desc": "",
+      "code": "alter procedure [dbo].[KKA_GetAccountDetailsWithActivityCount]\n      as\n      begin\n\nDeclare @tb table( cnt int)\nDeclare @pk varchar(max),@query varchar(max),@query2 varchar(max),@finalq varchar(max)='',\n@WRMasterCountQ varchar(max),@CWOMasterCountQ varchar(max),@LoginCountQ varchar(max),@UserCountQ varchar(max),@PPMCountQ varchar(max),\n@FreeDemoAccounts varchar(max),@val varchar(max)\n\nset @query = 'Declare @tb table(Account varchar(max),LoginCount int,UserCount int,WRCount int,CWOCount int,PPMCount int,CurrentPlan Varchar(500)) '\nDECLARE cur CURSOR FOR\n\nselect AccountID,F.Value from asp.dbo.AccountMaster A\ninner join asp.dbo.AccountSettings F on F.Account=A.AccountID and F.Name='currentplan'\n\n\nOPEN cur    \n    FETCH NEXT FROM cur\n    INTO @pk,@val\n    While @@FETCH_STATUS = 0\n    Begin\n\t\tDeclare @valtype varchar(50)\n\t\tset @LoginCountQ = '(select Count(1) from '+@pk+'.dbo.UserLoginActivity)'\n\t\tset @WRMasterCountQ = '(select Count(1) from '+@pk+'.dbo.WRMaster)'\n\t\tset @CWOMasterCountQ = '(select Count(1) from '+@pk+'.dbo.CWOMaster)'\n\t\tset @UserCountQ = '(select Count(1) from '+@pk+'.dbo.UserMaster)'\n\t\tif @val='free'\n\t\tbegin\n\t\t\tset @PPMCountQ = '0'\n\t\t\tset @valtype='Free Version'\n\t\tend\n\t\telse\n\t\tbegin\n\t\t\tset @PPMCountQ = '(select Count(1) from '+@pk+'.dbo.PPMAuditWorkOrder)'\n\t\t\tset @valtype='Free Trial'\n\t\tend\n\t\t\n\t\t--set @FreeDemoAccounts = '(select F.Email from  '+@pk+'.dbo.FreeDemoAccounts F)'\n\n       set @query2 = ' Insert into @tb (Account,LoginCount,WRCount,CWOCount,UserCount,PPMCount,CurrentPlan) Select '''+@pk+''','+@LoginCountQ+','+@WRMasterCountQ+','+@CWOMasterCountQ+','+@UserCountQ+','+@PPMCountQ+','''+@valtype+''''\n\n\t   --select @query\n\t  \n\t  set @finalq= @finalq + @query2\n    FETCH NEXT FROM cur\n    INTO @pk,@val\n   END;\nCLOSE cur;\nDEALLOCATE cur;\n\n\n       set @query=@query+@finalq+' select T.*,A.AccountType as InitialAccountType,A.Email,A.Loginid,A.FirstName,A.LastName,A.Country,A.Mobile,A.SiteLocation,A.TimeZone from @tb T inner join saas.dbo.FreeDemoAccounts A on A.AccountName=T.Account\n\t   Order by T.Account\n\t   '\n\n\t   --select @query\n\t    execute (@query)  \n\t\t  \n\t                                end\n\n\t\t\t\t\t\t\t\t\t--select * from saas.dbo.FreeDemoAccounts",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuacpoh9np1",
+      "title": "Shrink Database Manually",
+      "desc": "",
+      "code": "Make recovery mode to simple from full\n    > Right click DB\n    > select properties\n    > Go to Options\n    > Change Recovery Model : Simple\n\nShrink DB\n    > Right click the db \n    > click Task \n    > Shrink \n    > Database \n    > ok\n\nMake recovery mode to full again\n    > Right click DB\n    > select properties\n    > Go to Options\n    > Change Recovery Model : Full",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuat9wrk4j2",
+      "title": "Simple Pivot",
+      "desc": "",
+      "code": "Declare @tb table (yr int,mnth varchar(50),amt int)\n\n            Insert into @tb values (2011, 'Jan', 40)\nInsert into @tb values (2011, 'Feb', 46)\nInsert into @tb values (2011, 'Mar', 52)\nInsert into @tb values (2011, 'Apr', 58)\nInsert into @tb values (2011, 'May', 64)\nInsert into @tb values (2011, 'Jun', 70)\nInsert into @tb values (2011, 'Jul', 76)\nInsert into @tb values (2011, 'Aug', 82)\nInsert into @tb values (2011, 'Sep', 88)\nInsert into @tb values (2011, 'Oct', 94)\nInsert into @tb values (2012, 'Aug', 100)\nInsert into @tb values (2012, 'Sep', 106)\nInsert into @tb values (2012, 'Oct', 112)\nInsert into @tb values (2012, 'Nov', 118)\nInsert into @tb values (2012, 'Dec', 124)\nInsert into @tb values (2012, 'Jan', 130)\nInsert into @tb values (2012, 'Feb', 136)\nInsert into @tb values (2012, 'Mar', 142)\nInsert into @tb values (2012, 'Apr', 148)\nInsert into @tb values (2012, 'May', 154)\n\nSELECT*\nFROM (\n    SELECT\n        yr, mnth, amt\n    FROM @tb\n) as s\nPIVOT\n(\n    SUM(amt)\n    FOR[mnth] IN(jan, feb, mar, apr,\n    may, jun, jul, aug, sep, oct, nov, dec)\n)AS pivo",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuc2f7ec5l1",
+      "title": "Update the Location Heiracchy and FullName",
+      "desc": "",
+      "code": "Update the Location Heiracchy and FullName of the Location Master\n\nExec dbo.NumberLocationTree\n\nExec dbo.UpdateLocationName <LocationKey>",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhufkaz92dl6",
+      "title": "Automatically mergedb all the Accounts",
+      "desc": "",
+      "code": "sdm mergedball auto",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhugid8tbgat",
+      "title": "MessageDB Merge DB",
+      "desc": "",
+      "code": "sdm mergedb MessagingDB <AppPath>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhugt1oqj4jd",
+      "title": "LucyEvent Merge DB",
+      "desc": "",
+      "code": "sdm mergedb LucyEventDB <AppPath>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuh12j86n9b",
+      "title": "JobQueue Merge DB",
+      "desc": "",
+      "code": "sdm mergedb JobQueueDB <AppPath>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuhakzg85wq",
+      "title": "GroupADB Merge DB",
+      "desc": "",
+      "code": "sdm mergedb GroupADB <AppPath>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuhi575j9bj",
+      "title": "ASP Merge DB",
+      "desc": "",
+      "code": "sdm mergedb DB <AppPath>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuhptgfxxy3",
+      "title": "Generate Icon",
+      "desc": "",
+      "code": "sdm genappicon <AppPath>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuuwyzz394y",
+      "title": "Create App",
+      "desc": "",
+      "code": "sdm createapp <AppName> <Version>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuvaj804lwt",
+      "title": "Create Account",
+      "desc": "",
+      "code": "sdm createaccount <AccountName> <Appset Version> LoginID admin FirstName System LastName Admin Email eutech@cyber.com",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuvs5oqud88",
+      "title": "Global Config/Reset for Backend Services",
+      "desc": "",
+      "code": "sdm broadcast config/reset",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuw7ycceotp",
+      "title": "Signal all backend services that a new account created",
+      "desc": "",
+      "code": "sdm broadcast config/loadaccount <AccountName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuwgmc96q0y",
+      "title": "Unhide apps that were hidden",
+      "desc": "",
+      "code": "sdm <AccountName> showapp <AppName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuwnasi5n9m",
+      "title": "Runtasks",
+      "desc": "",
+      "code": "sdm <AccountName> runtasks",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhux09on2zoe",
+      "title": "Convert AttachmentMaster Data as Physical",
+      "desc": "",
+      "code": "sdm <AccountName> runscript convert-attachments-to-file-server.py",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhux71nvg7gi",
+      "title": "Install Tasks",
+      "desc": "",
+      "code": "sdm <AccountName> resettasks",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuxe9fcotbn",
+      "title": "Register Lucy Events",
+      "desc": "",
+      "code": "sdm <AccountName> registerevents",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuxld02ox7h",
+      "title": "Install ObjectView",
+      "desc": "",
+      "code": "sdm <AccountName> objectview install",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuy3m50kha0",
+      "title": "Automatically run the Mergedb for one account",
+      "desc": "",
+      "code": "sdm <AccountName> mergedb auto",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuyes4w9alh",
+      "title": "Merge DB for main account",
+      "desc": "",
+      "code": "sdm <AccountName> mergedb",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuylrvghokn",
+      "title": "List enabled interface objects",
+      "desc": "",
+      "code": "sdm <AccountName> listinterfaces allowed",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuysz8fd5z7",
+      "title": "List all interfaces",
+      "desc": "",
+      "code": "sdm <AccountName> listinterfaces",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuz51g4p7mp",
+      "title": "ListApps - Show all installed Apps",
+      "desc": "",
+      "code": "sdm <AccountName> listapps",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuzc10vngcs",
+      "title": "Test the LDAP Settings",
+      "desc": "",
+      "code": "sdm <AccountName> ldapauthtest <user> <password>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuzjtwhfv5s",
+      "title": "Install Views",
+      "desc": "",
+      "code": "sdm <AccountName> installviews",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhuzqecxutl2",
+      "title": "Install Apps",
+      "desc": "",
+      "code": "sdm <AccountName> installapp <AppName> <Version>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv017g5r0cm",
+      "title": "Add User Roles",
+      "desc": "",
+      "code": "sdm <AccountName> inituserroles all",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv0a1otrz89",
+      "title": "Install Initial Data",
+      "desc": "",
+      "code": "sdm <AccountName> initapp <AppName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv0gj8wlb3p",
+      "title": "Hides the specified apps",
+      "desc": "",
+      "code": "sdm <AccountName> hideapp <AppName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv0xjwa635j",
+      "title": "Get To A SQL Query and Copy to clipboard",
+      "desc": "",
+      "code": "sdm <AccountName> gensql <AppName>.<ModelName> <QueryBlockName> | clip",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv16okohjdt",
+      "title": "Get To A SQL Query",
+      "desc": "",
+      "code": "sdm <AccountName> gensql <AppName>.<ModelName> <QueryBlockName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv1mp10h4gy",
+      "title": "Table Generate For Model",
+      "desc": "",
+      "code": "sdm <AccountName> gensql <AppName>.<ModelName> | sdm <AccountName> execsql",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv25csdjr5k",
+      "title": "SQL For Model",
+      "desc": "Get only the SQL for the model",
+      "code": "sdm <AccountName> gensql <AppName>.<ModelName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv2gzxq9yx8",
+      "title": "Install Specific View",
+      "desc": "",
+      "code": "sdm <AccountName> geninterface <AppName>.<ModelName> install",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv2nh0dbsnx",
+      "title": "Generate db schema",
+      "desc": "",
+      "code": "sdm <AccountName> generatedbschema test.xml",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv2uisfmuod",
+      "title": "Export User Groups",
+      "desc": "",
+      "code": "sdm <AccountName> exportusergroups <AppPath>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv33sc7nmn0",
+      "title": "Manually Run LDAP Sync Service",
+      "desc": "",
+      "code": "sdm <AccountName> execute System.LDAPSync",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv3b303qg9e",
+      "title": "Get all the Approles for the App",
+      "desc": "",
+      "code": "sdm <AccountName> execute Auth.GetRolesForApp App <AppName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv3ohg3lnzx",
+      "title": "Execute In Pyscript with Parameters",
+      "desc": "",
+      "code": "sdm <AccountName> execute <AppName>.<ServiceName> ParameterName1 Parameter1",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv3viksl143",
+      "title": "Execute In Pyscript (Without parameters)",
+      "desc": "",
+      "code": "sdm <AccountName> execute <AppName>.<ServiceName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv490sxru7v",
+      "title": "Execute In Python with parameters",
+      "desc": "",
+      "code": "sdm <AccountName> execute <AppName>.<ModelName>:<ServiceName> ParameterName1 Parameter1",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv4gf8wpmab",
+      "title": "Execute In Python (Without parameters)",
+      "desc": "",
+      "code": "sdm <AccountName> execute <AppName>.<ModelName>:<ServiceName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv4qm5q0aey",
+      "title": "Execute Tasks In CMD",
+      "desc": "",
+      "code": "sdm <AccountName> execute <AppName>.<ModelName>:<ServiceName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv4x7gaj9su",
+      "title": "Enable LDAP",
+      "desc": "",
+      "code": "sdm <AccountName> enableldap",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv54o5c4cb5",
+      "title": "Enable Interface Object Type",
+      "desc": "",
+      "code": "sdm <AccountName> enableinterface <interface object type> <object type being enabled | all >",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv5dl8slgnc",
+      "title": "Enable App",
+      "desc": "",
+      "code": "sdm <AccountName> enableapp <AppName> <Version>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv5jwcv1tfy",
+      "title": "Disable LDAP",
+      "desc": "",
+      "code": "sdm <AccountName> disableldap",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv5qi4b5obd",
+      "title": "Disable Interface Object Type",
+      "desc": "",
+      "code": "sdm <AccountName> disableinterface <interface object type> <object type being disabled>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv5w70418df",
+      "title": "Disable App",
+      "desc": "",
+      "code": "sdm <AccountName> disableapp <AppName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv623w3835u",
+      "title": "Add To Account Setting",
+      "desc": "",
+      "code": "sdm <AccountName> config TrendDB <connectionstring>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv69lpyl7id",
+      "title": "Checkdb",
+      "desc": "",
+      "code": "sdm <AccountName> checkdb",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv6hq4ga8c8",
+      "title": "List of all models and their connections",
+      "desc": "",
+      "code": "sdm <AccountName> auditmodels",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv6pr0zrnep",
+      "title": "Check Keys In All Mappings",
+      "desc": "",
+      "code": "sdm <AccountName> auditdelete <AppName>.<ModelName> ObjectKey | clip",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv6w1gh771p",
+      "title": "Add App Alias",
+      "desc": "",
+      "code": "sdm <AccountName> addalias <AliasName> <AppName>",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhv8q7gnjat3",
+      "title": "DX Create New Account",
+      "desc": "",
+      "code": "sdm newaccount productv4 /var/data/iviva/appset/iviva.dx/AppSets/1.0.0.0/profile.xml FirstName Admin LastName User Email email@ecyber.com Password password Country iviva SiteLocation iviva Mobile 0714442552 LoginID admin CompanyName Eutech CompanyType IT TimeZone LK AccountType Freetrial EnableSampleData 0",
+      "catId": "mqhudgmrtfd5w",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhvmc7o8qe3e",
+      "title": "How to Install Telnet From Control Panel",
+      "desc": "",
+      "code": "Go to Control Panel\nClick on Programs\nClick on Turn windows features on or off link under Programs and Features.\nFrom Windows Feature window Select Telnet Client and Check it\nClick on OK button and wait until it installs\nAfter Install Click on Close button.\nTo Apply the setting you may need to Restart the computer",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "links": [
+        {
+          "label": "Install Telnet Video - Youtube",
+          "url": "https://www.youtube.com/watch?v=rggUmUlEsjI"
+        }
+      ]
+    },
+    {
+      "id": "mqhvrfukfbj0y",
+      "title": "Check whether telnet already installed in the computer",
+      "desc": "",
+      "code": "Open Command Prompt\nType Telnet\nPress Enter\n\nIf its installed it will show Telnet.\nIf its NOT installed it will show an error.",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "links": [
+        {
+          "label": "Is telnet installed or not Video - Youtube",
+          "url": "https://www.youtube.com/watch?v=rggUmUlEsjI"
+        }
+      ]
+    },
+    {
+      "id": "mqhvsnforfvvy",
+      "title": "How to Install Telnet From Command Prompt",
+      "desc": "",
+      "code": "Open Run and Type\npkgmgr /ui:'TelnetClient'\n\nClick on Ok button and Restart the Computer",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "links": [
+        {
+          "label": "Install Telnet from CMD Prompt - Video - Youtube",
+          "url": "https://www.youtube.com/watch?v=rggUmUlEsjI"
+        }
+      ]
+    },
+    {
+      "id": "mqhvufuds4d5p",
+      "title": "How to check the Details of the Laptop Battery",
+      "desc": "",
+      "code": "Check the Video",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "links": [
+        {
+          "label": "Details of the Laptop Battery - Video - Youtube",
+          "url": "https://www.youtube.com/watch?v=BACWzhjm8m4"
+        }
+      ]
+    },
+    {
+      "id": "mqhwz0gp4zf0v",
+      "title": "install net-tools",
+      "desc": "",
+      "code": "sudo apt install net-tools",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhwzh09wcsd5",
+      "title": "Check dotnet info",
+      "desc": "",
+      "code": "dotnet --info",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhwzwep9f3g5",
+      "title": "Restart Ubuntu",
+      "desc": "",
+      "code": "sudo reboot",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx0jnltkf8l",
+      "title": "Show SQL Running Status",
+      "desc": "",
+      "code": "sudo systemctl status mssql-server",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx0vx6nic5l",
+      "title": "Enable SQL",
+      "desc": "",
+      "code": "sudo systemctl enable mssql-server",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx156xptmt8",
+      "title": "Install curl",
+      "desc": "",
+      "code": "sudo apt install curl",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx1ihuj5gav",
+      "title": "Check the OS version",
+      "desc": "",
+      "code": "lsb_release -a",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx1qrd3lkoc",
+      "title": "Install node.js",
+      "desc": "",
+      "code": "sudo apt install nodejs\n\nY",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx2giqnokef",
+      "title": "Extract tar files",
+      "desc": "",
+      "code": "tar -xvzf ivivaweb.tar.gz",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx2t752xx0x",
+      "title": "Install UnZip",
+      "desc": "",
+      "code": "sudo apt install unzip",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx2zrd2m1x0",
+      "title": "Unzip Files",
+      "desc": "",
+      "code": "unzip foldername.zip",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx35o1nqmm7",
+      "title": "Install rar",
+      "desc": "",
+      "code": "sudo apt-get install unrar",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx7pupqw6jt",
+      "title": "Unzip Rar files",
+      "desc": "",
+      "code": "unrar foldername.zip",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx7w15jybq3",
+      "title": "Install Redis",
+      "desc": "",
+      "code": "sudo apt update\nsudo apt install redis\n\nY",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx87hdsjkpu",
+      "title": "Install nginx",
+      "desc": "",
+      "code": "sudo apt update\nsudo apt install nginx\nY",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx8eu1fqz5y",
+      "title": "Install Vim",
+      "desc": "",
+      "code": "sudo apt install vim\nY",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx8uqhvvy58",
+      "title": "Edit .profile",
+      "desc": "",
+      "code": "sudo apt update\nsudo vim ~/.profile\n\n--- add below lines ----\n\texport IVIVA_CONFIG_PATH=$home/iviva.yml\n\texport PATH='$PATH:/ opt / mssql - tools / bin'\n\n    save and exit: wq\n    -- -",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx94jt5yq2p",
+      "title": "Edit .bash_profile",
+      "desc": "",
+      "code": "sudo vim ~/.bash_profile\n\nexport IVIVA_CONFIG_PATH=$home/iviva.yml\n\texport PATH='$PATH:/ opt / mssql - tools / bin'\n\n    export PATH = '$PATH:/var/data/iviva/services/sdm'",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx9bc9c5sqe",
+      "title": "Reload Environmental Variables",
+      "desc": "",
+      "code": "source ~/.profile\n\nsource ~/.bashrc",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhx9ofd8z48q",
+      "title": "Give Ownership permissions to folder",
+      "desc": "",
+      "code": "sudo chown -R ubuntu:ubuntu /var/data/iviva",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxac014w33n",
+      "title": "Give All permissions to folder",
+      "desc": "",
+      "code": "sudo chmod -R 777 /var/data/iviva",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxax2bj1q7r",
+      "title": "Allow 1433 SQL port",
+      "desc": "",
+      "code": "sudo ufw allow 1433",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxb4r6wi287",
+      "title": "Allow 1434 port",
+      "desc": "",
+      "code": "sudo ufw allow 1434",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxcf15ucai4",
+      "title": "Install as Service",
+      "desc": "",
+      "code": "sudo vim ivivaweb.service\n[Unit]\nDescription=ivivaweb\nAfter=network.target\n\n[Service]\nWorkingDirectory=/var/data/iviva/ivivaweb\nExecStart=/usr/bin/dotnet ivivaweb.dll\nRestart=on-failure\n#Restart service after 3 seconds if the service crashes\nRestartSec=5\nUser=ubuntu\nEnvironment=IVIVA_CONFIG_PATH=/home/iviva.yml\n\n[Install]\nWantedBy=multi-user.target",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxcp3dulvkl",
+      "title": "Move service file to System",
+      "desc": "",
+      "code": "sudo mv ivivaweb.service /etc/systemd/system",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxe4k9cc154",
+      "title": "Start Enable Service",
+      "desc": "",
+      "code": "sudo systemctl list-unit-files ivivaweb.service\nsudo systemctl status ivivaweb.service\nsudo systemctl start ivivaweb.service\nsudo systemctl enable ivivaweb.service\nsudo systemctl restart ivivaweb.service",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxedyidilyn",
+      "title": "Install libc6",
+      "desc": "",
+      "code": "sudo apt install libc6-dev",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxek55gd0xg",
+      "title": "Install libgdiplus",
+      "desc": "",
+      "code": "sudo apt install libgdiplus",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxh85nctcfa",
+      "title": "Configure nginx",
+      "desc": "",
+      "code": "go to cd /etc/nginx/sites-available\n\nsudo vim ivivaweb\n\nserver {\n    listen        80;\n    server_name   *.domain.com;\n    location / {\n        proxy_pass         http://localhost:5000;\n        proxy_http_version 1.1;\n        proxy_set_header   Upgrade $http_upgrade;\n        #proxy_set_header   Connection keep-alive;\n        proxy_set_header   Connection $http_connection;\n        proxy_set_header   Host $host;\n        proxy_cache_bypass $http_upgrade;\n        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header   X-Forwarded-Proto $scheme;\n        client_max_body_size 50M;\n    }\n}\nsudo ln -s /etc/nginx/sites-available/ivivaweb /etc/nginx/sites-enabled\nsudo nginx -t\nsudo systemctl reload nginx",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxio952ikyz",
+      "title": "Uninstall Redis",
+      "desc": "",
+      "code": "sudo systemctl stop redis-server\nsudo apt-get purge redis redis-server redis-tools -y\nsudo rm -rf /etc/redis\nsudo rm -rf /var/lib/redis\nsudo deluser redis 2>/dev/null\nsudo delgroup redis 2>/dev/null\nsudo apt-get autoremove -y\nsudo apt-get autoclean\n\nVerify Redis Is Gone\n-------------------------\nredis-server --version\n\nsudo /sbin/iptables -I INPUT -p tcp -m tcp --dport 6379 -j ACCEPT",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhxn4cb4i5kb",
+      "title": "BoldReports,nginx,Component",
+      "desc": "",
+      "code": "location /components/boldreport/ {\n        rewrite ^/components/boldreport(.*)$ $1 break;\n        proxy_pass \thttp://172.0.3.49:21002;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n    \nAdd like this format in nginx and the port should be 21002.\n\nsudo /sbin/iptables -I INPUT -p tcp -m tcp --dport 21002 -j ACCEPT",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhypj7nnckfe",
+      "title": "Check Diskspace",
+      "desc": "",
+      "code": "sudo du -ah / --max-depth=1 | sort -hr | head -n 10\n\nYou can adjust the --max-depth=1 option to explore deeper levels if needed.\n\nView the contents of syslog: You can view the contents of the syslog file with the tail or less commands:\nsudo tail -f syslog\n\n Clear the syslog file:\n sudo truncate -s 0 /var/log/syslog\n\nMove and Archive the syslog:\nsudo mv /var/log/syslog /var/log/syslog.bak\nsudo systemctl restart rsyslog",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhyq3cjjjqmh",
+      "title": "Manual add to config path",
+      "desc": "",
+      "code": "export IVIVA_CONFIG_PATH=/home/ivivauser/iviva.yml",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhyrkybrf5p6",
+      "title": "SSL New",
+      "desc": "",
+      "code": "1.\tInstalling acme.sh\n    a.\tInstall GIT\n        sudo apt update\n        sudo apt install -y git\n\n    b.\tDownload the repository from github\n        git clone https://github.com/Neilpang/acme.sh.git\n\n    c.\tGo to the acme.sh path\n        cd acme.sh/\n        ./acme.sh –install\n\n    d.\tReload session\n        exec bash\n\n\nacme.sh --issue --dns --yes-I-know-dns-manual-mode-enough-go-ahead-please -d '*.dx.servicedeskhq.com'\n\nacme.sh --register-account -m lolitha@ecyber.com\n\nDomain: '_acme-challenge.dx.servicedeskhq.com'\nTXT value: 'M-wAja8X7lNn7UFrFAYVGrk0Y3wAQNLd7OFKztOxnX0'\n\nacme.sh --renew --yes-I-know-dns-manual-mode-enough-go-ahead-please -d '*.dx.servicedeskhq.com'\n\ncd / etc/nginx/sites-available\nsudo vim ivivaweb\n\nssl_certificate /home/ubuntu/.acme.sh/*.dx.servicedeskhq.com_ecc/fullchain.cer;\nssl_certificate_key /home/ubuntu/.acme.sh/*.dx.servicedeskhq.com_ecc/*.dx.servicedeskhq.com.key;\n\nsudo systemctl reload nginx\nsudo systemctl restart ivivaweb.service",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": [
+        {
+          "label": "Obtain Free Wildcard SSL Certificates from Let's Encrypt",
+          "url": "https://www.maketecheasier.com/obtain-free-wildcard-ssl-certificates-lets-encrypt/"
+        },
+        {
+          "label": "Reference",
+          "url": "https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal&tab=wildcard"
+        }
+      ]
+    },
+    {
+      "id": "mqhyszezqlxii",
+      "title": "SSL Renew",
+      "desc": "",
+      "code": "cd /home/azureuser/.acme.sh/\n\nRemove the folder *.dx.domain.com_ecc\n\n**Note: If you cant find the *.dx.domain.com_ecc folder, then go to cd /etc/nginx/sites-available \nand from the ivivaweb file get the path in the certificate.\neg:\n\n**ssl_certificate /home/ubuntu/.acme.sh/*.dx.domain.com_ecc/fullchain.cer;\n\n**path is /home/ubuntu/.acme.sh/*.dx.domain.com_ecc/\n\n**Go to that path and remove the folder dx.domain.com_ecc\n\nexec bash \n\nacme.sh --issue --dns --yes-I-know-dns-manual-mode-enough-go-ahead-please -d '*.dx.domain.com'\n\nwait for the code \neg:\nget these keys\n------------------\nDomain: '_acme-challenge.domain.com'\nTXT value: 'HiEV6BMoHMjGcPmp6ussyyvd93cEL0BsiQ2KVY66dVE'\n------------------------\n\nsync the code\n\nacme.sh --renew --yes-I-know-dns-manual-mode-enough-go-ahead-please -d '*.dx.domain.com'\n\n\nsudo systemctl reload nginx\nsudo systemctl restart ivivaweb.service",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhyv397tenkz",
+      "title": "Save Ports to the Table",
+      "desc": "",
+      "code": "sudo /sbin/iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT\nsudo /sbin/iptables -I INPUT -p tcp -m tcp --dport 443 -j ACCEPT",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhyvkledc1le",
+      "title": "Reload All Service",
+      "desc": "",
+      "code": "sudo systemctl reload nginx\nsudo systemctl daemon-reload\nsudo systemctl restart ivivaweb.service\nsudo systemctl restart lucyengine.service \nsudo systemctl restart hydra.service \nsudo systemctl restart wfengine.service\nsudo systemctl restart jobrunner.service \nsudo systemctl restart sdtaskrunner.service\nsudo systemctl restart emailgateway.service \nsudo systemctl restart saasaccountcreator.service",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhyvtyj29952",
+      "title": "Check whether url runs in Linux",
+      "desc": "",
+      "code": "curl http://saas.bdc.com:80/apps/auth/userlogin",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhyw6srcud66",
+      "title": "Zip the Folder - tar",
+      "desc": "",
+      "code": "tar -zcvf ivivaweb.tar.gz /var/data/iviva/Binaries/ivivaweb",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhze5qzg69on",
+      "title": "Remove all the images at once",
+      "desc": "",
+      "code": "sudo docker rm -f $(sudo docker ps -aq)",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhzejijku1au",
+      "title": "Stop All Images",
+      "desc": "",
+      "code": "sudo docker stop $(sudo docker ps -aq)",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhzf70b8jomg",
+      "title": "Up each service",
+      "desc": "",
+      "code": "sudo docker compose --profile redis --env-file .env up -d\n\nfirst go to the path where .env exists",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhzfvbninspb",
+      "title": "List the Images",
+      "desc": "",
+      "code": "sudo docker ps\n\nsudo docker images",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhzg42jjxyzt",
+      "title": "Remove the Container",
+      "desc": "",
+      "code": "sudo docker rm -f 332bd90bfe55",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhzgrfncp0vk",
+      "title": "Restart Services",
+      "desc": "",
+      "code": "sudo systemctl daemon-reload\nsudo docker restart iviva-redis\nsudo docker restart iviva-ivivaweb\nsudo docker restart iviva-lucyengine\nsudo docker restart iviva-hydra",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhzmlojpdsql",
+      "title": "Docker Redis Memory Limit Settings",
+      "desc": "Update in docker-compose.yml",
+      "code": "command: >\n  redis-server\n  --appendonly yes\n  --maxmemory 12gb\n  --maxmemory-policy allkeys-lru\n  \nmem_limit: 14g\nmem_reservation: 12g",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqhznn7f749qx",
+      "title": "Check the Redis Memory",
+      "desc": "",
+      "code": "docker exec -it iviva-redis redis-cli INFO memory",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi05tcs2dapi",
+      "title": "Restart Docker Image in force",
+      "desc": "",
+      "code": "docker compose up -d --force-recreate redis",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi07agc7cc0i",
+      "title": "Remove the existing docker images",
+      "desc": "Remove by container ID",
+      "code": "sudo docker stop 539eefc8c7fd\nsudo docker rm 539eefc8c7fd",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi08s9gpgzyw",
+      "title": "Start all the docker images at once",
+      "desc": "",
+      "code": "sudo docker compose  --profile ivivaweb  --profile lucyengine  --profile redis  --profile jobrunner  --profile sdtaskrunner  --profile emailgateway  --profile boldreports  --profile mongo --profile hydra  up -d",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0f3glzgpop",
+      "title": "Install Offline Docker Images",
+      "desc": "",
+      "code": "Download the required Service from Online machine\n--------------------------------------------------\ncurl -s \"https://license.iviva.com/login?key=ivivalicensekey\" | docker login 0699271ss43.dkr.ecr.ap-southeast-1.amazonaws.com/iviva/v4/releases/hydra:4.4.0 -u AWS --password-pwd\n\ndocker pull 0699271ss43.dkr.ecr.ap-southeast-1.amazonaws.com/iviva/v4/releases/hydra:4.4.0\n\ndocker save -o hydra_latest.tar 0699271ss43.dkr.ecr.ap-southeast-1.amazonaws.com/iviva/v4/releases/hydra:4.4.0\n\ncopy the file hydra_latest.tar to server and run below commnad on server\n------------------------------------------------------------------\n\ndocker load -i /var/data/iviva/hydra_latest.tar\n\nsudo docker compose --profile hydra --env-file .env up -d",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0geckdy9xk",
+      "title": "Backup Mongo DB",
+      "desc": "",
+      "code": "mongodump --host 192.168.1.11 --port 27017 --db 3d-models --out /home/ubuntu/mongo",
+      "catId": "mqi0i285jpnl0",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0h47hhkh6b",
+      "title": "Restore Mongo DB",
+      "desc": "",
+      "code": "mongorestore --host 192.168.1.11 --port 27017 --db 3d-model --drop /home/ubuntu/mongo/3d-models",
+      "catId": "mqi0i285jpnl0",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0jais4pndl",
+      "title": "Find Mongo",
+      "desc": "Search anything from Mongo Compass",
+      "code": "{componentName:\"home_leftpanel\"}",
+      "catId": "mqi0i285jpnl0",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0k1jw012ph",
+      "title": "Find and Update in Mongo Compass",
+      "desc": "",
+      "code": "Find\n{ \"modelPath\": \"1769412700566_8010-PKF-3DView-DTL1-2.glb\" }\n\nUpdate\n{ \"$set\": { \"modelPath\": \"1773627498815_PKF-Level-01.glb\" } }",
+      "catId": "mqi0i285jpnl0",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0kd50ns2q6",
+      "title": "Find Contains in Mongo Compass",
+      "desc": "",
+      "code": "{ \"buildingLabel\": { \"$regex\": \"SIM\", \"$options\": \"i\" } }",
+      "catId": "mqi0i285jpnl0",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0mecdtonz2",
+      "title": "Influx Backup",
+      "desc": "",
+      "code": "influx backup /home/trend-server-01/influxdbbackups/12012026/IBMSTrends --token <Token> --bucket IBMSTrends",
+      "catId": "mqi0lof9fisx6",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0mwbhr0w2d",
+      "title": "List the tokens - Influx",
+      "desc": "",
+      "code": "influx auth list",
+      "catId": "mqi0lof9fisx6",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqi0nk1p0t89w",
+      "title": "Influx Restore",
+      "desc": "",
+      "code": "influx restore /home/ubuntu/prodback/IBMSTrends --host http://192.168.1.75:8086 --token <Token> --bucket IBMSTrends --org iviva",
+      "catId": "mqi0lof9fisx6",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkk081r9gotl",
+      "title": "Influx-Search from Query",
+      "desc": "",
+      "code": "from(bucket: \"IBMSTrends\")\n  |> range(start: -30d)\n  |> filter(fn: (r) => r._measurement == \"trend_20460\")\n  |> sort(columns: [\"_time\"], desc: false)",
+      "catId": "mqi0lof9fisx6",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkl3y9r559r9",
+      "title": "Access File Actions Unauthorized",
+      "desc": "",
+      "code": "Add Codes to this File \nServiceConfiguration.xml\n\nCodes: \n\n<Services>\n\t<Service name='Billing.FreeDemoAccount:VerifyEmailOnly'  public='true' requires_auth='false' />\n</Services>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkl49v2bfmu5",
+      "title": "Activity Message Passed in XML",
+      "desc": "",
+      "code": "params['ActivityMessage']=$L('ccjc.am.css.feedbacktaken')",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkl4h06y1aj7",
+      "title": "Add Action - Show Dialog Box",
+      "desc": "",
+      "code": "<AddAction>\n\t            <ShowDialog view='ContractManagement.pms.addkpiadj.partial' defaultparams='true'>\n\t                <Parameter name='ContractKey' value='#{page.object_key}' />\n\t                <Success>\n\t                    <ReloadTable field='st_kpi_adj' />\n\t                    <Notify message='Adjustment Method added' />\n\t                </Success>\n\t            </ShowDialog>\n            </AddAction>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkl4tjadesza",
+      "title": "Add Menu Link to another App from another App",
+      "desc": "",
+      "code": "import clr\nimport System\nimport ServiceDesk\nclass App(ServiceDesk.SDAppController):\n\tdef Install(self,account):\n\t\tprint 'Installing app'\n\t\t# print 'Installing AppBlocks -helpers for Metadata Maps'\n\t\n\tdef Init(self,account):\n\t\tpass\n\t\t#App initialized\n\t\n\t#add an item to the Asset app's linkcontainer\n\tdef Loaded(self,manager):\n\t\t\n\t\t#get all versions of the asset app that exist in the system\n\t\tapps = manager.GetAllAppVersions('PPM')\n\t\tfor app in apps:\n\t\t\tcontainers = app.GetAllLinkContainers()\n\t\t\tfor container in containers:\n\t\t\t\tif ServiceDesk.Common.Matches(container.ContainerID,'PPM.dashboard'):\n\t\t\t\t\tfor group in container.Groups:\n\t\t\t\t\t\tif ServiceDesk.Common.Matches(group.Name,'#{:Configure}'):\n\t\t\t\t\t\t\tlink = ServiceDesk.SDAccountLink()\n\t\t\t\t\t\t\tlink.Text = 'Checklists'\n\t\t\t\t\t\t\t# link.Visible = '#{authrole.JobCard.canopenapp? and authrole.JobCard.canviewhotjobmap? and appexists.JCIMBridge}'\n\t\t\t\t\t\t\tlink.App = 'PPM'\n\t\t\t\t\t\t\tlink.View = 'checklist.search'\n\t\t\t\t\t\t\tlink.LinkType = ServiceDesk.SDAccountLinkType.AppView\n\t\t\t\t\t\t\tgroup.Links.Add(link)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkljdz1sc9nz",
+      "title": "Alert - Javascript",
+      "desc": "",
+      "code": "alert($L('Are you sure you want to Close this Service Contract?'))\n\n/*$L is used to translate the words*/",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkljw9aarq79",
+      "title": "App Exists in XML",
+      "desc": "",
+      "code": "#{appexists.CWOPMBridge?}",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklk5jyvk29m",
+      "title": "App Url",
+      "desc": "",
+      "code": "#{appurl}\nreturns:\n\n/App/",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklknp2v2m3c",
+      "title": "Attachments Attach for Notifications",
+      "desc": "",
+      "code": "/* In Configuration.xml */\n<AttachmentGenerators>\n      <AttachmentGenerator name='PurchaseOrderItemReport' type='service'  service='PurchaseOrders.PurchaseOrder:UploadAttachment' target_object='PurchaseOrders.PurchaseOrder'\n        >\n        <Description>Upload Attachments</Description>\n      </AttachmentGenerator>\n  </AttachmentGenerators>\n\n/* In Python File */\ndef ExecuteUploadAttachment(self,args,env):\n        rep_args = {'ReportName':'PurchaseOrder.Purchase Order Detail Report'}\n        rep_details = self.account.ExecuteService('PurchaseOrders.PurchaseOrder:CRReportDetails',rep_args,env)\n        args['ReportKey'] = rep_details['ReportKey']\n        data=self.GetAttachment(args,env)\n        return {'Data':data,'AttachmentName':'Purchase_Order_Detail_Report.pdf'}\n\n    def GetAttachment(self,args,env):\n        report = self.account.ExecuteService('CrystalReportsConnector.CRReport:Details',{'ReportKey':args['ReportKey']},env)\n        if report.Count==0:\n            raise Exception('No such report')\n        rn = report['ReportName']\n        rep_def = report['ReportDefinition']\n        rd = self.LoadDoc(rep_def)\n        self.SetDataSource(rd)\n        parameters = self.account.ExecuteService('CrystalReportsConnector.CRReport:Parameters',{ 'ReportKey':args['ReportKey']},env)\n        rparams = { }\n\n            for p in parameters.Rows:\n            rparams[p['ParameterName']] = p\n            parmFields = rd.DataDefinition.ParameterFields\n    \n            isCWOExists = 0\n            isInvExists = 0\n            if self.Account.HasApp('CorrectiveWorkOrder'):\n            isCWOExists = 1\n\n        if self.Account.HasApp('Inventory'):\n            isInvExists = 1\n\n        rep_params = { 'POKey': args['POKey'],'IsCWOAppExists':isCWOExists,'IsInventoryAppExists':isInvExists}\n\n            for p in parmFields:                      \n            if p.IsLinked(): continue\n            p.CurrentValues.Clear()\n            pv = CrystalDecisions.Shared.ParameterDiscreteValue()\n\n            _v = \"\n\n            if p.Name in rparams:\n            pd = rparams[p.Name]\n\n                if ServiceDesk.Common.Matches(pd['ParameterType'], 'datetime'):\n                    _v = ServiceDesk.Common.ParseDateTime(_v)\n\n                if ServiceDesk.Common.Matches(pd['ParameterType'], 'text'):\n                    _v = ServiceDesk.Common.ParseDateTime(_v)\n\n                if ServiceDesk.Common.Matches(pd['ParameterType'], 'date'):\n                    _v = ServiceDesk.Common.ParseDateTime(_v)\n\n                if ServiceDesk.Common.Matches(pd['ParameterType'], 'int'):\n                    _v = ServiceDesk.Common.ConvertToInt(_v)\n\n                if ServiceDesk.Common.Matches(pd['ParameterType'], 'model'):\n                    _v = ServiceDesk.Common.ConvertToInt(_v)\n\n                if ServiceDesk.Common.Matches(pd['ParameterType'], 'boolean'):\n                    _v = ServiceDesk.Common.Matches(_v, 'true')\n\n                if ServiceDesk.Common.Matches(pd['ParameterType'], 'multitext'):\n                    for mv in _v.split(','):\n                        if mv == '': continue\n                        mv_val = CrystalDecisions.Shared.ParameterDiscreteValue()\n                        mv_val.Value = mv\n                        currentValues = p.CurrentValues\n                        currentValues.Add(mv_val)\n                        p.ApplyCurrentValues(currentValues)\n\n                    continue\n\n            if rep_params.ContainsKey(p.Name):\n                _v = rep_params[p.Name]\n\n            pv.Value = _v\n            currentValues = p.CurrentValues\n            currentValues.Add(pv)\n            p.ApplyCurrentValues(currentValues)\n\n        cdfmt = CrystalDecisions.Shared.ExportFormatType.PortableDocFormat\n        ext = '.pdf'\n        ct = 'application/pdf'\n        fn = System.IO.Path.GetTempFileName()\n        b = self.GetBytesFromStream(rd.ExportToStream(cdfmt))\n        return b\n\n    def LoadDoc(self, data):\n        fn = System.IO.Path.GetTempFileName()\n        stream = System.IO.FileStream(fn, System.IO.FileMode.OpenOrCreate)\n        stream.Write(data, 0, data.Length)\n        stream.Flush()\n        stream.Close()\n        stream.Dispose()\n        rd = CREngine.ReportDocument()\n        rd.Load(fn)\n        return rd\n\n    def SetDataSource(self, rd):\n        sample_path = self.App.GetAppPath('Resources', 'sample.rpt')\n        sample = CREngine.ReportDocument()\n        sample.Load(sample_path)\n        for table in rd.Database.Tables:\n            self.TransformTable(table, rd, sample)\n        for section in rd.ReportDefinition.Sections:\n            for robj in section.ReportObjects:\n                if robj.Kind == CREngine.SubreportObject:\n                    sd = robj.OpenSubreport(robj.SubreportName)\n                    for table in sd.Database.Tables:\n                        self.TransformTable(table, rd, sample)\n        rd.Refresh()\n        sample.Dispose()\n\n    def GetBytesFromStream(self, stream):\n        stream.Position = 0\n        length = stream.Length\n        b = System.Array.CreateInstance(System.Byte, length)\n        totalCopied = 0\n        while True:\n            totalCopied += stream.Read(b, totalCopied, length - totalCopied)\n            if totalCopied >= length:\n                break\n        return b\n\n    def TransformTable(self, table, rd, sample):\n        lp = sample.Database.Tables[0].LogOnInfo.ConnectionInfo.LogonProperties\n        linfo = table.LogOnInfo\n        for o in lp:\n            new_np2 = CrystalDecisions.Shared.NameValuePair2(o.Name, o.Value)\n            linfo.ConnectionInfo.LogonProperties.Add(new_np2)\n        linfo.ConnectionInfo.Attributes.Collection.Clear()\n        for o in sample.Database.Tables[0].LogOnInfo.ConnectionInfo.Attributes.Collection:\n            linfo.ConnectionInfo.Attributes.Collection.Add(o)\n        connection = linfo.ConnectionInfo\n        cs = self.Account.DB\n        sb = System.Data.Common.DbConnectionStringBuilder()\n        sb.ConnectionString = cs\n        connection.UserID = sb['user id']\n        connection.Password = sb['pwd']\n        connection.ServerName = sb['data source']\n        connection.DatabaseName = sb['initial catalog']\n        connection.IntegratedSecurity = False\n        table.ApplyLogOnInfo(linfo)\n\n/* Finally add the file to Resources folder in the App */\nFile : sample.rpt",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklkxm69svzg",
+      "title": "Attribute - Add Icon to Dynamic List",
+      "desc": "",
+      "code": "include_icon='true'",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkll6kuvd7fo",
+      "title": "Attribute - Clear the Date Time Field",
+      "desc": "",
+      "code": "can_clear='true'",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkllhdy6ts5l",
+      "title": "Attribute - Clear the Dynamic List Field",
+      "desc": "",
+      "code": "allow_empty='true'",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklloouue6fv",
+      "title": "Attribute - Data hints for Search Page fields",
+      "desc": "",
+      "code": "data-hint-group='searchresults' data-hint-id='sup' data-hint='#{:Supervisor}' data-hint-position='top'",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkllzzq012f8",
+      "title": "Audit Delete",
+      "desc": "",
+      "code": "self.dbmodel.AuditDelete(self.account,args,env) \n\n\nif int(re['HasLinks'])==1:\n    raise ServiceDesk.SDModelValidationException('DeleteGroup',env.L('This Equipment Group in use, can not be delete'))",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklmahynio23",
+      "title": "Blank View Page",
+      "desc": "",
+      "code": "<Form layout='simple' title='#{app.LongName}' roles='*'>\n\t<Section id='title'>\n        <Field type='pageheader' id='#{:Configuration Portal}' />\n    </Section>\n    <Section id='main'>\n    \t<FieldGroup title='Locations'  id='fg_locations'>\n    \t</FieldGroup>\n    </Section>\n</Form>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklmiwmbuq4w",
+      "title": "Blue color button",
+      "desc": "",
+      "code": "<a class='calltoaction' href='#{appurl}/User/user.wizard.create?swp=1'>New User »</a>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklne8elf2z2",
+      "title": "Call another Apps Query Block from another App",
+      "desc": "",
+      "code": "<Query name='FMServiceAll'  page_size='10' base='FM.FMVendorService' attributes='*'>\n  </Query>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklnnrq80z4l",
+      "title": "Celllist",
+      "desc": "",
+      "code": "<FieldGroup id='fb_id' title=' '>\n\t<Field id='cl_id' type='celllist' source='celllist_source' auto_load='true' nodata='#{:No Items Found.}'>\t\t\t\n        <Parameter name = 'celllistparamkey' value = '#{param.key}' auto_bind = 'true' />\n        <CellListHeader >\n            <Cells>\n                <Cell width = '40%' >#{:Expand Duration}</Cell>\n            \t<Cell width = '30%' >#{:Expand User}</Cell>\n                <Cell width = '30%' >#{:Expand Date Time}</Cell>\n            </Cells>\n        </CellListHeader>\n        <Cells>\n            <Cell width = '40%' header = '#{:Expand Duration}'>\n                <![CDATA[\n#{row.StartDateTime|dateformat(services.details.TimeZone)}\n\t\t\t\t]]>\n            </Cell>\n            <Cell width = '30%' header = '#{:Expand User}' >\n                <![CDATA[\n#{row.ExpandUserDisplayName}\t\n\t\t\t\t]]>\n            </Cell>\n            <Cell width = '30%' header = '#{:Expand Date Time}' >\n                <![CDATA[\n#{row.ExpandDateTime|datetimeformat(services.details.TimeZone)}\n\t\t\t\t]]>\n            </Cell>\n        </Cells>\n    </Field>\n</FieldGroup>\n<Service id = 'celllist_source' service = 'ContractManagement.CMVendorContractExpandHistory:All' >\n    <ContractKey >#{param.celllistparamkey}</ContractKey>\n</Service>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklnuryh9sdb",
+      "title": "Celllist - Include Count",
+      "desc": "",
+      "code": "include_count='true'",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklo1rymvd3u",
+      "title": "Celllist Reload For XID",
+      "desc": "",
+      "code": "$XSD('payment_celllist').reloadCurrent();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklo9muoftdk",
+      "title": "Check js code existance",
+      "desc": "",
+      "code": "if(!!$$('permission').exists()) {\n\n            var permission = $SD('permission').getValue();\n\n        }",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkloh1hkhfmm",
+      "title": "Checkbox Field",
+      "desc": "",
+      "code": "<Field type='checkbox' true_value='1' false_value='0' value='1' text='Receive messages by email' title=' ' id='receivemailnotice' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkloo32nlv23",
+      "title": "Clear Dynamic List Field",
+      "desc": "",
+      "code": "$SD('LocationKey').clearItem();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklovi6r1oqp",
+      "title": "Clear List Field",
+      "desc": "",
+      "code": "$SD('AlarmClassKey').clear();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklp25qrodia",
+      "title": "Close Layers or Closed the Partial Page",
+      "desc": "",
+      "code": "ServiceDesk.closeLayers();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklpawe2pmxp",
+      "title": "ConnectedTo",
+      "desc": "",
+      "code": "<ConnectedTo model='PPM.PPMAuditWorkOrder' name='AWO' by='AWOKey:AWOKey' report.visible='true'>\n\t\t<Attribute id='AWONo' />\n\t</ConnectedTo>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklpmlat2nuu",
+      "title": "Convert to TimeZone for Search Pages",
+      "desc": "Python",
+      "code": "def ExecuteAllPy(self,args,env):\n        tz =self.account.GetTimeZoneInfoOrDefault(args['TimeZone'])\n\n        if args['StartDate']!='':\n            dStartDate = args['StartDate']\n            dStartDate_utc=tz.ConvertToUtc(ServiceDesk.Common.ParseDateTime(dStartDate))\n            args['StartDate'] = xstr(ServiceDesk.Common.DateTimeToString(dStartDate_utc))\n\n        if args['EndDateEx']!='':\n            args['EndDate__tz']= args['EndDateEx__tz']\n            dEndDate = args['EndDateEx']\n            dEndDate_utc=tz.ConvertToUtc(ServiceDesk.Common.ParseDateTime(dEndDate).AddMinutes(1440))\n            args['EndDate'] = xstr(ServiceDesk.Common.DateTimeToString(dEndDate_utc))\n\n            # raise Exception(repr(args))\n        return self.account.ExecuteService('CorrectiveWorkOrder.CorrectiveWorkOrder:All',args,env)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklq0718dq8q",
+      "title": "Create a Lucy Event",
+      "desc": "Python",
+      "code": "Create a App.py in your App\nAdd these :\nApp.py\nimport clr\nimport System\nimport ServiceDesk\nimport Newtonsoft\nxstr = ServiceDesk.Common.ConvertToString\nxint = ServiceDesk.Common.ConvertToInt\n\nclass App(ServiceDesk.SDAppController):\n    def Install(self,account):\n        print 'Installing AppBlocks - helpers for Metadata Maps'\n    \n    def RegisterEvent(self,account,event,desc,params):\n        env = ServiceDesk.SDExecutionEnvironment(account)\n        args = {\n            'EventID':event\n            ,'Description':desc\n            ,'App':self.App.Name\n            ,'Parameters':ServiceDesk.Common.SerializeJSON(params)\n        }\n        print 'Contract Management Registering Event',args\n        account.ExecuteService('System.EventRegister:RegisterEvent',args,env)\n    \n    def Init(self,account):\n        env = ServiceDesk.SDExecutionEnvironment(account)\n        self.RegisterEvent(account,'ContractManagement.KPIUpdateRaised','Raised when a there is a PMS KPI update',{'ContractKey':'ContractKey','KPIKey':'KPIKey','StartTime':'StartTime','EndTime':'EndTime'})\n        self.RegisterEvent(account,'ContractManagement.SLAUpdateRaised','Raised when a there is a PMS SLA update',{'ContractKey':'ContractKey','SLAKey':'SLAKey','StartTime':'StartTime','EndTime':'EndTime'})\n\n-----------------------------------------------------------------------\nIn python file:\n\ndef ExecuteKPITriggerOIEvent(self,kpi,env):        \n        try:\n            event_args = {                        \n                'ContractKey':xstr(args['ContractKey'])                        \n                ,'KPIKey':xstr(args['KPIKey'])\n                ,'WorkStartDate':xstr(args['WorkStartDate'])                        \n                ,'WorkEndDate':xstr(args['WorkEndDate'])                        \n            }\n        json = ServiceDesk.Common.SerializeJSON(event_args)\n            event_name='ContractManagement.KPIUpdateRaised'\n            self.account.TriggerEvent(event_name,json,'')\n        except Exception, e:\n            ServiceDesk.Log.WriteEntry('ContractManagement.KPIUpdateRaised', 'Exception: ' + repr(e))\n\ndef WhereYouWantToCallTheTriggerFunction(self,args,env):\n        bla bla\n        bla bla\n        self.account.ExecuteService('ContractManagement.ContractManagement:KPITriggerOIEvent',{},env)   \n\n-----------------------------------------------------------------------\n\nRun\n\nSDM <AccountName> initapp ContractManagement\n\nRun \n\nSDM <AccountName> registerevents\n\n-----------------------------------------------------------------\nTest the Lucy Trigger \n\nGo to Lucy App >>> Events >> Event Register\nCheck in the list whether the registered events shows\n\nCreate a New Model\nSelect the Register Event as Action in the Lucy\nAdd a Model Name\nClick on the Action and tick the 'Debug' to true in the Properties\n\nSave the Model\n\nExecute the Trigger from the app.\nCome back to the Lucy model and check in the Debugger.",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklqi464ya1y",
+      "title": "Delete Icon in a Search Table,Celllist etc",
+      "desc": "",
+      "code": "<Field type='uiaction' image='delete'>\n                        <Action>\n                          <Confirm message='#{:Delete this Adjustment Method?}'>\n                            <OK>\n                              <ExecuteService service = 'ContractManagement.PMSContractKPIAdjustmentMapping:Delete'>\n                                <Parameter name = 'key' value = '#{row.ContractKPIAdjustmentMappingKey}' />\n                                <Success >\n                                  <ReloadTable field = 'st_kpi_adj' />\n                                  <Notify message = 'Adjustment Method removed' />\n                                </Success>\n                              </ExecuteService>\n                            </OK>\n                          </Confirm>\n                        </Action>\n                      </Field>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklqq3imsky0",
+      "title": "Download Data with Instruction tab in EXCEL",
+      "desc": "",
+      "code": "function downloadTemplate() {\n                            ServiceDesk.exportToExcel('Organization','OrgDepartment:DepartmentDetails',{'q':'','OrgBranchKey':0,'filename':'Department Detail Report','bulkimportschema':'Organization.department-bulk'});\n                        }",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklr2729dumu",
+      "title": "Download Excel files from Resources",
+      "desc": "",
+      "code": "function LoadSampleTemplate(){\n            var sampletemplate = $SD('sampletemplate').getValue();\n            var templatename = sampletemplate+'.SampleTemplate.xlsx';\n            var url = ServiceDesk.resourceUrl('SAASConfigPortal/SampleSheets/' + templatename)      \n            var args = {\n                '__format__':'binary'\n                ,'__sc__':__token__\n            };\n            url += '?' + $.param(args);\n            location.href = url;                 \n        }",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklrbnyf5wom",
+      "title": "Dynamically create Fields",
+      "desc": "",
+      "code": "<FieldGenerator source='loadlocationtypes'>\n                        <Header>\n                            <![CDATA[\n                                <FieldList>\n                            ]]>\n                        </Header>\n                        <Template>\n                            <![CDATA[\n                                <FieldLine title='Site'>\n                                    <Field visible='true' title='Site' type='list' value='' validate='false' source='sites' key_field='ObjectKey' text_field='ObjectID' id='SiteKey'></Field>\n                                    <Field id='SiteKeyAdd' type='uiaction' image='add'>\n                                        <Action>\n                                            <UIScript>\n                                            #{cdatastart}\n                                            AddSite('Site');\n                                            #{cdataend}\n                                            </UIScript>\n                                        </Action>\n                                    </Field>\n                                    <FieldLine css='SiteKeyLoader lt throbber invisible' />\n                                </FieldLine>\n                            ]]>\n                        </Template>\n                        <Footer>\n                            <![CDATA[\n                                </FieldList>\n                            ]]>\n                        </Footer>\n\n                    </FieldGenerator>\n\n                    <Service id='loadlocationtypes' service='System.UserGroup:CustomDashboardsForUser' serialize='true'>\n                        <UserKey>#{auth.UserKey}</UserKey>\n                    </Service>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklrkn1wojbm",
+      "title": "Dynamiclist",
+      "desc": "",
+      "code": "<Field type='dynamiclist' key_field='AssetCategoryKey' text_field='AssetCategoryID' _object_type='Asset' value='' service='Location.ObjectLayout:AssetCategoryList' allow_empty='true' id='AssetCategoryKey' title='Asset Category'/>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkls4quofgzl",
+      "title": "Edittable",
+      "desc": "",
+      "code": "<FieldGroup title='Assets to Move'>\n    <SubTitle>\n        <![CDATA[\n            <a href='#' onclick='ServiceDesk.loadSearchListInPopup(this,'Asset','popupassetsearch',{lk:#{param.lk}},addAsset);return false;' class='icon-add'></a>\n        ]]>\n    </SubTitle>\n    <Field  type='edittable' allow_delete='true' allow_duplicates='false' id='selectedassets' title='Assets' key_field='AssetKey'  format='csv'>\n        <Column  width='6' header='Assets' field='AssetID' />\n        <Column  width='6' header='' field='' />\n        <Column  width='6' header='' field='' />\n    </Field>\n</FieldGroup>\n<Script>\n    <![CDATA[                   \n        function addAsset(obj,hr) {\n            var asset = obj.AssetKey;\n            var assetid = obj.AssetID;\n            if (!asset) return;\n            var asset_table = $SD('selectedassets');\n            asset_table.addObject({'AssetID':assetid,'AssetKey':asset});                \n            ServiceDesk.closePopup(hr);             \n            return true;\n        }\n    ]]>\n</Script>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklsf8darlq9",
+      "title": "Edittable - Add Empty Fields",
+      "desc": "",
+      "code": "<FieldGroup title='Sub-task Status' id='fg_subtaskstatus'>\n\t\t\t    <SubTitle>\n\t\t\t        <![CDATA[\n\t\t\t            <a href='#' onclick='addSubTaskStatusRow();return false;' class='icon-add'></a>\n\t\t\t        ]]>\n\t\t\t    </SubTitle>\n\n\t\t\t\t<Field  type='edittable' allow_delete='true' allow_duplicates='true' id='et_subtaskstatus' title='' key_field='sskey'  format='csv'>\n\t\t\t        <Column  width='6' header='Status' field='Status' id='et_id_SubTaskStatus'/>\n    \t\t\t</Field>\n\t\t\t</FieldGroup>\n\n<Script>\n<![CDATA[\n    function addSubTaskStatusRow() {\n\t\t\t\t$SD('et_subtaskstatus').setColumn('et_id_SubTaskStatus',EditTable.ColumnTypes.TextColumn({\n                    'key_field':'Status'\n                    ,'id':'subtaskstatus'\n                })); \n\t\t\t\tvar et_subtaskstatus = $SD('et_subtaskstatus');\n\t\t\t\titemlist = {};\n\t\t\t\titemlist.Status = '';\n\t\t\t\tet_subtaskstatus.addObject(itemlist);\n\t\t\t\t\n\t\t\t}\n\n]]>\n</Script>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklsor1kdsg4",
+      "title": "Edittable - Show duplicate validation message",
+      "desc": "",
+      "code": "duplicate.message='#{:This technician has already been added}'\n\n<Field  type='edittable' allow_delete='true' allow_duplicates='false' id='selectedtechs' title='Technicians' key_field='ObjectKey'  duplicate.message='#{:This technician has already been added}'>\n    <Column header='Technician' field='ObjectID' />\n    <Column header='' field='ObjectType' id='ObjectType' visible='false' />\n</Field>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklt02tada3m",
+      "title": "ExecuteQuery in Python for SQL Query",
+      "desc": "",
+      "code": "sql='''\n\tselect * from LockerMaster \n\twhere AccessCardKey=@OldAccessCardKey\n'''\ndtb = self.account.DBService().ExecuteQuery(sql,args)\nif dtb.Rows.Count>0:\n\tfor a in dtb.Rows:\n\t\targs['AssetKey']=a['AssetKey']\n\t\targs['LockerID']=a['LockerID']\n\t\tb= self.account.ExecuteService('Locker.LockerTransactionQueue:Create',args,env)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklt8wmxai8d",
+      "title": "executeService in Javascript",
+      "desc": "",
+      "code": "ServiceDesk.executeService('ContractManagement','CMVendorContract:CRReportDetails',{ReportName:rpname},function(data){\n                        if (data.length>0) {\n                \t        // Do whatever here\n                        }\n                        else {\n                            alert('Report Not Found : '+rpname);\n                        }\n\n                    }\n                    ,function(err) {\n                        alert(err);\n                    });",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkltglpkl2xj",
+      "title": "Field - DateTime",
+      "desc": "",
+      "code": "<Field type='datetime' value='#{now}' xid='ShiftStartTime' title='Shift From' can_clear='true' timezone='#{auth.TimeZone}' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklto5ybn0hd",
+      "title": "Field - List from service",
+      "desc": "",
+      "code": "<Field type='list' text_field='ObjectID' key_field='ObjectKey' source='sites' value='' id='SiteKey' title='Site' unselected_text='Any' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkltyz22b0j0",
+      "title": "Field - List from Static Files",
+      "desc": "",
+      "code": "<Field type='list' text_field='Text' key_field='Value' id='RLType' title='Servicing Group' source='#{app.PPM.StaticData.RouteTypes}' unselected_text='Any' value=''/>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklu7ambrj06",
+      "title": "Field - Multilist",
+      "desc": "",
+      "code": "<Field type='multilist' id='Status' title='Status' key_field='Status' unselected_text='#{:Any}'  text_field='Status' simple_source='Source Here' />\n\n <Filter attributes='OperationalStatus' optional='true' operator='multiple'/>\n\n\nTake from source:\n\n<Field type='multilist' id='ObjectType' title='Object Type' key_field='ObjectType' unselected_text='#{:Any}'  text_field='ObjectTypeAlias' source='ObjectTypes' />\n</FieldList>  \n\n <Service id='ObjectTypes' service='ToDoList.ToDoListObjectView:ObjectTypeDetails' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklui8u0kqv2",
+      "title": "Field - popupsearch-Get Locations by one click",
+      "desc": "",
+      "code": "<SubTitleFields>\n                      <Field type='popupsearch' class='icon-add' parameters='' callback='addLocation' app='Location' text='Add Location' visible='#{authrole.canaddlocationtocostcentres?}' />\n                    </SubTitleFields>\n\n<Script>\n      <![CDATA[\n         function addLocation(obj,hr) {\n            console.log(obj.LocationKey)\n            var params = {};\n            params['CostCentreKey']=QS('key');\n            params['LocationKey']=obj.LocationKey;\n\n            ServiceDesk.executeService('Organization','OrgCostCentreLocationMap:Create',params,function(data){\n\n            return true;\n        }\n            ,function(err)\n        {\n            alert(err);\n        }); \n         }   ]]>\n        </Script>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklv0balelln",
+      "title": "Field : Delete link",
+      "desc": "",
+      "code": "<Field  type='deletelink' can_hide='false' model='IBMSSchedule.IBMSSchedule' dialog='true' key='#{param.key}' text='Delete this Schedule' next='IBMSSchedule/search' visible='#{authrole.candeletescheduledetails?' delete_title='Delete Schedule: #{services.details.ScheduleName}' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklw066gzgdr",
+      "title": "Field - uiaction - DataEntry",
+      "desc": "",
+      "code": "<Field visible='#{container.current?}' type='dataentry' xid='dataentryID'  title='#{:Title goes here}' service='ServiceToDoUpdateCreateDelete'>\n\n    <Field type='uiaction' text='#{:Button Title goes here}' id='assign_btn' >\n\n        <Action>\n\n            <SaveEdit xfield='dataentryID' >\n\n                <Success>\n\n                    <Notify message='#{msg.cwo.user-scheduleassigned}' />\n\n                    < UIScript >\n\n                        < ![CDATA[\n\n                            if (!!$$('hold_btn').exists()){\n\n                ServiceDesk.hideField('hold_btn');\n\n            }\n\n            ServiceDesk.hideField('reassign_btn');\n\n                            $(ServiceDesk).bind('process.statechange', function(){ location.reload(); });\n\n                        ]]>\n\n                    </ UIScript >\n\n                </ Success >\n\n            </ SaveEdit >\n\n        </ Action >\n\n    </ Field >\n\n</ Field >\n\n\n\n< Service id = 'ServiceToDoUpdateCreateDelete' service = 'CorrectiveWorkOrder.CorrectiveWorkOrder:UpdateTechnician' >\n   \n       < key >#{param.key}</key>\n\n    < IsTechAssign > 1 </ IsTechAssign >\n   \n   </ Service >",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklw686k6y0m",
+      "title": "Field - Warning",
+      "desc": "",
+      "code": "<Field type='warning' text='#{: This Asset is mobile}' visible='#{services.details.IsMobile?}' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklwkfyclv49",
+      "title": "FieldSection - Hook",
+      "desc": "",
+      "code": "/*Place where the field should be*/\n<FieldSection viewhook='vh_sidebarlink' />\n\n /*From where the tab should be injected <configuration.xml>*/\n <Hook target_object='ContractManagement' target_view='pms.update_score' viewhook='vh_sidebarlink' view='sidebarlinktoawo.fieldsection' /> \n\n/*sidebarlinktoawo.fieldsection view file which is in the hooking app*/\n<Form>\n    <Field type='sidebarlink' app='PPM' view='auditworkorder.view?key=#{param.awokey}' text='Back to Audit Work Order' visible='#{param.fo?}'/>\n</Form>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklwvdqhjj16",
+      "title": "FieldSwitch",
+      "desc": "",
+      "code": "<FieldSwitch valid='#{if param.ak|int>0 then [true] else [false]}' title='Asset' >\n    <True>\n        <!-- Do what ever here when this is true -->\n    </True>\n    <False>\n        \n        <!-- Do what ever here when this is false -->\n\n    </False>\n</FieldSwitch>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklxkn2gwqmq",
+      "title": "FW - fullaccounturl",
+      "desc": "",
+      "code": "#{fullaccounturl}\nEx: \n<QrCode>#{fullaccounturl}/Apps/Visitor/visitorpreapprovedinvitation?key=</QrCode>\n\n<Parameter name='url' value='#{fullaccounturl}' />\n\n<img src='#{qrcode(concat(fullaccounturl,[/Apps/Asset/view?key=],param.key))}' width=\"100\" height=\"100\"  />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqklxxzh6wxie",
+      "title": "Get Server Account URL",
+      "desc": "",
+      "code": "url = Account.GetServerAccountUrl()",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkmq7lyup0u0",
+      "title": "getFieldValue",
+      "desc": "",
+      "code": "ServiceDesk.getFieldValue('edit_pointType');",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkmqdv1x3wvw",
+      "title": "getValue for SD",
+      "desc": "",
+      "code": "var app = $SD('accesscard').getValue();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkmqj52cxnip",
+      "title": "getValue for XSD",
+      "desc": "",
+      "code": "var a = $XSD('InstalledLocInSearch').getValue();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkn6iaudyhlu",
+      "title": "Hidden Field",
+      "desc": "",
+      "code": "<Field type='hidden' id='FrequencyLable' value='25' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkn73f99cluh",
+      "title": "Hide Field, Show Field",
+      "desc": "",
+      "code": "ServiceDesk.showField('edit_pointaddrese_t');\n            ServiceDesk.hideField('edit_customddress');",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkn7e5p67a9m",
+      "title": "HTML - Banner",
+      "desc": "",
+      "code": "<Field type='html'>\n\t\t\t\t\t<![CDATA[\t\t\t\t\t\t \t\t\t\t\t\n\t\t\t\t\t    <div class=\"hidden_banner\">\t\t\t\t    \t\t\t\t\t        \t\t\n\t\t\t\t\t       \t    #{:This User is Blacklisted.}\t\t\t\n                        </div>\t\t\t    \n\t\t\t        ]]>\n\n                </Field>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkn7kvxxuxgx",
+      "title": "HTML : If Statements",
+      "desc": "",
+      "code": "<Field type='html' title='Disposal Date'>\n\t            <![CDATA[\n                    ${if services.details.DisposalDate?}\n                        #{services.details.DisposalDate|dateformat}\n                    ${else}\n                        <span class='nodata'>Not configured</span>\n                    ${end}\n                ]]>\n            </Field>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkn88fx2huc8",
+      "title": "Include Activities Link",
+      "desc": "",
+      "code": "{% include System.activity.fragment %}",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqknatth9bvcs",
+      "title": "Javascript - Clear Edittable",
+      "desc": "Javascript",
+      "code": "var a = $SD('et_headers')\n\t\t\t            var tableHeaderRowCount = 1;\n\t\t\t            var table = document.getElementById('et_headers__table');\n\t\t\t            var rowCount = table.rows.length;\n\t\t\t            for (var i = tableHeaderRowCount; i < rowCount; i++) {\n\t\t\t                a.deleteRow(0, false);\n\t\t\t                a.reload();\n\t\t\t                a.dataChanged();\n\t\t\t            }",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqknbfny7i05v",
+      "title": "Javascript - Assign Objects to Dynamic list Object",
+      "desc": "",
+      "code": "var lobj = {'ObjectKey':data[0]['LocationKey'],'ObjectType':'Location','ObjectID':data[0]['FullName']};\n                                                $SD('InstalledLocInSearch').setObject(lobj);",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqknbqjxp4rmz",
+      "title": "Javascript - Flash Notifications",
+      "desc": "",
+      "code": "ServiceDesk.flashNotification('Asset Marked Successfully');",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqknc13xo1y47",
+      "title": "Javascript - Get Object Type from selected the Object",
+      "desc": "",
+      "code": "$SD('owner').getObject().ObjectType",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqknclzxya0z7",
+      "title": "Javascript - Get UTC DateTime",
+      "desc": "",
+      "code": "const utcStr = new Date().toUTCString();\n                    ServiceDesk.getField('ScheduleDate').setDate(ServiceDesk.parseDateTime(utcStr));",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqkncxq6hwe6a",
+      "title": "Javascript - Reload Edittable",
+      "desc": "",
+      "code": "$SD('items').reload();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvk1j0pwehj",
+      "title": "JavaScript - Reload Search Tables",
+      "desc": "",
+      "code": "__SearchTables__['safety_pro'].reloadCurrent();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvk9hy2jfmd",
+      "title": "Javascript - Reload When Group Editor Save called",
+      "desc": "",
+      "code": "if(!!$$('t1').exists())\n                {\n                  $SD('t1').onFieldSaved(function(){\n                    \n                    //url='#{appurl}/#{app}/view?key='+QS('key')+'#!tabs.tab0=1';\n                    //alert(url)\n                    //location.href(url)\n\n                  });\n                }",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvkpecifela",
+      "title": "Javascript - Reset Code",
+      "desc": "Config Reset",
+      "code": "javascript:document.createElement('img').src='/config/reset';void(0);",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvkx78h8ct6",
+      "title": "Javascript - SetDate",
+      "desc": "",
+      "code": "ServiceDesk.getField('edit_disposaldate').setDate(ServiceDesk.parseDateTime(disdate));",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvl3s4pajm7",
+      "title": "Javascript - SetDate and SetTime",
+      "desc": "",
+      "code": "datetimes = ServiceDesk.gatherFields(['FromDate','ToDate']);\n                    starttime = datetimes['FromDate__data'];\n                    starttime_obj = ServiceDesk.parseDateTime(starttime);\n                    starttime_obj.setHours(starttime_obj.getHours()+2);\n\n                    $SD('ToDate').setDate(starttime_obj);\n                    $SD('ToDate').setTime(starttime_obj);",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvle2kz9vjy",
+      "title": "Javascript - Show error message on Orange color Box",
+      "desc": "",
+      "code": "ServiceDesk.signalError('AccessCardNumber',($L('Oops. You forgot to fill this.')));      \nServiceDesk.clearError('SiteKey');",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvlx706dknz",
+      "title": "Javascript : Get Account URL",
+      "desc": "",
+      "code": "accounturl =window.location.href;\n                var arr = accounturl.split(' / ');\n                var result = arr[0] + '//' + arr[2]\n                document.getElementById('copyme').value = result;",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvnktgbda6v",
+      "title": "List Field - Simple Source",
+      "desc": "",
+      "code": "<Field type='list' title='Month' simple_source='{'1':'1st Month','2':'2nd Month','3':'3rd Month','4':'4th Month','5':'5th Month','6':'6th Month','7':'7th Month','8':'8th Month','9':'9th Month','10':'10th Month','11':'11th Month','12':'12th Month'}' value=''  id='annualbilldate' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqlvnxwci410f",
+      "title": "Load Partial Page",
+      "desc": "",
+      "code": "ServiceDesk.loadRemoteFormInLayer('CorrectiveWorkOrder','cwoprintsection.partial',{'CWOKey':QS('key')},function(data){      \n            \t        \t    //Do whatever here\n            \t   \t\t\t        });",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqni959djnyl0",
+      "title": "How to Install Telnet From Command Prompt",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [
+        {
+          "label": "Click Here for the Video",
+          "url": "https://www.youtube.com/watch?v=rggUmUlEsjI"
+        }
+      ],
+      "steps": [
+        {
+          "id": "mqni8fc2xdh0x",
+          "title": "Open Run and Type",
+          "content": "pkgmgr /ui:'TelnetClient'",
+          "type": "cmd"
+        },
+        {
+          "id": "mqni8u9cm789u",
+          "title": "",
+          "content": "Click on Ok button and Restart the Computer",
+          "type": "cmd"
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1782029332705
+    },
+    {
+      "id": "mqni78ex8c1dl",
+      "title": "How to Install Telnet From Control Panel",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [
+        {
+          "label": "Click here for Video",
+          "url": "https://www.youtube.com/watch?v=rggUmUlEsjI"
+        }
+      ],
+      "steps": [
+        {
+          "id": "mqni5yr4b18c8",
+          "title": "",
+          "content": "Go to Control Panel",
+          "type": "cmd"
+        },
+        {
+          "id": "mqni6e1ca1dwh",
+          "title": "",
+          "content": "Click on Programs",
+          "type": "cmd"
+        },
+        {
+          "id": "mqni6hdsjto0p",
+          "title": "",
+          "content": "Click on Turn windows features on or off link under Programs and Features.",
+          "type": "cmd"
+        },
+        {
+          "id": "mqni6j7cdoyo5",
+          "title": "",
+          "content": "From Windows Feature window Select Telnet Client and Check it",
+          "type": "cmd"
+        },
+        {
+          "id": "mqni6mm10nuwh",
+          "title": "",
+          "content": "Click on OK button and wait until it installs",
+          "type": "cmd"
+        },
+        {
+          "id": "mqni6p94uqr4b",
+          "title": "",
+          "content": "After Install Click on Close button.",
+          "type": "cmd"
+        },
+        {
+          "id": "mqni6s1tqlbjx",
+          "title": "",
+          "content": "To Apply the setting you may need to Restart the computer",
+          "type": "cmd"
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1782029243481
+    },
+    {
+      "id": "mqnh1uk1xcp0f",
+      "title": "Parameters Required",
+      "desc": "",
+      "code": "ServiceDesk.parametersRequired('ProblemTypeKey',function(params) {\n                     params['ServiceCategoryKey'] = $SD('ServiceCategoryKey').getValue();     \n                });",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh216gpqarn",
+      "title": "parametersRequired for XID",
+      "desc": "",
+      "code": "$XSD('AssetCategoryKey').parametersRequired(function(params) {\n                                \n                                params['LayoutKey'] = llk;\n                                \n                            });",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh2ejccvdoh",
+      "title": "Pyscript - Read from File",
+      "desc": "Pyscript",
+      "code": "def GetInitFile(file):\n    return System.IO.Path.Combine(LocalPath,file)\n\nServiceDesk.Common.ReadFromFile(GetInitFile('EULA.txt'))",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh2ml4n2pqv",
+      "title": "Pyscript - Read from Registry",
+      "desc": "Pyscript",
+      "code": "db = ServiceDesk.BasicDBService(ServiceDesk.Configuration.ReadValue('DB'))",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh2uwo6c7n5",
+      "title": "Pyscript - Read SQL files and Insert to DB",
+      "desc": "Pyscript",
+      "code": "def GetInitFile(file):\n    return System.IO.Path.Combine(LocalPath,file)\n\npath1 = GetInitFile('dbo.CRReports.Table.sql')\n\nAccount.DBService().ExecuteScalar(ServiceDesk.Common.ReadFromFile(path1),{})",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh47iaf39k2",
+      "title": "Pyscript - Read the DB from Registry and Update DB",
+      "desc": "Pyscript",
+      "code": "db = ServiceDesk.BasicDBService(ServiceDesk.Configuration.ReadValue('DB'))\n\n    sql = 'exec UpdateAccountSettings @account, @name, @value'\n    db.ExecuteQuery(sql, {\n        'account': Account.AccountID,\n        'name': 'Created',\n        'value': ServiceDesk.Common.ConvertObjectToString(System.DateTime.UtcNow, {})\n    })",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh4eygdopdx",
+      "title": "Pyscript - Update/Insert/Delete query by ExecuteScalar",
+      "desc": "Pyscript",
+      "code": "up_notify = '''\n       Update table set p=1\n    '''\n    Account.DBService().ExecuteScalar(up_notify,{})",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh53h45fpzs",
+      "title": "Python - Activity Logs",
+      "desc": "Python",
+      "code": "model = self.account.LoadModelForObjectType('Asset.Asset')\nmodel.RecordActivity(self.account, 'Asset moved', ServiceDesk.Common.ConvertToInt(args['AssetKey']), env.UserKey)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh5c7kyst7a",
+      "title": "Python - Add Days",
+      "desc": "Python",
+      "code": "end_dt.AddDays(1)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh5kr4kq8hf",
+      "title": "Python - Add Minutes",
+      "desc": "Python",
+      "code": "System.DateTime.UtcNow.AddMinutes(-1)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh5t3kaj6ec",
+      "title": "Python - Call API",
+      "desc": "Python",
+      "code": "def ExecuteCallAPITest(self,args,env):\n        x={'ak':xint(args['AssetKey']),'paramname':args['Parameter'],'value':args['Value']}\n        #x={'ak':1023,'paramname':'ABC','value':5}\n        args1={}\n        args1['URL']='http://127.0.0.1/api/GetSensorStatus/'\n        args1['Param']=x\n        args1['Method']='GET'\n        args1['APIKey']=''\n        self.ExecuteCallAPI(args1,env)\n\n\n    def ExecuteCallAPI(self,args,env):\n        try:\n            _url=args['URL']\n            _param=args['Param']\n            _method=args['Method']\n            _apikey=args['APIKey']\n            \n            json = ServiceDesk.Common.SerializeJSON(_param)\n            ContentType='application/json'\n\n            restRequest = RestSharp.RestRequest()\n            if _method=='GET':\n                restRequest.Method = RestSharp.Method.GET\n            elif  _method=='POST':\n                restRequest.Method = RestSharp.Method.POST\n            elif  _method=='PATCH':\n                restRequest.Method = RestSharp.Method.PATCH\n            elif  _method=='DELETE':\n                restRequest.Method = RestSharp.Method.DELETE\n\n            restRequest.AddParameter(ContentType,json,RestSharp.ParameterType.RequestBody)\n            restRequest.AddHeader('Authorization',_apikey)\n            client = RestSharp.RestClient(System.Uri(_url))\n            restResponse = client.Execute(restRequest)\n            if _method=='GET':\n                if int(restResponse.StatusCode) > 399:\n                    msg = xstr(restResponse.Content)\n                    print(msg)\n                    error = ''\n                    try:\n                        json = Newtonsoft.Json.Linq.JObject.Parse(msg)\n                        error = xstr(json['error']['code'])\n                    except Exception,e:\n                        raise Exception('Sync failed.www')\n                    raise Exception('Sync failed.')\n                jsonResponse = Newtonsoft.Json.JsonConvert.DeserializeObject(restResponse.Content)\n            else:\n                sc = int(restResponse.StatusCode)\n                if sc == 0 or sc > 399:\n                    ServiceDesk.Log.Error('AutomatedWorkFlow','Call API Error at error code : ' + xstr(restResponse.StatusCode)+':'+xstr(restResponse.ErrorMessage)+':'+xstr(json))\n\n        except Exception, e:\n            ServiceDesk.Log.Error('AutomatedWorkFlow', 'Call API Error:' + repr(e))",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh610xp80zq",
+      "title": "Python - Check App Role",
+      "desc": "Python",
+      "code": "if env.UserSession.LoginDetails.HasRole('Asset','canveditspecification'):",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh68cg3dwg4",
+      "title": "Python - Check HasApp",
+      "desc": "Python",
+      "code": "if self.Account.HasApp('IBMS'):",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh6mv4zlxe3",
+      "title": "Python - Check Palindrome of a String",
+      "desc": "Python",
+      "code": "A palindrome is a number of a string that looks the same when it gets reversed\n\ntext = 'level'\n        ispalindrome = text == text[::-1]\n        print ispalindrome\n\nOutput :\nTrue",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh787si7zty",
+      "title": "Python - Convert Dict to Dictionary",
+      "desc": "Python",
+      "code": "parse_args = System.Collections.Generic.Dictionary[str,str]()\nparse_args['IQL']= xstr(args['iql'])\nparse_args['LoggedUserKey']= xstr(args['UserKey'])",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh7g3ce5w9c",
+      "title": "Python - Convert String to Json Format",
+      "desc": "Python",
+      "code": "app = args['app']\n\nappJson = Newtonsoft.Json.Linq.JObject.Parse(app)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh7nmx6beow",
+      "title": "Python - Convert to Date Time",
+      "desc": "Python",
+      "code": "xdatetime = ServiceDesk.Common.ConvertToDateTime",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh7y8gei7uv",
+      "title": "Python - Convert to Float",
+      "desc": "Python",
+      "code": "xfloat = ServiceDesk.Common.ConvertToFloat",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh8chkgyu10",
+      "title": "Python - Convert to Int",
+      "desc": "Python",
+      "code": "xint = ServiceDesk.Common.ConvertToInt",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh8jtsss90c",
+      "title": "Python - Convert to String",
+      "desc": "Python",
+      "code": "xstr= ServiceDesk.Common.ConvertToString",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh8ymhpudkv",
+      "title": "Python - Delete FW Query",
+      "desc": "Python",
+      "code": "x = self.dbmodel.Delete(self.account,args,env)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh984wfdjdm",
+      "title": "Python - Delete SQL Query",
+      "desc": "Python",
+      "code": "sql='''\n\t\t\tdelete from AccessCardActivation\n\t\t'''\n\t\tdtb=self.account.DBService().ExecuteQuery(sql,args)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh9jwo6te7l",
+      "title": "Python - Encrypt Data",
+      "desc": "Python",
+      "code": "login_pwd = ServiceDesk.AuthMod.HashPassword('password')",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnh9sx5dz9be",
+      "title": "Python - Execute Lucy Models via Python",
+      "desc": "Python",
+      "code": "def ExecuteCallLucyModel(self,args,env):\n    self.ExecuteLucyModel('SAASAccountManager','NewDemoRequestViaEmailValidation',args,env)\n\ndef ExecuteLucyModel(self,model,action,args,env):\n    args['Instance.Action'] = action\n    args['Instance.Name'] = model\n    return self.account.ExecuteService('System.MetadataMap:ExecuteAction',args,env)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnha0ltxvt22",
+      "title": "Python - ExecuteService",
+      "desc": "Python",
+      "code": "self.account.ExecuteService('Asset.AssetCategory:Create',{'AssetCategoryID':AssetCategoryID},env)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnha8ygsj6qt",
+      "title": "Python - ExecuteService - For Loop for FW Query",
+      "desc": "Python",
+      "code": "contract_item_details = self.account.ExecuteService('ContractManagement.PMSContractPaymentSLAMapping:All_Details',{'ContractKey':contractKey,'PaymentItemNo':itemKey},env)\n            if contract_item_details.Count > 0:\n                for item in contract_item_details.Rows:\n                    slaKey = xint(item['SLAKey'])",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhah81b8ex3",
+      "title": "Python - ExecuteService For Loop",
+      "desc": "Python",
+      "code": "ppmcmdetails=self.account.ExecuteService('PPMCMBridge.PPMCMAMWOSLAMap:DistinctContractKeys',{'AMWOKey':amwokey},env)\nif ppmcmdetails.Count>0:\n    for cm in ppmcmdetails.Rows:\n    \tviskey = cm['VisitorKey']",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhb2lkpl6he",
+      "title": "Python - Get negative elements in an array",
+      "desc": "Python",
+      "code": "Get negative elements in list with List Comprehension\n\nmy_list=[1,3,-5,6,3,0]\n        new_list = [item for item in my_list if item<0]\n        print new_list\n\nOutput : \n[-5]",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhbybcn6tf4",
+      "title": "Python - Get ObjectKey after Create to another Service",
+      "desc": "Python",
+      "code": "sr = env.GetTempData('ParentServiceResult')\n        CWOKey = sr['ObjectKey']",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhc6u848gpo",
+      "title": "Python - GUID",
+      "desc": "Python",
+      "code": "sGUID = System.Guid.NewGuid().ToString()",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhcss8ge0gs",
+      "title": "Python - Read Static Data",
+      "desc": "Python",
+      "code": "statdata=self.Account.LoadApp('Asset').GetStaticData('DepreciationMethods')\nfor row in statdata.Rows:\n    depm = row['Method']\n    if depm==depmeth:\n        fldep=1",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhd98wzpnnw",
+      "title": "Python - Replace Text in Text file",
+      "desc": "Python",
+      "code": "def ExecuteGetDemoValidateEmail(self,args,env):\n    app = self.account.LoadApp('Billing')    \n    path = System.IO.Path.Combine(app.GetAppPath(), 'mails', 'email-validation-unauthorized.txt')\n    msg = ServiceDesk.Common.ReadFromFile(path)\n    msg = msg.replace('|LINK|', self.account.GetServerAppUrl('Billing', 'validate-unauthorize-email'))\n    msg = msg.replace('|FIRSTNAME|', FirstName)\n\n    return {'msgBody':msg,'Subject':'iviva.facility Email Validation Required'}",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhdiggmbezs",
+      "title": "Python - Return as Python Dictionary",
+      "desc": "Python",
+      "code": "HubSpotParams['a'] = args['a']\n        HubSpotParams['bn'] = 'b'\n        HubSpotParams['c'] ='b'\n\n        # json = ServiceDesk.Common.SerializeJSON(HubSpotParams)\n        c =[]\n        c.append(HubSpotParams)\n        json = ServiceDesk.SDPythonDictListServiceResult()\n        json.DictList = c",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhdrbmf1f8g",
+      "title": "Python - Simple Bulk Import",
+      "desc": "Python",
+      "code": "def ExecuteBulkAssetCategories(self,args,env):\n        key1=''\n        for key in ['Asset Category']:\n            if not args.ContainsKey(key):\n                key1=key1+','+key                \n        if key1!='':\n            key1=key1[1:]\n            raise Exception(key1 +' '+'column is missing')\n\n        asscat=xstr(args['Asset Category'])\n\n        if asscat=='':\n            raise ServiceDesk.SDModelValidationException('Error',env.L('ast.bulk.assetcategory'))\n\n        if len(asscat)>255:\n            raise ServiceDesk.SDModelValidationException('Error',env.L('ast.assetcategory.length'))\n\n        sql_category='''\n            select * from dbo.AssetCategoryMaster where AssetCategoryID=@category\n        '''\n        catdata = self.Account.DBService().ExecuteQuery(sql_category,{'category':asscat})\n        if catdata.Rows.Count==0:\n            cat={}                \n            cat['AssetCategoryID']=asscat\n            self.account.ExecuteService('Asset.AssetCategory:Create',cat,env)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhe0q9izhr7",
+      "title": "Python - Try Catch",
+      "desc": "Python",
+      "code": "try:\n    ............\nexcept Exception,e:\n    ErrorMsg = repr(e)\n    raise Exception('isBoth^' + ErrorMsg)",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnheee8yq5ru",
+      "title": "Python ContainsKey",
+      "desc": "Python",
+      "code": "if args.ContainsKey('AssetCategoryKey'):",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhenmhog2jr",
+      "title": "Python Error Message Handler",
+      "desc": "Python",
+      "code": "raise ServiceDesk.SDModelValidationException('ErrorID',env.L('ast.validateparentasset'))\n                \n                /*env.L used for translate matters, and 'ast.validateparentasset' is code which is written in specific apps Message.xml*/",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhfb3d4ga0r",
+      "title": "Python Get Now Date Time and UTC Date Time",
+      "desc": "Python",
+      "code": "System.DateTime.Now\n\nSystem.DateTime.UtcNow",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhfk08bml1t",
+      "title": "Python Logs",
+      "desc": "Python",
+      "code": "ServiceDesk.Log.WriteEntry('LDAP Sync Issue', 'Invalid data for Profile Image Name')",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhfztc68coq",
+      "title": "Query Block - CustomFilter",
+      "desc": "",
+      "code": "<CustomFilter enabled='#{param.ExpiredContracts?}'>\n\t      \t    <Attribute id='ContractKey' alias='ContractKey' />\n\t      \t    <Sql>\n\t      \t\t    <![CDATA[\n\t              \t    (@ExpiredContracts=1 and #{ContractKey} in (select ContractKey from CMVendorContractMaster where ExpiryDate<GETUTCDATE()) or @ExpiredContracts=0)\n\t          \t    ]]>\n\t      \t    </Sql>\n\t        </CustomFilter>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhgbhdm3q93",
+      "title": "Query Block - DateTimeFilter",
+      "desc": "",
+      "code": "<DateTimeFilter attribute='ExpiryDate' dateonly='true' var='ExpiryDate' optional='true' operator='lte' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhgiihsahqm",
+      "title": "Query Block - Filter",
+      "desc": "",
+      "code": "<Filter attribute='ContractKey' optional='true' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhgoi8njpym",
+      "title": "Query Block - Location Filter",
+      "desc": "",
+      "code": "<LocationFilter attribute='LocationKey' optional='true' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhhtl4vm0j2",
+      "title": "Query Block - Sort",
+      "desc": "",
+      "code": "<Sort attribute='StartDate' order='descending' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhhzohi1frn",
+      "title": "Query Block - SQL",
+      "desc": "",
+      "code": "<Query name='CRReportDetails'>\n                                        <Sql>\n                                            <![CDATA[\n                                                  select * from CRReports where ReportName = @ReportName\n                                            ]]>\n                                        </Sql>\n                                    </Query>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhi6o1jpwu3",
+      "title": "Query Block - TextFilter",
+      "desc": "",
+      "code": "<TextFilter var='q' attributes='ContractID,Description' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhif8o29bvv",
+      "title": "Quick Info in HTML Cell",
+      "desc": "",
+      "code": "<Cell width='5%'>\n                                                <![CDATA[\n                                                    <div class='subtxt' style='float:right'>\n                                                        <span style='margin-left:20px;' href='#' class='showqix quickinfo' ok='#{row.ObjectKey}' ot='PPM'></span>\n                                                    </div>\n                                                ]]>\n                                            </Cell>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhivw04rfcn",
+      "title": "Read from Registry or YAML DB",
+      "desc": "",
+      "code": "aspdb = ServiceDesk.BasicDBService(ServiceDesk.Configuration.ReadValue('DB'))\n        sql = '''\n            Select Value,Account\n            from AccountSettings \n            where Name=@Name\n            and (isnull(@Account,'')='' or Account=@Account)\n        '''\n        \n        result = aspdb.ExecuteQuery(sql, {'Name':'Created','Account':''})\n        if result.Rows.Count > 0:\n            ServiceDesk.Log.WriteEntry('DGT_No of Accounts >>>', xstr(result.Rows.Count))\n            for dt in result.Rows:\n                _createdDate=\"\n                _accountName=\"\n                _trialPeriod=0\n                _uptodate=\"\n\n                _createdDate = dt['Value']",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhj6gpt3mze",
+      "title": "Read the registry setting",
+      "desc": "",
+      "code": "Read the registry setting \n\n#{sysconfig.MaxUploadFileSizeMB}",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhjd3taamwh",
+      "title": "RegisterChangeEvent",
+      "desc": "",
+      "code": "<Field type='dynamiclist' key_field='AssetCategoryKey' text_field='AssetCategoryID' _object_type='Asset' value='' service='Location.ObjectLayout:AssetCategoryList' allow_empty='true' id='AssetCategoryKey' title='Asset Category'/>\n\n/*AssetCategoryKey is the id of the Field*/\n\nServiceDesk.registerChangeEvent('AssetCategoryKey',function(evnt,data) {\n    console.log(data);\n                                        //Do your work here\n                                    });",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhjip483qw7",
+      "title": "RegisterChangeEvent for XID",
+      "desc": "",
+      "code": "$XSD('AssetCategoryKey').registerChangeEvent(function(evnt,data){\n    console.log(data);\n                                        //Do your work here\n                  })",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhjop561ied",
+      "title": "Reload Celllist from UIScript",
+      "desc": "",
+      "code": "<UIScript>\n                                                                            <![CDATA[\n                                                                                $SD('cl_jpt').reloadCurrent();\n                                                                            ]]>\n                                                                        </UIScript>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhjx81q1fq1",
+      "title": "Reload FieldBlock from Javascript",
+      "desc": "",
+      "code": "ServiceDesk.updateFieldsInView(['normalicon'],'Asset','assetcategory',QS()) \n\n            ServiceDesk.updateFieldsInView([$XID('shift_selection_blk')], 'CorrectiveWorkOrder', 'view', QS());\n\n            /*ServiceDesk.updateFieldsInView(['<FieldID>'],'<AppName>','<ViewName>',QS()) */",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhk4mgyxn7f",
+      "title": "Reload FieldBlock from xml",
+      "desc": "",
+      "code": "<UpdateFields fields='assignee_container' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhka7szyim3",
+      "title": "Reload Page from Javascript",
+      "desc": "",
+      "code": "location.reload();",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhko08cc2xe",
+      "title": "Reload Search Tables",
+      "desc": "",
+      "code": "<ReloadTable field='st_kpi' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhkxcgfnxj6",
+      "title": "Scroll for Tables",
+      "desc": "",
+      "code": "<FieldBlock style='height:50px;overflow:auto;margin:-3px;width:240px;'>\n\n</ FieldBlock >",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhl3rsxmnxb",
+      "title": "Search Box in Fields",
+      "desc": "",
+      "code": "<Field title='Search:' fieldlist.full_span='false' placeholder='Search MWOs' search='true' type='text' id='mwoschsearch' text='' style='width:100%' css='searchbox focusme' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhlkmpktrky",
+      "title": "Set Value",
+      "desc": "",
+      "code": "ServiceDesk.getField('new_WorkDescription').setValue(des);\n\n $SD('Description').setValue(hiddenremarks);",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhlxqgqgzek",
+      "title": "Side bar Injection",
+      "desc": "",
+      "code": "Add this to Side Bar of target view\n<Field type='sidebarinjection' view='store' />\n\nAdd this to From hook Configuration.xml\n<SideBar appicon='SAASConfigPortal' group='Data Configuration' target_object='Inventory' view='backtoworkplacelink.fieldsection' target_view='store' />\n\nThe backtoworkplacelink.fieldsection.xml\n<Form>\n    <Field type='sidebarlink' app='SAASConfigPortal' view='userconfiguration' text='Back to Data Configuration Portal' visible='#{param.swp? and param.ut==[User]}'/>\n</Form>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhm6c8ueyxi",
+      "title": "Sidebar button (HTML)",
+      "desc": "",
+      "code": "<Sidebar>\n\t<Field type='html' visible='true'>\n\t    <![CDATA[\n\t        <div align='left'>\n\t            <a class='sidebar_link_switch'href='#' onclick='CopyQRToVendor(#{param.key}); return false; '>#{:Send this Quotation Request to another Vendor}</a>\n              </ div >\n\t    ]]>\n    </ Field >\n</ Sidebar >",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhmfvtj847g",
+      "title": "SortAttribute",
+      "desc": "",
+      "code": "<SortAttribute attribute='AssetID' label='Asset ID' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhmlooapxl0",
+      "title": "SortAttribute Order",
+      "desc": "",
+      "code": "<SortAttribute attribute='AlarmedTime' label='--Select--' selected='true' order='descending' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhmt81m0xiv",
+      "title": "Suggested Dynamic List",
+      "desc": "",
+      "code": "<Field validate='true' type='dynamiclist' id='saasassetcat' title='Asset Category' key_field='AssetCategoryKey' text_field='AssetCategoryID'  allow_empty='true' service='Asset.AssetCategory:All'>                     \n                                            <Parameter name='App' value='Asset'/>\n                                            <Parameter name='CurrentUser' value='#{auth.UserKey}'/>\n                                            <Parameter name='AssetGroupKey' value='0'/>\n                                        </Field>  \n\n<Script>\n<![CDATA[\nfunction Onload (){\n                            $SD('saasassetcat').editFieldExit= function(){ \n                                document.getElementById('saasassetcat__data').value = document.getElementById('saasassetcat').value\n                                return\n                            }\n    }\n\n]]>\n</Script>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhn3sw4pzwf",
+      "title": "Tab Hook",
+      "desc": "",
+      "code": "/*Place where the tab should be*/\n            <Tab viewhook='moredetails' visible='#{hook.visible}' >\n\t\t\t\t<Title>#{hook.title}</Title>\n\t\t\t</Tab>\n\n            /*From where the tab should be injected <configuration.xml>*/\n            <Hook target_object='PPM' target_view='auditworkorder.view' viewhook='moredetails' view='contractawo.tab' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhn71k06d47",
+      "title": "Tab view in View Page",
+      "desc": "",
+      "code": "<Tabs id='ov'>\n                        \n                            < Tab selected = 'true' >\n                                < Title >#{row.LocationType}</Title>\n                                < Content >\n                                </ Content >\n                            </ Tab >\n                      \n                            </ Tabs >",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhnhpsnq01d",
+      "title": "Validation Attribute",
+      "desc": "",
+      "code": "validation.attribute='UserGroupID'\n<Field type='text' id='ugid' validate='true' text='' title='User Group' validation.attribute='UserGroupID'  />\n\nThis is used to show the Error message in the Orange color box.",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhnpoxcrhet",
+      "title": "Validator - Comparison",
+      "desc": "",
+      "code": "<Validator type='comparison' on='create,update' attribute1='EndDate' attribute2='StartDate' operator='gt' message='!fm.fmidentification.comparison'/>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhnuspd2pj3",
+      "title": "Validator - Length",
+      "desc": "",
+      "code": "<Validator type='length' attribute='Description' length='1024' message='Item should be less than 1024 characters'/>",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnho02wmnv5z",
+      "title": "Validator - Range",
+      "desc": "",
+      "code": "<Validator type='range' attribute='ExtensionReminderLeadTime' min='0' message='!cnrt.extensionreminderleadtime' on='Create,Update' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnho6fc6y5ht",
+      "title": "Validator - Required",
+      "desc": "",
+      "code": "<Validator type='required' attribute='OwnerKey,OwnerType' on='create' message='required message' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhoia8vgrh1",
+      "title": "Validator - Unique",
+      "desc": "",
+      "code": "<Validator type='unique' attribute='AssetID' on='create,update' message='!ast.uniqueid' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhor9lx8kb7",
+      "title": "Vendor Object QI",
+      "desc": "",
+      "code": "<Field  include_icon='true' type='object' title='Vendor' object_type='FM.Vendor' link_type='qi' object_key='#{services.details.VendorKey}' text='#{services.details.VendorID}' view='vendor' nodata='Not Configured' />",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhq5uw01vd6",
+      "title": "Add",
+      "desc": "Adds changes to stage/index in your working directory.",
+      "code": "git add .",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhr0o0y9sjw",
+      "title": "Branch",
+      "desc": "Lists out all the branches.   git branch",
+      "code": "git branch",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhrf3dpi524",
+      "title": "Checkout",
+      "desc": "Move up to next branch",
+      "code": "git checkout <branchName>",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhrrugxrlpb",
+      "title": "Clean the uncommitted changes",
+      "desc": "",
+      "code": "git checkout .",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhsbtc54otk",
+      "title": "Commit",
+      "desc": "Commit the changes to the branch",
+      "code": "git commit –m “Message to go with the commit here”",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhta3scqpzr",
+      "title": "Create New Branch",
+      "desc": "creates branches and helps you to navigate between them. For example, the following basic Git command creates a new branch and automatically switches you to it",
+      "code": "git checkout -b <branch-name>",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhu6y8n5ocv",
+      "title": "Pull",
+      "desc": "To pull the changes from the given branch name, this commit the changes as well.",
+      "code": "git pull \n\ngit pull origin main",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhuiwosy13n",
+      "title": "Sets username and email",
+      "desc": "",
+      "code": "git config [options]\n\ngit config --global user.name \"uname\"\ngit config --global user.email \"uemail@email.com\"",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhuz9sy2vrz",
+      "title": "Log",
+      "desc": "Shows the log of commits for current branch",
+      "code": "git log",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhvfgw77zr8",
+      "title": "Status",
+      "desc": "To check the status of files you’ve changed in your working directory, i.e, what all has changed since your last commit.",
+      "code": "git status",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhywwgndx6n",
+      "title": "MISCONF Redis Error",
+      "desc": "MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.",
+      "code": "Because No disk space and cant write redis logs",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnhztcowu2aj",
+      "title": "Error opening Crystal Reports in v4",
+      "desc": "Error reading JArray from JsonReader. Current JsonReader item is not an array: StartObject. Path ',line 1, position 1.  Happens in V4 server, When opening Crystal Report.",
+      "code": "Restart the running the crystal report service in the window server",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqni17pcxzpi2",
+      "title": "To giving access to mails to use in 3rd party",
+      "desc": "",
+      "code": "The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [
+        {
+          "label": "Google Access - Link",
+          "url": "https://www.google.com/settings/security/lesssecureapps"
+        }
+      ]
+    },
+    {
+      "id": "mqni219c48tt8",
+      "title": "KeyError",
+      "desc": "This Error came when Updating Location.  Due to: Comes when Unknown LocationTypeKey is in LocationMaster",
+      "code": "Solution: Remove garbage data.\nSolution: May be no parent location exists in the table",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqni3074cx0xj",
+      "title": "Lucy - Too large Value",
+      "desc": "Too Large Value",
+      "code": "Add a Registry Entry\n\nLucyEngine.MaxDebugInfoLength\n\nset \n\n8000000",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnjcdwo8p1fa",
+      "title": "Time Sheets",
+      "desc": "Click below link to Add Time",
+      "code": "",
+      "catId": "mqnjapmx24la1",
+      "img": "",
+      "links": [
+        {
+          "label": "Add Time",
+          "url": "https://eutech.atlassian.net/plugins/servlet/ac/com.kaanha.reports/jira-reports-timesheet-entry"
+        }
+      ]
+    },
+    {
+      "id": "mqnjdx28c8gr0",
+      "title": "DX App Compare",
+      "desc": "Click below link to Compare two apps",
+      "code": "",
+      "catId": "mqnjapmx24la1",
+      "img": "",
+      "links": [
+        {
+          "label": "Compare Apps",
+          "url": "https://json-compare-kk.tiiny.site/"
+        }
+      ]
+    },
+    {
+      "id": "mqnjm70galqle",
+      "title": "Resource Manager",
+      "desc": "Click below link to Open Resource Manager App",
+      "code": "",
+      "catId": "mqnjapmx24la1",
+      "img": "",
+      "links": [
+        {
+          "label": "Resource Manager",
+          "url": "https://resource-manager-kka.netlify.app/"
+        }
+      ]
+    },
+    {
+      "id": "mql3uzpcy7zhw",
+      "title": "Run Docker Compose",
+      "desc": "Start all services in detached mode",
+      "code": "docker compose up -d",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpcmqykv",
+      "title": "Git Status",
+      "desc": "Check working tree status",
+      "code": "git status",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpcmkkf3",
+      "title": "Git Log (pretty)",
+      "desc": "Compact commit history",
+      "code": "git log --oneline --graph --decorate",
+      "catId": "mqly4dz7ddalq",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpc6tgoc",
+      "title": "Find large files",
+      "desc": "Files over 100MB",
+      "code": "find / -type f -size +100M 2>/dev/null",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpcth1mq",
+      "title": "Show all tables",
+      "desc": "PostgreSQL — list tables",
+      "code": "\\dt",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpcjt40c",
+      "title": "Ping Google",
+      "desc": "Test internet connectivity",
+      "code": "ping google.com",
+      "catId": "mqly4dz7t3w8c",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpcfc20e",
+      "title": "Show IP Config",
+      "desc": "Show all network adapters and IPs",
+      "code": "ipconfig /all",
+      "catId": "mqly4dz7t3w8c",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpcojvse",
+      "title": "NPM permission error",
+      "desc": "Fix: EACCES permission denied on ~/.npm",
+      "code": "sudo chown -R $(whoami) ~/.npm",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mql3uzpciv10l",
+      "title": "Port already in use",
+      "desc": "Kill process using port 3000",
+      "code": "lsof -ti:3000 | xargs kill -9",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnryc9l2bu2h",
+      "title": "Docker Installation With Deployment",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [
+        {
+          "label": "Configure Server Details",
+          "url": "https://eutechcybernetic.github.io/server-planner/"
+        }
+      ],
+      "steps": [
+        {
+          "id": "mqnrtcveie56h",
+          "title": "Go to the this site and configured the server details",
+          "content": "https://eutechcybernetic.github.io/server-planner/",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnruazee6dqn",
+          "title": "Go to Open Settings and fill all the details required",
+          "content": "Get the License Key from Haran ",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrujz5jw7hy",
+          "title": "",
+          "content": "Add Server Details from Add Server\nSave the configuration",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnruyahkqtl4",
+          "title": "In the bottom of the page you will find Installation Scripts",
+          "content": "Download the Download.zip files",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrv2zd1uvzs",
+          "title": "Copy them to your servers for each web, app, db servers seperately (Create the folders)",
+          "content": "sudo mkdir -p /var/data/iviva\nsudo mkdir -p /opt/iviva/config",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrvmu9qcubz",
+          "title": "Copy the download.zip files in the Path",
+          "content": "/var/data/iviva",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrvvtlnm9au",
+          "title": "Make the env file to .env to make as hidden",
+          "content": "mv env .env",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrw62ppubl2",
+          "title": "Move iviva.config.yaml to /opt/iviva/config",
+          "content": "mv /var/data/iviva/iviva.config.yaml /opt/iviva/config",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrwj6x4jkew",
+          "title": "Go to /var/data/iviva and give permission",
+          "content": "cd /var/data/iviva\nsudo chmod a+x *.sh",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrxo35bbj9o",
+          "title": "Run the setup.sh",
+          "content": "sudo ./setup.sh",
+          "type": "cmd"
+        },
+        {
+          "id": "mqnrxxmh41nkw",
+          "title": "Create the account",
+          "content": "sudo docker compose --profile setup --env-file .env up\nsudo ./start.sh",
+          "type": "cmd"
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1782045624729
+    },
+    {
+      "id": "mqnrlqkjo77mx",
+      "title": "To Update Simple Checklist",
+      "desc": "Javascript",
+      "code": "//Input: table\n//Ouput: [{\"text\":\"Task 1\",\"checked\":false},{\"text\":\"Task 2\",\"checked\":false}]\n\nlet { AllTasks } = runtime.inputs();\n\nlet allTasksArray = []; // Initialize an empty array to store JSON objects\n\nif (AllTasks && AllTasks.length > 0) { // Ensure the table has rows\n    for (let i = 0; i < AllTasks.length; i++) {\n        let row = AllTasks[i]; // Access each row in the table\n        let taskArray={};\n        taskArray['text']=row[\"Description\"]\n        taskArray['checked']=false\n         // Append the row object to the array\n         allTasksArray.push(taskArray);\n    }\n    \n}\n\n// Convert the array of objects to a JSON string\nlet tasksJson = JSON.stringify(allTasksArray);\n\nruntime.done({ \"Actions\": tasksJson });",
+      "catId": "mqnrk0cp011ot",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnrmi2xrydjq",
+      "title": "To Update Advance Table",
+      "desc": "Javascript",
+      "code": "//Input: table\n//Ouput: [[\"KFC User 1\"],[\"KFC User 2\"]]\n\n\nlet { AllSubscribers } = runtime.inputs();\n\nlet allSubArray = []; // Initialize an empty array to store JSON objects\n\nif (AllSubscribers && AllSubscribers.length > 0) { // Ensure the table has rows\n    for (let i = 0; i < AllSubscribers.length; i++) {\n        let row = AllSubscribers[i]; // Access each row in the table\n        let subArray = [];\n        subArray.push(row['SubscriberDisplayName']); // Access the 'SubscriberDisplayName' property correctly\n        allSubArray.push(subArray); // Append the array with the value to allSubArray\n    }\n}\n\n// Convert the array of objects to a JSON string\nlet subJson = JSON.stringify(allSubArray);\n\nruntime.done({ \"IncidentSubscribers\": subJson });",
+      "catId": "mqnrk0cp011ot",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnrna75rpje6",
+      "title": "To Update Object Group",
+      "desc": "Models",
+      "code": "Input : [{\"displayText\":\"Tharindu  Leelananda\",\"objectType\":\"User\",\"value\":\"18\"},{\"displayText\":\"requester nn \",\"objectType\":\"User\",\"value\":\"68\"}]\n\n------------------------------------------------------------------------------------\nBreak TransitionModel to get the Forms, Fields, and JSON\n====================================================================================\n+ Destructure Models\n\t- formModel\n+ Destructure Models\n\t- fields\n+ Make JSON Array\n\t- Output JSON List\n\t\n+ JSON Block\n\tlet {jsonInput} = runtime.inputs();\n\tlet BMARemarksValue=\"\"\n\n\tfor (let i = 0; i < jsonInput.length; i++) {\n\t\tconst searchID = jsonInput[i]['searchIndex'];\n\t\tconst value=jsonInput[i]['value']\n\t\tif (searchID==\"BMARemarks\"){\n\t\t\tBMARemarksValue=value\n\t\t}\n\t}\n\n\truntime.done({\"BMARemarks\":BMARemarksValue})",
+      "catId": "mqnrk0cp011ot",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnroubt770lc",
+      "title": "Change Events",
+      "desc": "Javascript",
+      "code": "let {JsonInput, form, SubFormOption } = runtime.inputs();\nconst formData = JSON.parse(form);\nfor (let i = 0; i < JsonInput.length; i++) {\n\tconst searchIndex = JsonInput[i]['searchIndex'];\n\tconst value=JsonInput[i]['value']\n\tformData.fields[i].value=rtxtSubFormsFilledRTValue;\n}\nruntime.done({ data: { Form: JSON.stringify(formData) } });",
+      "catId": "mqnrk0cp011ot",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnrpar531afi",
+      "title": "Attachments",
+      "desc": "Javascript",
+      "code": "let { Attachments } = runtime.inputs();\n\nlet parsed = JSON.parse(Attachments);\n\nlet attachmentKeys = [];\nparsed.forEach(item => {\n    attachmentKeys.push(item.AttachmentKey);\n});\n\n\nruntime.done({\n    attachmentKeys: JSON.stringify(attachmentKeys)\n});",
+      "catId": "mqnrk0cp011ot",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnt1uupi0p9i",
+      "title": "Uninstall Redis",
+      "desc": "",
+      "code": "sudo systemctl stop redis-server\nsudo apt-get purge redis redis-server redis-tools -y\nsudo rm -rf /etc/redis\nsudo rm -rf /var/lib/redis\nsudo deluser redis 2>/dev/null\nsudo delgroup redis 2>/dev/null\nsudo apt-get autoremove -y\nsudo apt-get autoclean\n\nVerify Redis Is Gone\n-------------------------\nredis-server --version\n\nsudo /sbin/iptables -I INPUT -p tcp -m tcp --dport 6379 -j ACCEPT",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "links": []
+    },
+    {
+      "id": "mqnt9zu1i1xpq",
+      "title": "Configure Redis Memory",
+      "desc": "",
+      "code": "Add this to docker-compose.yaml in redis\n==========================================\ncommand: >\n  redis-server\n  --appendonly yes\n  --maxmemory 12gb\n  --maxmemory-policy allkeys-lru\n  \nmem_limit: 14g\n\n==================================\ndocker compose up -d --force-recreate redis\ndocker exec -it iviva-redis redis-cli INFO memory\n\nsudo docker stop iviva-redis\nsudo docker rm iviva-redis\nsudo docker compose --env-file .env --profile redis up -d",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "links": []
+    }
+  ]
+}
