@@ -1,6 +1,9 @@
 {
-  "version": "11.0",
-  "changelog": [],
+  "version": "1.1",
+  "changelog": [
+    "Added some Lucy Blocks",
+    "Added some SQL"
+  ],
   "categories": [
     {
       "id": "mqqd3zxibm1sp",
@@ -360,19 +363,22 @@
           "id": "mr4q4kdn2185i",
           "title": "Regenerate Configurations",
           "content": "curl -X 'GET' \\\n  'http://10.211.9.5:5122/chilled_water/update/meters/config' \\\n  -H 'accept: application/json' \\\n  -H 'X-IVIVA-ACCOUNT: c12a'",
-          "type": "cmd"
+          "type": "cmd",
+          "img": ""
         },
         {
           "id": "mr4q5sw3vff7g",
           "title": "Update the missing days UMS, taken from IBMS",
           "content": "curl -X 'GET' \\\n'http://10.211.9.5:22314/api/v1/analytics/trigger/getdata' \\\n-H 'accept: application/json' \\\n-H 'X-IVIVA-ACCOUNT: c12a'",
-          "type": "cmd"
+          "type": "cmd",
+          "img": ""
         },
         {
           "id": "mra8i909vmj6a",
           "title": "Update the missing days UMS, taken from IBMS",
-          "content": "curl --location 'http://172.16.160.8:5000/components/UMS/api/v1/utilitymeters/bulk' \\\n--header 'Accept: application/json, text/plain, */*' \\\n--header 'Accept-Language: en-US,en;q=0.9' \\\n--header 'Authorization: APIKEY SC:dic:31a4a2163e2c106a' \\\n--form 'Integration=\"{\\\"IntegrationId\\\":\\\"ibms-integration\\\",\\\"MeterIds\\\":[],\\\"start\\\":\\\"2026-07-07T00:00:00Z\\\",\\\"end\\\":\\\"2026-07-10T00:00:00Z\\\"}\"'",
-          "type": "cmd"
+          "content": "curl --location 'http://172.16.160.8:5000/components/UMS/api/v1/utilitymeters/bulk' \\\n--header 'Accept: application/json, text/plain, */*' \\\n--header 'Accept-Language: en-US,en;q=0.9' \\\n--header 'Authorization: APIKEY SC:account:341a4a2163e2c106a' \\\n--form 'Integration=\"{\\\"IntegrationId\\\":\\\"ibms-integration\\\",\\\"MeterIds\\\":[],\\\"start\\\":\\\"2026-07-07T00:00:00Z\\\",\\\"end\\\":\\\"2026-07-10T00:00:00Z\\\"}\"'",
+          "type": "cmd",
+          "img": ""
         }
       ],
       "notes": "For Check logs >>\n\ndocker logs 41a17983b22a -f -n 100",
@@ -5959,7 +5965,7 @@
       "id": "mrlommfdop87b",
       "title": "Bulk Update Points to Trend Group",
       "desc": "",
-      "code": "Declare @TrendGroupKey int\nselect @TrendGroupKey=TrendGroupConfigKey from IBMSTrendGroupConfigurations where TrendGroupName='C12A ALL MSB ESB SSB Voltage'\n\nDeclare @pk int\nDECLARE cur CURSOR FOR\n\nselect P.PointKey from IBMSPoints P \ninner join AssetMaster A on A.AssetKey=P.AssetKey\ninner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\ninner join IBMSPointTemplates T on T.PointTemplateKey=P.PointTemplateKey\nwhere  T.PointTemplateName in ('Voltage 1','Voltage 2','Voltage 3')\n\nOPEN cur    \n    FETCH NEXT FROM cur\n    INTO @pk\n    While @@FETCH_STATUS = 0\n    Begin\n      If not exists(select * from IBMSTrendGroups where TrendGroupConfigKey=@TrendGroupKey and PointKey=@pk)\n      begin\n        Insert into IBMSTrendGroups (PointKey,TrendGroupConfigKey,CreatedDateTime,CreatedUserKey)\n        Values (@pk,@TrendGroupKey,GETUTCDATE(),1)\n      end\n\n    FETCH NEXT FROM cur\n    INTO @pk\n   END;\nCLOSE cur;\nDEALLOCATE cur;",
+      "code": "Declare @TrendGroupKey int\nselect @TrendGroupKey=TrendGroupConfigKey from IBMSTrendGroupConfigurations where TrendGroupName='C12A ALL MSB ESB SSB Voltage'\n\nDeclare @pk int\nDECLARE cur CURSOR FOR\n\nselect P.PointKey from IBMSPoints P \n--select C.AssetCategoryID,A.AssetID,T.PointTemplateName, * from IBMSPoints P \ninner join AssetMaster A on A.AssetKey=P.AssetKey\ninner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\ninner join IBMSPointTemplates T on T.PointTemplateKey=P.PointTemplateKey\nwhere  T.PointTemplateName in ('Voltage 1','Voltage 2','Voltage 3')\nand (A.AssetID like '%MSB%' or A.AssetID like '%SSB%')\n\nOPEN cur    \n    FETCH NEXT FROM cur\n    INTO @pk\n    While @@FETCH_STATUS = 0\n    Begin\n      If not exists(select * from IBMSTrendGroups where TrendGroupConfigKey=@TrendGroupKey and PointKey=@pk)\n      begin\n        Insert into IBMSTrendGroups (PointKey,TrendGroupConfigKey,CreatedDateTime,CreatedUserKey)\n        Values (@pk,@TrendGroupKey,GETUTCDATE(),1)\n      end\n\n    FETCH NEXT FROM cur\n    INTO @pk\n   END;\nCLOSE cur;\nDEALLOCATE cur;",
       "catId": "mqly4dz764hce",
       "img": "",
       "links": [],
