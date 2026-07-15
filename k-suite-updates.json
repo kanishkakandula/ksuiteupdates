@@ -1,5 +1,5 @@
 {
-  "version": "10.10",
+  "version": "11.0",
   "changelog": [],
   "categories": [
     {
@@ -139,36 +139,6 @@
       "groupId": "mr4u90kxv64ch"
     },
     {
-      "id": "mr0h1opsksyc8",
-      "name": "Kanishka's Safe",
-      "color": "#e11d48",
-      "icon": "ti-lock",
-      "type": "guide",
-      "protected": true,
-      "pinHash": "xOwpUyFCL9lfmamtPGkagBsL0q+tR4jRbH42n15B0dA=",
-      "salt": "w+SfXO7TFQWkI994wRHmfQ==",
-      "langTag": "",
-      "rec": {
-        "salt": "0NcGFvOmRs5FBm1aR1SK3A==",
-        "enc": "tHUvHRX4fqww8gwm9Be+DDscKTjl4qRBLjgB9QwKhPBPwtDkV0vajGg2"
-      }
-    },
-    {
-      "id": "mrafhcbp0xsqw",
-      "name": "Kani Project Changelogs",
-      "color": "#475569",
-      "icon": "ti-server",
-      "type": "guide",
-      "langTag": "",
-      "protected": true,
-      "pinHash": "/ImvkbvW8LnbQIc9/TP1tJkJvKBvBuQK/wv+aykV8p4=",
-      "salt": "FI/OJzyZjoqHmt+rqTO5sA==",
-      "rec": {
-        "salt": "ORHvVYDlhpmHYlm1xdD3Qw==",
-        "enc": "Be6QRqp5TDeiv1zhSK+tMzVMTpbuYbi0FmzQlM6/PK+luwFPtsI66rpM"
-      }
-    },
-    {
       "id": "mrbk4tx2sntoi",
       "name": "DX",
       "color": "#c026d3",
@@ -198,22 +168,6 @@
     }
   ],
   "commands": [
-    {
-      "id": "mrk3bb4ljo8oa",
-      "catId": "mrafhcbp0xsqw",
-      "enc": "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",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mriyenag6xrzl",
-      "catId": "mr0h1opsksyc8",
-      "enc": "5m122VLSUKboPhulnCff5Hx8qv6SJOt3mxWAPzXOqRMdyd3iOvvZ95sm1j/C2F00YxO7vjzuIjgqripI26z3ldDuPgEdzx8sf3SKfY9w1/oSMIK47hMAW4hZEMtEV6m/T/7zLMaKoaWx38tX23K1b1XXcTpUb8KpdTBZ/A2vGl2gdxrxqPwKUVk5XH2U4mIUv1in3ixnvnB/a71l7fPC9g7TmsM6E/9cCU2yduyBFI4U3htTx5QHvYQf4jQLYGkF1KqLMIq3Y03smcrJT2WzzlCuJU+lDYej2yIg2u2tbNEAy5Bcdl3chsSV+q0aT2H+i1c60ADj2e8TALaITgvVy02cE6KH2d9TsALiDYl3P3fsOVYUL8JKOIgyPYfglL/P0AttqFrPXeJnkoEQ3TVEkoDr+EHpMlF/jugkxsI7vIarVDY/vy+8qTLxU08d+E5tzzi7KJGNXEcTNncm/FlwVNcxwJWTcMye68XFkE9GZYB6VraUo85ZNw==",
-      "img": "",
-      "links": [],
-      "related": []
-    },
     {
       "id": "mrd8ejgznmevt",
       "title": "Fault Auto Rectify Change",
@@ -321,14 +275,6 @@
       "related": []
     },
     {
-      "id": "mrafi98ae197y",
-      "catId": "mrafhcbp0xsqw",
-      "enc": "WWLRvBgNAy0S7u3/fJRWz+LGeRFyRCN8XZjuZ1YVSQqBJOOu/hwA4QmVyCtpV9RezVPcsLO5YFPdrrZATHMf8UbFdCeEaLhbpuI17bppNb4pfeuFfG/kLX0zmOqvWKqH5zBWcaunYVZFOk/oYx3GmZsJocftJSX/cLSOnV38AFiV1Ca8yHrlMY+FvJDkFjlSPmKuqrYiUbDdAg121D2wtwByVoJ0qtZzGP5xr9n8WoizahIpOIZJTDVmri8rhJzlbC+TfhTO2cz/X9tEj2yji55rGvLlh6bVgwVrIxsBGhwqMgHZQQNfkWGAdAA3XrJx6GFOEf/+k7Z85c3U0TL/hVE9OoNNBw3JpJcW6bL1mj+2kYos6MEsrs5qhAPBb+tyXiosrJMiEhL7Eo+TcAxwrPkreqH80eOZGZYxTiL4m/cYK0JEKYMnEo5lurV3Yh5q8+jNBeW+j4VKqTm5dLBgZBvNt5AbAx/wVf9Ej06E666DQ/10KlFW5XDTR852iVt75XI2/VXC1MWX0G/I1SbLodiaXzp/k+qME8eovmnDsSgUQND9nvag1QATeur728vEC/Jmyi7YWsLiKe+oASDyLzt2rn0g0GutEhaoDLFrDoiB",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
       "id": "mrab3f4qc4ks5",
       "title": "Install Offline Docker Images Steps",
       "desc": "",
@@ -397,14 +343,6 @@
       "notes": "",
       "isGuide": true,
       "createdAt": 1783408030298,
-      "related": []
-    },
-    {
-      "id": "mr8ti9ouvfnf8",
-      "catId": "mr0h1opsksyc8",
-      "enc": "nzIdjAMZ8/lLhEVUf7GxGS9w1I9l50plEgFFEOK4VYCesENDMGoK1mxnkCKvyjS+kfZP9mrgM/b3hhXY0YtAj/v6j+LPakI7pWgKp8GLk0gJCdgdoAw3pgEa7wwLq6ESk0ED99dJDGEN3qWJjLqW6YixmzZZIx90Og8vrbG0uzSA5dYXYGDRkpgsqLv+zkhiWteUqUPZBfJQdl6Yx1N9ceATcZKn2PfEVd6Q7NWG+YEXc0fIjeTJFLoldeO8HzU5tUBiJn6faONXtCyHDdlfid4JF8xNeu8CGwczoKPxC8aLlnbzmt5FHjZOnrOxMQn9aMAK+pq3xNHJph0KNrR49SatHNhSpNuvWqVqNqSA+EUgc5tATBcJDu9skfCeE7mZkJMwQfOkkWua7Xf4Vex10q7V5WZuHJil6HpymgkMvPcci+TOve0PZ7r1THN9pKCYEC7roanVRoZ8GA82/V+F8nETPbxl+gNME3yIjIMxPuOT0Oek1sdeZSprwz3lWWNGuCrdm3B7B0iMoQjUqdZ5jBULiQVS1ACcVnmxuBu6AGQS7YmkqwuynVEuH/zqIr0PoXeWY71N2HzB9mfBivZk6sgWX1YZnliFIh4ikl4hpexaeMUYuIfmo11CQxKT7ZcpUbcsrvIZbUkLtDoDT2CRmBNKOlmFkl+7gGtgGCPzxuFoE2vA71S4nHbPR+OCwql6LnMcTVB5VFbFOp0X2NUlR5MqTuSJ",
-      "img": "",
-      "links": [],
       "related": []
     },
     {
@@ -509,30 +447,6 @@
       "related": []
     },
     {
-      "id": "mr1jgf4hzakut",
-      "catId": "mr0h1opsksyc8",
-      "enc": "jOASVGtGmnvtiLM5hpOf3oXif00FhNy9AmaA9f7+jkGzki9lCSSzKAp8l1MzAwmDQ+fsF9eFFOFK/u12qq+vOmcNNqZni19HDNszqmoCTnobx+si09zLxui05p/+xHGDLaO/WCJxqxzi8/ycyoYu+vPWiii1wYBO8h2lhHS6zVv7DM9SyKwG2IhyBCtFB01EdQmpfzaAMpfQkqSn/4H8SpTDSGWZgj/boxsbpbUFSt+aZrc/EvquYauq7RsBhaLrxn2joORgdKE4E+F1Y1ORmccM4LlN6CP+G05dYlIStl2e+JVlr5zkuSW+LiClQr18sqi5PLmwN5SZaePepWutFeUYuhnZlSLdpIgjfMf9oRjRfNWLqeJwMyj0iiAj3s0NxxLKg8lEkUWblFuas6QM3BZe1r1uAf/T0ZvX5Wjf0GS5naZo4PPecQnyfxibSd6tjnQXnFvz53GXgVW8jwGb3Jr4meX4XPbkHc8l1M3PDV9gZNV0bUUVU8IOZZn8GU3hxPtlOH4pxumjFgwzYZxkGgZzHDb3pWTZj4Mbaw1QdTNZCUV07I5OxxjiYc//0954fdBquel7eKNuzRdQkSJmbvEPvzm3nGcgl1i+PAM9pVuXJZ9Dnh2Jb4+JBqPazkpp1KT4BmZf4DO9OKp4y72+ympX4opy7QGKsBOnHdzto/HMLkj18uXCdnNE7B9mA6jJtryhGuVs5nvSpnWCJhuiTyvhwfi7hqZ/kYvaodTR3Imu/gRoK4U141DBH57OAEcb3Zk0Y9KM+0eHa7QsC6Ictj25+7KkSEamwibzA44+/FMO2jXx1kIdXUOB+B3c4KPLjhEbZ2Xbs8mFkYan68y0054Fy1o+x/U720w+WYWkm1JWN1bzWFYSg8vORf6Yhfh8fsigyz4n+28qLPPVTHkdMhuEu/dg2Do/nKc75E8sAwGwMiXT/+WSius2QBOOO0bIftN9YEhH/3sLvxfW0Hex/Qb+MsLxVGOYhR9l1jT2WHajaUNlTyiL8lbqmU91x2PQX/e9U2ND96L5eGxGvDCoS0UQDAQpvEtnFFDPng312gkVYUm/ssWIFdA5odo+ntGGoQzNH8ZJ0a/mEOnjjpshsouygNWUCOwWi9GDukdJXdxCD86QW2Ru+HAqJ2B69DKCXM+IHzuwJ8iJdKS3seTMv4TRNCvqUOwMGz/QiaoUOcFc5opb++bv8p34tURQwlrFYg==",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr1ja8i23rpnd",
-      "catId": "mr0h1opsksyc8",
-      "enc": "6ifR3jrxJFR0CRVR3+gAbIWLHrLXosxrpDOnP6hlhxyujtvwpijY2JDLLZj+DYhQqhAk2xS9ZNE5EOGMp8NZMfLpxkCkVESYX/H4Rdcmn1uaYhKS6urxQOrEko6j9XeL2RAZki3zKJCCxvkTDjMbZ3mnOF9iQnJSbzWkntI3WgKtsY9pQ3T+qPJrlXVRWyz8IwbKK2AwCH21LFbgVWyXxuKiT/AMmyJSebKtQKl8VxzeWOtQ66J9afqWU4VZlyDZtKp5GjJrQgylMq+UE1BM8ZL6ZeqDUFRh8AyBwYG20Lj7Q5tsF37ua2jCMIRERsPoU6UvDi7nyx3tda0tZaEqiMO+yES5ohCZ32qJAFVrwzinrhPNkA13XJ5vlgZqBpPtujkdVUb8SWZCBqb54VTJQtjN+CtIyvXk/FGeZuOJAArGLd9LWKxiiQ86nKxBXMoUsEf99mAEN0s2ze5hZZD8jc3l0ainu6gxuhsZQsPsfR0Z1DBIeiOsvryR59XYwafbhxiOtJT7aSYDNXp4v9hAim49imwV6jrTkMjw88a1wHunOUaIstWX",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr1i5ckj66bba",
-      "catId": "mr0h1opsksyc8",
-      "enc": "cbIJgXo6v5llgDBFzLoyV3z/W3GY1653fUBFRgwwk0e1HXFfx+u5gfvH/vzfHuNtiTN6jEW8yLPc0yg9yh4FDWzScmD+sF8oZt9ts7lVEAnNnGcYnvN1tvPnm9hcvnrfmi4ezaGvan8+tNXd22sQB46OdaPNpjJYMTf/q9+0UPQu8AaOZ1qaSSSc+YVPIKVD1K0KdtVRkGzgRG7SfCjCWR+UgJxG/31mNv8AjaPEn/P1onmLWqhTZHDQq72cwXHzzyYsg4Emza+3g6ZDO6GvNO5mQyd7MFhkc6Wp+/Cp15oWA27haWPoPG9t/YI4IGQG5jugrEHgmRYxok5q8zqXtbjtntc=",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
       "id": "mr0piv2qxhh7q",
       "title": "Hypervisor-Update the navigation Panel",
       "desc": "Hypervisor",
@@ -565,78 +479,6 @@
       "notes": "",
       "isGuide": true,
       "createdAt": 1782827603666,
-      "related": []
-    },
-    {
-      "id": "mr0p5qpeurzto",
-      "catId": "mr0h1opsksyc8",
-      "enc": "pjJlHcwtAeLM41WVDTaiP49gRQ8cTFi/+//Xuu9TjhALfhf5IjnOvVJj+krMDX3MdTXGGX/5XJQRUnjSCyNw7pwMVit85MQriPicK5/mow+fgV2T2h7WImKS4sXQU2NLcOJlOY8fJB/BivK2uab7Utfe/V77JCF8Jqffy+KWCVK0kDPezxBbOJer2W9PoyQNMFIfkwTCoNE0R6usMywea12HddO8ml+ELNDEd50hUiWPoaEIwY4PuDEZ14p9e4F3uhGQ+eQydpOBd5CZCEPmX2QB2cx/CkeVUoyxZ7t4vPB7IxgsSgPZ2ZG9iQhQpifS7UKlzev5bWPI/uKJuXPOPc7HC0l9c26tI+PFXSru",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0p1kxuxpzcw",
-      "catId": "mr0h1opsksyc8",
-      "enc": "xW7UaEiNBa5M+1Yu16p+tyIZcxqzgpHd9ywOSwkJwdaMxJBrztWwrwTo5sFBd5LbkRaET7POreZ/D/Y2B5d5PhqMMg+594OuI+6TKycUpfNMZJDbo4i3LI7s7aDYd+BMk+tyzvK/cQm1OUBgafgM62k4Qsb2v1WC2HUiyXciRwjgEepfjmE/GYHDaK/rAfhKjBHh8bK64KHsWNnBym4dbOiRyZAU8yuGx8UnF2Uvvf2QiMKpMjby5EhLmLtKS64QbSeVieW8S5sRTYrOn+doKfVNsmY2oVtASFVMTFu5BMwK4jrQH8xOZC6ewdV1DXxsn+HDBvMjcRKK5oIB+Ici6ukOd2OLRqE2zIbGW+AJiU3kYjC977NbXFQNnvs1j5+jlQGMqde3nQJw6JSV8zwAxYpeTXeiIonOtS0YgsJkgYKh6ahw7v8PTT0r+3RYYLbCKNLQ9U8qbAwCDx0UW+7vy7IHK7e8AWw7VqjxbfhISoCAUWAhRw==",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0ox97u8ll0x",
-      "catId": "mr0h1opsksyc8",
-      "enc": "J+TFLJ3yIEwQiFInfR6I0m+2H7AoQiBFGtWL+SFSk8qg2OxUijzreVGnxp36GRCPD69jA16s+qNs2umA6PHE971PhSi1hv6xpC3Pn+uoKMAsJey7VId3dbq0eBFO64drXeFH0ijBvaBGoTesZDIuXT4vcVVEtsZaPgcbe5ejbMEKt1mUB5kPfJvTkG8r8YE+t58N3ZhBNCB6gPjVeKHUR401YhTvrtywClpwBfoO40riPHEmoLdEXW+kYnjobNGE8UP2uTBhApEXSQdhjg8IXH9vdDmXxnSC7YcDlnSPmPYsbIVjDmrekz366Uccimh7qrKY99VTNoBIB/HTng0T79J1SHnLURZ5J+SVaFTKhNawNWLU0TUAV/s=",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0or6iqefpb7",
-      "catId": "mr0h1opsksyc8",
-      "enc": "pOY4QWhnt4cleFonXm+vsWPIFQVuE7YIOZNujhdrtqrwFlBFch3tkleKXq06skbygS7k4r1k/IdM8t+Inwn2WLQ9uBzXCyAeJvg1t0JOOxT9RQTJNcoT1DFuDDveG21ZmvLf+zkiNb4V5RslObAf0gCEusU2gWtGxpp6J4Wo8HDw40QPb7/RXftPtx7F/Y+huf3qEwVh32zgB0zmHowTn1OgT3uw7H6eGxB236RDTc37pmzypRTK9PEPDeL6Sv7rSjSTY+EDiqrxwrQ89Lfu+iyt80EZUsm4uBi0V39VLYGZFcitCJ7JiKOHXbB2SHZo14dB3zqrHH40pM2gLoCc5IM/tKVdVEPrX6kUyWRCKikm3JWXjaKeEv7GohTI49qmbjYg8u2IWyxDsbpbfJ551zlQM7yyLjNoUaFdVHdVVpSyMwHzSRmM7yOaBQX2qIWfdwqf3xwzZdOuyYIiaDJAee4hzensXkWfgayHWTcQyReL2pcU8MdeuPsnp5d3Z83Ijro+g137yv9mZc5W21iKI/xHsyUoCM1/kWBqnpCzF306havgK8tlrax1O4WYTd/OEQ/9CFEguaZHpWi8O/Or660XfJYevljNehYYGSWKxO8Qog9qCBG0ME62fRmQxqE3IZ8ihcdwsbHodNvWNXcTXtnkAQ8kci0DkZb3IQ3pb0xBAdDA+ss217Gp6FQ=",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0ohe2ajx1u2",
-      "catId": "mr0h1opsksyc8",
-      "enc": "DqqpWzQmRrwNrR/c/yPTWp9VUF6wvr69hy6PTGk2gbH9AhNnDeD7TIV+gY3yWUyuvYS12U5GzbKGlE1jAyYjfwUGe8/kvr47TaSjv2sUqt0vbVR/hmCWwPwXnmIqcUK7uPNyCenRo7T72Nbww7mexDB6L/b8wDTgGTTvldlk/XaDxuPpk2Fd//Phv0ANy3l2okyrvlO3Ada4HlHDVfJYSpid+DMK4jI7Piq9xR7lPmWjQwbX4lnp6VacipG8LGA62+58GMw0gcgcw1ulv4sA2wZUMipIvjMfrkMwU154dRIgD30WzyaMT27LifvUqnUkX0Br8pA8MvMwgh5NoyARflQd2AA/RPir6eRh7QW/R2SeTEB30CDRauWmtbzOk73QS6BypyZxJvCazuEKHruo9lR961uTbWtKFx5b3fnhLX8nGE8dlj0oKjdEGalXDwk8iYWxk4oUTjYAFqX2zA3GBWneClzBLMl91mrJ11o0Ds6X8Bc/Nu6s2rHXM93Y6E2rh03dQbFD4M3cr51xIWaROAP9QBsQVX5HhlvQFn4xWW+n/i6ls4uhR6tJ/ukX4qAB8fx3jOMiYIUlY9cmAYFlXgby7/Q2nDCy7O7dA+8qIoCFWlyLT6Ki5Pb5CmjFcjXQzAjg5qrZsiAakPLzNS2pjwiBoRzrIMXyg40AEmjikFHp54BAzWsxSUzIXltNkQ6qCfZ/0+wov1VtlPn+0DNE88V3n2Cc9RjMFpTR+FaUHE17U+JA8I8Bxrg1LNpVDp0BupjQq7WQUtlYQHBQM26YjgXQXMbQiP57ielCcBmQKebTShE=",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0ocawx0g9vb",
-      "catId": "mr0h1opsksyc8",
-      "enc": "jJfni5ujxgIlr5JMGiSsodFJ2dbNJpyi9kSJCfptCLn0mtZ/JwPy2C0DMUfGvKcsagEgXLASySe8Tmi/pTUr8moFIpQkSd1+t2QfqyfhYZAZ11vC/nzucYn5KENxHw5Vai1Hxh1zccyQV4UQmGZzowKypSnjSmYbbwv/sHNkEuLYIDnx0S8w+D8GbyoHCUxk/eAf8IM+ncTaVWFHYML3rEwcin71Sp7s/Ze7PVmdFPQJ/ECX/2GRn51EEZFMLSiS3s9PXjJVZw8ayQXdzZ6zo/UnSJPtl1AkVPz7v6XgFOYq/22KF391IO094TJWWMfNw+JF0pHv6Fq38TWDeS1VX4Mm4/6pTxXbIa7L7mabPAYs+IX8hRteuPfE4zzfstIYKWWbILFcpLgrk8Viv95McKs+gcMH3ri66QjBpzuV58IE9M30uchGhh5EZ5wp8NA02UuinRNpv1mu+LQt+lL3B+SBsRsdu+nisowUqZvDYH8EQCxb+5607rujK77aDyNOWlRS+vHtp8+35SeFrcMXswMOng+chgSNRQHwI3pqz+q+omWL24pURPykTOPW7Dkz5rmCnFGIsURrlqdJaFsNlqrx46cW40vLHNvDKS+C4s5VIPTWADcuJCli1i+1Viz2A2b9sLpTZjECYzTgJI7yNPzg/WL0M9cPHCQIsHj9aDReHN3D0IoZqc3R7vBpcTYnx6EGLnTwAaECww32wFEB7NCPDYtqxma+g05VXmFHg7ZTr2lORFj/qGOfFHh93dvaf9vZ42UDsxgWFA==",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0o7jz6jb7eq",
-      "catId": "mr0h1opsksyc8",
-      "enc": "uGrW+rHke1VY3v6pRDmIj1Bw2SDsciU8B62TLscg6YJBRnHPKhGJZfFYlHe30PRXKuHcHJ1eYfrPgXMluFjMqrAFyv9XuWDD5kiigiUKECxc0SGsNf8rI3JyYteC/Q1pebYo2GNqErB8S5krzm23JbUNMwwu4OSTEEvOgHUmQp0c8MiDZumwJ23umizx6rXGL0KQ98K8he2y70zK3lS9G6rc4g8zWj6ofYftIdCxXqXFVaylGFBWctOwq1WWs51U6nsJXH0J7wK6HThtIabk7xVY6NNnsxcifRsf4TgeX0CZjDlf8eugn1YMeOLpCzxp3U9VL9NS8Rsau9MaeSwgifKrVH1jNiuSsIQ=",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0hbtvsgeg59",
-      "catId": "mr0h1opsksyc8",
-      "enc": "1v0kMxUw+gpwOxK54qFVjYdZ42QDfZuneKdDZslHdqY8z6Uwu1iTSERr7oyJ7RK2zCXI5du0UykwvqB/fDbqto2TB87yykbB9vf0vneE4HpfkqvPA2woRMpKPfVmEQXLbSXsLfjq0Yc06E70V1hFXkvbx/eLAjkgnv5eoPnhFZqJv2kll3rPiTG2xWUFILsLlgfeCDSsvMFuuP0FaiW+x5lFKOL4iv5558zb7ha9LQtt22hhHARI+uy/Dg2w910VBUmscV9Uaq4Kx9+iwO25k03mTEHBQqO+t6UB4CA2pt0byOrBT0w4o9UiUpVizKE2HDF0ajcP0QcaTZGdMRZzULwlqMMVesSCcQzf9+pOM5Ps3iapvNUNkC35BHfkehzXg8T9LyIbOmel5uZpU3Sg4G+vlrWIUPTF1k0bRXz4Du1DTvX6HXKOmZc=",
-      "img": "",
-      "links": [],
-      "related": []
-    },
-    {
-      "id": "mr0h4oc8ej96p",
-      "catId": "mr0h1opsksyc8",
-      "enc": "sCdOMxLo+/uuO7aomoSs6BJwbOAvtsm7i9W/d2dFOwYRrV0dXPmKo0xpB9ibjJIcKL5ptNh8FueuCmm5U4y+9C+wCycqubsSVlhAXLbBGVoz3KcR+fAfYYjDIivUAmohoI13wt6c62xqXE1ednPzbZPc/VVrQsn2KdLBI3Q9sit/+LNrKn3TVI+2QO2tNrzE2gMptu8lnOqQmvKAw0H9U37NH2cHvtiV/emkdEs+VPmINXiS75M4ViK7Et4RVqKpuGC2PClmM9LlkFOJlDV4jI2bPOrUU4yRmyqRmmon0fx4rD3qM3+f7XsipRsDhbwqINEXVOX73Q5PWod8J9KrWPIFtLRtRzteelmg5mPGAkxIXCIcQ8eMLCx7lyGFoO1SwMLItbelXmJSmZu9qAIAdefyfnwHdsyk2QKhH4OAEH1VO6xraL1TNp/2yw+qzsdu4d/ZUp7QzaBlu9sZpcKgNJf21kxdZunrLtbTOH5F9gP8fCiI2NUILTfvxndC/rpd+10LWRExgTNDvmQRyjHcETyI8bsuOUOVlpxRj9XIokp7d3RY9kcU9mBHwbfSJmcoX7dSdL8lXzEYa/u/QGLmGiepgn3xggXNE1S/BZseq0r8Rq2qrLOuikLYGgQuE0luuHx9KXBvX1nm5eeGa+DOGiQl16ECyfG6/tACNK9C5E/Mms8sCuGzeojlw1YcYgvSn8u1cT0b3rDzRZyvB4Q5plM9Zta5fLxGEB7yjFmt+ltaFCfPbnSY+mCMJf7pDy5bNWo6W2JPptWaZ3kfAenU/XTM3Flu99QrtymWEcUO8ydLUz36nvUhnKre7it/fZO6GzQ5Sz2g7D+L3Gcq0kmlo58wz+3P2fLUZUM+0fMOIlq7VcOTD9iXEP8cmmeyodkt3ICVItZiXeGzxklyJJu7chZ1QA++5ObyHRWbTe1rSOKQhsCK99doDhTtQZTXjKO+nEOfFphxfoQxP0aSAd3lFgSsGw3GbPg1mEQ9N1aVFYZnRYnXluMC49/ijoF+syOGVvJQTV/ipoFnhRWxkXAu8ztZWN8FeHc8RIWDWdOGF5j1iyOBekdrE8p8C8RYx0loQTyyJCjNbbUy2+2oFZ58FrqSQlC33DOivQJbcY8AedCCmbAA1kGmwX8GPp+D6A+REs16IrbG1CYt8zSiitCnH1t9rSTA5HpES0ICE5I3XxlqPd03CSrQhPdJM5suRDx3QM/4cmDLOI0nXtWWtjY0vpOrN35s1LbpxW/J1zbpdrVI+WqIwgLSUEiiTlivMupZlvTlcY+zLU7a5dd2oXKtwiPp3iR8zi0CWGWHdOZ+2RolwWNM1tHqqtJLXh01d3ujf4TpCwrhqaOMNBPzH5iYdJdol4Na+WmEvcDlMROTU1yTJLnYKL7vqitnc4KGweFaUquL+QCOhxQ198wTGG5Sd16fJO9rwUGW3qXMjmsai+fBf8m0vN+hPcRQd6sOsjovlqJhG1CM13xff+Oq7NSLD4YG5zQPsJIZWVi6gy1aIUHWH8SV4u6gKIcDHHyCaSnxENgqjzMwdCsP/oXIx0agmZmdww0gmIM6yBmYJ0gWxcYxr/QGyfgt4h0k8iE20vkepnKolbU18EenZZCBmy52BK35MhzYTYPtSyycAk4F+OGDVKxKHWQsoKy3gNP9ou3sjjoJz2XPrX7wEqZyJ87Lkoa0Z3auZvlTgUeJ",
-      "img": "",
-      "links": [],
       "related": []
     },
     {
@@ -6111,6 +5953,17 @@
       "img": "",
       "links": [],
       "langTag": "",
+      "related": []
+    },
+    {
+      "id": "mrlommfdop87b",
+      "title": "Bulk Update Points to Trend Group",
+      "desc": "",
+      "code": "Declare @TrendGroupKey int\nselect @TrendGroupKey=TrendGroupConfigKey from IBMSTrendGroupConfigurations where TrendGroupName='C12A ALL MSB ESB SSB Voltage'\n\nDeclare @pk int\nDECLARE cur CURSOR FOR\n\nselect P.PointKey from IBMSPoints P \ninner join AssetMaster A on A.AssetKey=P.AssetKey\ninner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\ninner join IBMSPointTemplates T on T.PointTemplateKey=P.PointTemplateKey\nwhere  T.PointTemplateName in ('Voltage 1','Voltage 2','Voltage 3')\n\nOPEN cur    \n    FETCH NEXT FROM cur\n    INTO @pk\n    While @@FETCH_STATUS = 0\n    Begin\n      If not exists(select * from IBMSTrendGroups where TrendGroupConfigKey=@TrendGroupKey and PointKey=@pk)\n      begin\n        Insert into IBMSTrendGroups (PointKey,TrendGroupConfigKey,CreatedDateTime,CreatedUserKey)\n        Values (@pk,@TrendGroupKey,GETUTCDATE(),1)\n      end\n\n    FETCH NEXT FROM cur\n    INTO @pk\n   END;\nCLOSE cur;\nDEALLOCATE cur;",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
       "related": []
     }
   ],
