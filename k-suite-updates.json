@@ -1,8 +1,14 @@
 {
-  "version": "1.6",
+  "version": "2.8",
   "changelog": [
     "Redis Commands added",
-    "Removed Duplicate Entries"
+    "Removed Duplicate Entries",
+    "SQL Queries added",
+    "Hypervisor details added",
+    "Troubleshoots added",
+    "Quick links added",
+    "Linux Codes added",
+    "How to do things"
   ],
   "categories": [
     {
@@ -82,7 +88,8 @@
       "name": "How to do things",
       "color": "#8b5cf6",
       "icon": "ti-rocket",
-      "type": "snippet"
+      "type": "guide",
+      "langTag": ""
     },
     {
       "id": "mqhudgmrtfd5w",
@@ -171,6 +178,117 @@
     }
   ],
   "commands": [
+    {
+      "id": "mrqmc2w95mtmy",
+      "title": "How to get API token for Github and add post",
+      "desc": "Prepare GitHub",
+      "code": "",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mrqm9qogciftg",
+          "title": "",
+          "content": "Create a repo for submissions, e.g. ksuite-submissions (private is fine).",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mrqmb39z67ji7",
+          "title": "Create a fine-grained PAT: GitHub → Settings → Developer settings → Fine-grained tokens → Generate new token.",
+          "content": "Repository access: only ksuite-submissions\nPermissions: Contents → Read and write — nothing else\nExpiry: 1 year (max)",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mrqmbknjtgya0",
+          "title": "",
+          "content": "Copy the token somewhere safe ",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mrqnjgl420t9u",
+          "title": " Create the Worker ",
+          "content": "Sign up at dash.cloudflare.com (free, no card).",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mrqnjgnk1xwcj",
+          "title": "",
+          "content": "Go to Workers & Pages → Create → Worker, give it a name like ksuite-hq, deploy the hello-world, then click Edit code.",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mrqnk8d45afok",
+          "title": "Replace the code with something like:",
+          "content": "export default {\n  async fetch(request, env) {\n    const cors = {\n      \"Access-Control-Allow-Origin\": \"*\",   // K-Suite runs from file://, origin is \"null\"\n      \"Access-Control-Allow-Methods\": \"POST, OPTIONS\",\n      \"Access-Control-Allow-Headers\": \"Content-Type\"\n    };\n    if (request.method === \"OPTIONS\") return new Response(null, { headers: cors });\n    if (request.method !== \"POST\") return new Response(\"Not allowed\", { status: 405, headers: cors });\n\n    let payload;\n    try { payload = await request.json(); }\n    catch { return new Response(\"Bad JSON\", { status: 400, headers: cors }); }\n\n    // Simple abuse guards\n    const body = JSON.stringify(payload, null, 2);\n    if (body.length > 2_000_000) return new Response(\"Too large\", { status: 413, headers: cors });\n\n    const user = (payload.sender || \"anonymous\").replace(/[^a-z0-9-]/gi, \"_\").slice(0, 40);\n    const path = `submissions/${user}-${new Date().toISOString().replace(/[:.]/g, \"-\")}.json`;\n\n    const gh = await fetch(\n      `https://api.github.com/repos/YOUR_USERNAME/ksuite-submissions/contents/${path}`,\n      {\n        method: \"PUT\",\n        headers: {\n          \"Authorization\": `Bearer ${env.GITHUB_TOKEN}`,\n          \"User-Agent\": \"ksuite-hq-worker\",\n          \"Accept\": \"application/vnd.github+json\"\n        },\n        body: JSON.stringify({\n          message: `KB submission from ${user}`,\n          content: btoa(unescape(encodeURIComponent(body)))  // base64, unicode-safe\n        })\n      }\n    );\n\n    return new Response(gh.ok ? \"OK\" : \"GitHub error\", { status: gh.ok ? 200 : 502, headers: cors });\n  }\n};",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mrqnkod44ekif",
+          "title": "",
+          "content": "Replace YOUR_USERNAME, then Deploy.",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mrqnkvxcf00b9",
+          "title": "Test it- From any terminal:",
+          "content": "curl -X POST https://ksuite-hq.YOUR-SUBDOMAIN.workers.dev -H \"Content-Type: application/json\" -d \"{\\\"sender\\\":\\\"test\\\",\\\"hello\\\":1}\"",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "You should get OK and see submissions/test-….json appear in the repo.",
+      "isGuide": true,
+      "createdAt": 1784394368937,
+      "related": []
+    },
+    {
+      "id": "mronftop5bl5g",
+      "title": "Hypervisor-Add Colors for Value limits for Equipments",
+      "desc": "",
+      "code": "",
+      "catId": "mqqd3zxibm1sp",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mromx1mx6s839",
+          "title": "Add Colors",
+          "content": "Go to \"Asset Color Config\" under settings in DT",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mronejtt6q1jk",
+          "title": "",
+          "content": "You can change colors in Temperature, Occupancy or IAQ only",
+          "type": "tip",
+          "img": ""
+        },
+        {
+          "id": "mronf86pb48ez",
+          "title": "Change Color",
+          "content": "Select one category and set limits for colors",
+          "type": "note",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1784275290889,
+      "related": []
+    },
     {
       "id": "mrd8ejgznmevt",
       "title": "Fault Auto Rectify Change",
@@ -5500,9 +5618,14 @@
         {
           "label": "Suno - Text to Song",
           "url": "https://suno.com/"
+        },
+        {
+          "label": "Colorize Old Photos",
+          "url": "https://colorize.cc/"
         }
       ],
-      "related": []
+      "related": [],
+      "langTag": ""
     },
     {
       "id": "mqyqy0v51b762",
@@ -6020,6 +6143,41 @@
       "related": [
         "mrmypstbi25s9"
       ]
+    },
+    {
+      "id": "mrneiebm6u535",
+      "title": "Get Asset Count for given Locations based on Asset Categories",
+      "desc": "",
+      "code": "Declare @locationKey int\nselect @locationKey=LocationKey \nfrom LocationMaster where FullName ='DIC.Tower A.L11'\n\nDeclare @tb table (LocationKey int,FullName varchar(500))\n\nInsert into @tb\nselect L.LocationKey,L.FullName \nfrom LocationMaster L \ninner join LocationMaster P on L.LValue>=P.LValue\nand L.RValue<=P.RValue\nwhere P.LocationKey=@locationKey\n\nselect C.AssetCategoryID,count(1) from AssetMaster A\ninner join @tb L on L.LocationKey=A.InstalledLocationKey\nInner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\nwhere C.AssetCategoryID!='DT Widget'\ngroup by C.AssetCategoryID",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": []
+    },
+    {
+      "id": "mroniuisndvzc",
+      "title": "If Occupancy Category not shown in Hypervisor as Banner",
+      "desc": "",
+      "error": "If Occupancy Category not shown in Hypervisor as Banner",
+      "solution": "Make \"Occupancy\" for category in Mongo Compass in Simple ie: \"occupancy\"",
+      "code": "If Occupancy Category not shown in Hypervisor as Banner",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": []
+    },
+    {
+      "id": "mrosyf5xjwdez",
+      "title": "Delete Logs .sh file for Ubuntu",
+      "desc": "",
+      "code": "#!/bin/bash\n\n# Script  : Bash script for getting Log Cleaning\n# Author  : Sithum, Dilshan, Suthesh\n# version : 1.2\n\n# 1.1 LogCleaning with execution log\n# 1.2 fixed an issue with log finding -mmin +$((min*hours*days)) option with -mtime +days and changed /usr/bin/find find to find\n\n#Get local date time in \n#Fri 27 Aug 2021 12:46:14 AM PDT format\nDateTime=$(date +'%c')\n\n\n#Logpath to configure logs because cronjobs does not record history \n#path of the log needs to be change accordingly\nLogFile=\"/home/app-server-01/LogCleaningHistory/CleanLog-$(date +\"%d.%m.%y.%H.%M.%S\").log\"\n\nFiles=$(find /opt/iviva/logs -name '*' -mtime +5)\n\nif [[ -z \"$Files\" ]];\nthen\n\techo \"$DateTime INFO [Log Clean] - No Log Files Available.\" >> $LogFile\n\techo \" \" >> $LogFile\nelse\n\t#Remove the log files\n\tsudo find /opt/iviva/logs -name '*' -mtime +5 -exec rm -f {} \\;\n\n\t#exist code of the command execution\n\tExeResult=$?\n\n\tif [[ \"$ExeResult\" -eq 0 ]];\n\tthen\n\t\techo \"$DateTime INFO [Log Clean] - Log Files Available.\" >> $LogFile\n\t\t#The files manipulated less than 2*24 hours\n\t\tfor f in $Files \n\t\tdo \n\t\t\techo \"$DateTime INFO [File] - ${f##*/}\" >> $LogFile\n\t\tdone\n\t\techo \"$DateTime INFO [Log Clean] - Log Cleaning successful.\" >> $LogFile\n\t\techo \" \" >> $LogFile\n\telse\n\t\techo \"$DateTime ERROR [Log Clean] - Log Cleaning failed due to error code: $ExeResult\" >> $LogFile\n\t\techo \" \" >> $LogFile\n\tfi\nfi",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": [],
+      "langTag": "bash",
+      "related": []
     }
   ],
   "parentCats": {
