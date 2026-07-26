@@ -1,9 +1,10 @@
 {
-  "version": "3.9",
+  "version": "4.7",
   "changelog": [
-    "Installations added",
-    "FW Code added",
-    "SQL"
+    "FW Codes",
+    "Added Quick Access Links Parent Category",
+    "Added Widget Quick Access Links, where you can access your widget very quick",
+    "Check on Whats New icon, More features added to the tool."
   ],
   "categories": [
     {
@@ -14,6 +15,15 @@
       "type": "guide",
       "langTag": "",
       "groupId": "mr4u90kxv64ch"
+    },
+    {
+      "id": "ms18fimgg17ry",
+      "name": "Widget Quick Access",
+      "color": "#4f8ef7",
+      "icon": "ti-dice",
+      "type": "snippet",
+      "langTag": "",
+      "groupId": "ms18tzmft4mt0"
     },
     {
       "id": "mql28z70136be",
@@ -27,7 +37,9 @@
       "name": "Quick Links",
       "color": "#e05252",
       "icon": "ti-tag",
-      "type": "links"
+      "type": "links",
+      "langTag": "",
+      "groupId": "ms18tzmft4mt0"
     },
     {
       "id": "mqly4dz7iy550",
@@ -5435,7 +5447,9 @@
         }
       ],
       "related": [],
-      "output": ""
+      "output": "",
+      "langTag": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqnjdx28c8gr0",
@@ -5832,7 +5846,8 @@
       "img": "",
       "links": [],
       "related": [],
-      "output": ""
+      "output": "",
+      "langTag": "python"
     },
     {
       "id": "mqrx0s84i3z6j",
@@ -6723,6 +6738,163 @@
       "langTag": "sql",
       "related": [],
       "output": ""
+    },
+    {
+      "id": "mrx9k9zlt80ni",
+      "title": "Get EnableApps",
+      "desc": "",
+      "code": "def ExecuteGetEnableApps(self,args,env):\n        manager = self.Account.AccountManager\n        aspConString  = manager.DB\n        db = ServiceDesk.BasicDBService(aspConString)\n        sql_cmd='''\n                    select AppName from AccountAppMap where AccountID=@Account\n                '''\n        sql_data = db.ExecuteQuery(sql_cmd,{'Account':self.Account.AccountID})\n        return sql_data",
+      "output": "",
+      "catId": "mqgt4k04blf8g",
+      "img": "",
+      "links": [],
+      "langTag": "python",
+      "related": []
+    },
+    {
+      "id": "mryso0gq4jti9",
+      "title": "Get Simple Asset Details",
+      "desc": "Location, Category, Asset ID",
+      "code": "select L.FullName as LocationName, C.AssetCategoryID, A.AssetID\nfrom AssetMaster A\ninner join LocationMaster L on L.LocationKey=A.InstalledLocationKey\ninner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\nwhere C.AssetCategoryID!='DT Widget'",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": []
+    },
+    {
+      "id": "ms18h6300h5on",
+      "title": "JSON Formatter",
+      "desc": "",
+      "code": "Paste any json code to output as JSON Format",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-jsonformat"
+      ]
+    },
+    {
+      "id": "ms18l2tr4rf7a",
+      "title": "Python Syntax Checker",
+      "desc": "",
+      "code": "Paste any python Code or Upload a Python File to find its syntax errors",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-pythonchecker"
+      ]
+    },
+    {
+      "id": "ms18lxa0h6g9a",
+      "title": "Timesheet Tracker",
+      "desc": "Not Integrate with JIRA",
+      "code": "Track your time and export to excel",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-timesheet"
+      ]
+    },
+    {
+      "id": "ms18n5geyf85o",
+      "title": "My Checklist",
+      "desc": "",
+      "code": "Track your items as checklist, Can able track by Projectwise and able to export to Excel",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms18ouywk4572",
+      "title": "Utility Meter Data Tool",
+      "desc": "",
+      "code": "Upload Mongodb json collection, to get the MeterID and other attributes as Excel, or SQL. Can able to generate the SQL insert for the UMS Table.",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-umtool"
+      ]
+    },
+    {
+      "id": "ms18qbdjoegj2",
+      "title": "SQL Dataset Viewer",
+      "desc": "",
+      "code": "Paste any Data set (which have columns and data) or Upload a dataset format, and able to export to Excel file",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-sqldataset"
+      ]
+    },
+    {
+      "id": "ms18rlylobvy9",
+      "title": "DT Matcher",
+      "desc": "",
+      "code": "Can compare Asset List (Excel file) to Mongodb Meshconfig json file and identify which assets are not mapped in the 3d model.",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-dtmatcher"
+      ]
+    },
+    {
+      "id": "ms18siinvhxsc",
+      "title": "Version Manager",
+      "desc": "",
+      "code": "Tracks your versions",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-versionmgr"
+      ]
+    },
+    {
+      "id": "ms18t1mqq105x",
+      "title": "Universal Converter",
+      "desc": "",
+      "code": "Convert any files to supported Files",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-converter"
+      ]
     }
   ],
   "parentCats": {
@@ -6731,6 +6903,10 @@
       {
         "id": "mr4u90kxv64ch",
         "name": "Applications"
+      },
+      {
+        "id": "ms18tzmft4mt0",
+        "name": "Quick Access Links"
       }
     ]
   }
