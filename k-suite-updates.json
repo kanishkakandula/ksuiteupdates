@@ -1,10 +1,11 @@
 {
-  "version": "4.7",
+  "version": "5.2",
   "changelog": [
-    "FW Codes",
-    "Added Quick Access Links Parent Category",
-    "Added Widget Quick Access Links, where you can access your widget very quick",
-    "Check on Whats New icon, More features added to the tool."
+    "Added DX",
+    "UMS troubleshoot added",
+    "Chiller Optimization troubleshoot added",
+    "Hypervisor added",
+    "CMAT added"
   ],
   "categories": [
     {
@@ -185,6 +186,269 @@
     }
   ],
   "commands": [
+    {
+      "id": "ms5kzmaomya4a",
+      "title": "To check Real Issue",
+      "desc": "Check from Hypervisor",
+      "code": "",
+      "catId": "mrd84cpnu54vb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "ms5kszx6eu0gj",
+          "title": "Click on the Fault from home page",
+          "content": "Go to the fault detection page",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms5kucoakgbek",
+          "title": "",
+          "content": "Click on Test Model",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms5kuxwych7ae",
+          "title": "Automated Tests",
+          "content": "If that Test model doesnt show Test button. Click on Start button. Then it will show Test button.",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms5kvveamzzj0",
+          "title": "Click on Test button",
+          "content": "When click on Test button, if it shows its running on another instance, Click on \"i\" and click on the name on top and go to soptest page.",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms5kx5zfomq4m",
+          "title": "Max Waiting Time",
+          "content": "Set the Max Waiting Time to 1 seconds",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms5kxocd3hd6g",
+          "title": "Go back",
+          "content": "Again go back to Automated Tests. and click Test button. This time it will run the model again to test whether there is a fault.. If the test failed. that means the equipment has a fault.",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms5kz1a3ab4d9",
+          "title": "Max Waiting Time",
+          "content": "Again change Max Waiting Time to previous value",
+          "type": "note",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1785299100576,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms5ipfc7avd6e",
+      "title": "Colors for Running,Stopping,Capsule,Glowing",
+      "desc": "",
+      "code": "",
+      "catId": "mqqd3zxibm1sp",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "ms5io08mzdx81",
+          "title": "Capsule Color",
+          "content": "#42c25c",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms5ioq7y3hjay",
+          "title": "Glow Color",
+          "content": "#42c25c",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms5ioy12637ie",
+          "title": "Running Color",
+          "content": "#42c25c",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms5ip5d2xx0nz",
+          "title": "Stopped Color",
+          "content": "#A9A9A9",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1785295265767,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms5h2pvfw1yyq",
+      "title": "Chiller Optimization No Data Coming",
+      "desc": "",
+      "code": "",
+      "catId": "mrd84cpnu54vb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "ms5h0sjgt4np7",
+          "title": "Try to Curl",
+          "content": "curl -X GET <MLServerIP>/inference-with-config/1",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "This may happens when restart server, If error comes when curl, click on the card attached to this card.(related card)",
+      "isGuide": true,
+      "createdAt": 1785292526715,
+      "related": [
+        "ms5h014tk963a"
+      ],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms2m56f0y0nz0",
+      "title": "DX Basic Installation Steps",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "ms2lyh03ns0ug",
+          "title": "Download Iviva DX ",
+          "content": "git clone 'http://source.iviva.com/EutechDevelopers/iviva.dx.git'",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2lyufgqzuxx",
+          "title": "Checkout to the latest Branch",
+          "content": "git checkout 4.9.3",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2lz7qctwoxz",
+          "title": "Run Mergedb",
+          "content": "sdm accountname mergedb all",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2lzipv59blq",
+          "title": "Run Installviews",
+          "content": "sdm accountname installviews",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2lzqdwvjqgv",
+          "title": "Run User roles",
+          "content": "sdm accountname inituserroles",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2lzx4b9o10m",
+          "title": "Create Anonymous and System Users - Mandatory for DX",
+          "content": "sdm accountname execute User.User:CreateUsersFromScript",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2m0g1gxiodp",
+          "title": "restart the services",
+          "content": "sudo systemctl reload nginx\nsudo systemctl daemon-reload\nsudo systemctl restart ivivaweb.service\nsudo systemctl restart lucyengine.service \nsudo systemctl restart hydra.service \nsudo systemctl restart wfengine.service\nsudo systemctl restart jobrunner.service \nsudo systemctl restart sdtaskrunner.service\nsudo systemctl restart emailgateway.service \nsudo systemctl restart saasaccountcreator.service ",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2m14lwxpa4j",
+          "title": "Log to the system and go to DX Apps",
+          "content": "/Apps/IvivaDX/composer/accountManager",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2m1hqb9njln",
+          "title": "Click on \"Upgrade to Latest Version\"",
+          "content": "Check whether the latest version is updated",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms2m1tyze17i9",
+          "title": "Click on \"Upload DX Lucy Models\"",
+          "content": "To upload the Latest Lucy Models needed for DX",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms2m3a9wib8f6",
+          "title": "Click on \"Upload DX Widget Templates\"",
+          "content": "To upload the latest DX Widget Templates",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms2m3mikc51fl",
+          "title": "Click on \"Upload DX UXP Dashboards\"",
+          "content": "To Upload the UXP Dashboards ",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms2m3wwkb02ct",
+          "title": "Click on \"Upload Firebase Configurations\"",
+          "content": "To work with push up notifications",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "ms2m4b44vyh9h",
+          "title": "Click on \"Initialize Scope Configurations\"",
+          "content": "To update the Scope configurations in Organization, Location, Inventory etc.",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "ms2m4zngnvzsi",
+          "title": "Go to App Store to install required Apps",
+          "content": "/Apps/IvivaDX/composer/appstore",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1785119641020,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "mrqmc2w95mtmy",
       "title": "How to get API token for Github and add post",
@@ -509,7 +773,12 @@
       "notes": "For Check logs >>\n\ndocker logs 41a17983b22a -f -n 100",
       "isGuide": true,
       "createdAt": 1783070551283,
-      "related": []
+      "related": [
+        "mrabbuk9fs12k",
+        "ms5g66cikb8br",
+        "ms5g986z30js1"
+      ],
+      "relatedWidgets": []
     },
     {
       "id": "mr3ap1p6dde9z",
@@ -1231,7 +1500,10 @@
       "notes": "Running Color : #42c25c\nStopped Color : #A9A9A9\nCapsule Color : #42c25c\nGlowing Color : #42c25c",
       "isGuide": true,
       "createdAt": 1782203321391,
-      "related": []
+      "related": [
+        "ms5ipfc7avd6e"
+      ],
+      "relatedWidgets": []
     },
     {
       "id": "mqly4dz883lwn",
@@ -6809,19 +7081,6 @@
       ]
     },
     {
-      "id": "ms18n5geyf85o",
-      "title": "My Checklist",
-      "desc": "",
-      "code": "Track your items as checklist, Can able track by Projectwise and able to export to Excel",
-      "output": "",
-      "catId": "ms18fimgg17ry",
-      "img": "",
-      "links": [],
-      "langTag": "",
-      "related": [],
-      "relatedWidgets": []
-    },
-    {
       "id": "ms18ouywk4572",
       "title": "Utility Meter Data Tool",
       "desc": "",
@@ -6895,6 +7154,104 @@
       "relatedWidgets": [
         "widget-converter"
       ]
+    },
+    {
+      "id": "ms2lrat6y77qf",
+      "title": "My Checklist",
+      "desc": "",
+      "code": "Track your items as checklist, Can able track by ProjectWise and able to export to Excel",
+      "output": "",
+      "catId": "ms18fimgg17ry",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": [
+        "widget-checklist"
+      ]
+    },
+    {
+      "id": "ms2mb5l3extxx",
+      "title": "DX Basic Installation Steps - Guide Shortcut",
+      "desc": "",
+      "code": "Shorcut for Installation Guide",
+      "output": "",
+      "catId": "mrbk4tx2sntoi",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [
+        "ms2m56f0y0nz0"
+      ],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms5g66cikb8br",
+      "title": "If Suddenly no data come for UMS",
+      "desc": "",
+      "error": "No data for UMS from start",
+      "solution": "1. Check in IBMS whether the influx in running\n2. If not running, check the service is running.",
+      "solutionSteps": [
+        "Check in IBMS whether the influx in running",
+        "If not running, check the service is running."
+      ],
+      "code": "No data for UMS from start",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms5g986z30js1",
+      "title": "UMS Import Not working",
+      "desc": "",
+      "error": "Exception - Object reference not set to an instance of an object.",
+      "solution": "Check whether the influx is running. Check the related card below attached",
+      "code": "Exception - Object reference not set to an instance of an object.",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [
+        "ms5g66cikb8br"
+      ],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms5h014tk963a",
+      "title": "Chiller Optimization curl Error",
+      "desc": "",
+      "error": "curl: (7) Failed to connect to <MLServerIP> port 80 after 0 ms: Couldn't connect to server",
+      "solution": "1. Try to ping\nping <MLServerIP>\n\nPinging successfully\nthen issue is on the PORT\n2. Check whether the PORT is listening\n\nsudo ss -tulpn | grep :80\n\nLook for something:\n0.0.0.0:80->80/tcp\n3. If its not listening try for PORT:8000",
+      "solutionSteps": [
+        "Try to ping\nping <MLServerIP>\n\nPinging successfully\nthen issue is on the PORT",
+        "Check whether the PORT is listening\n\nsudo ss -tulpn | grep :80\n\nLook for something:\n0.0.0.0:80->80/tcp",
+        "If its not listening try for PORT:8000"
+      ],
+      "code": "curl: (7) Failed to connect to <MLServerIP> port 80 after 0 ms: Couldn't connect to server",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "ms5kf7kjzldym",
+      "title": "Get Fields with actual columns from SQL",
+      "desc": "",
+      "code": "Check the related link below",
+      "output": "",
+      "catId": "mrbk4tx2sntoi",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [
+        "mqhsqnmynlu2f"
+      ],
+      "relatedWidgets": []
     }
   ],
   "parentCats": {
