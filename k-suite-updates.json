@@ -1,9 +1,11 @@
 {
-  "version": "6.0",
+  "version": "6.2",
   "changelog": [
-    "Linux codes- cron",
-    "Installations",
-    "IBMS Added"
+    "Intallation Guides",
+    "SQL- IBMS",
+    "Hypervisor",
+    "Repository Links",
+    "YML table structure added - new category"
   ],
   "categories": [
     {
@@ -189,9 +191,57 @@
       "icon": "ti-briefcase",
       "type": "guide",
       "langTag": ""
+    },
+    {
+      "id": "mseet9tp5t6nw",
+      "name": "YML",
+      "color": "#f59e0b",
+      "icon": "ti-building",
+      "type": "table",
+      "langTag": "",
+      "cardStyle": "list"
     }
   ],
   "commands": [
+    {
+      "id": "mseaw9t9ucgns",
+      "title": "Start from Scratch",
+      "desc": "",
+      "code": "",
+      "catId": "mqqd3zxibm1sp",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mseaukzravyi0",
+          "title": "Run the Service",
+          "content": "DTH Service",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mseavawi8e7eb",
+          "title": "Upload the DT Bundles",
+          "content": "Upload the DT Bundles in the UXP Bundles",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mseavo33gx6lr",
+          "title": "Add the Screen",
+          "content": "Create a Screen, given the id",
+          "type": "note",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1785826343853,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "msd23pultzx3d",
       "title": "Purge IBMS Alarms Steps",
@@ -1873,9 +1923,9 @@
         },
         {
           "id": "mql2d131354p7",
-          "title": "",
-          "content": "Copy the client.ovpn to /etc/openvpn and rename if to client.conf",
-          "type": "note",
+          "title": "Copy the client.ovpn to /etc/openvpn and rename if to client.conf",
+          "content": "sudo mv eutech@ecyber.com.ovpn client.conf\nsudo mv client.conf /etc/openvpn",
+          "type": "cmd",
           "img": ""
         },
         {
@@ -1900,7 +1950,8 @@
       "files": [],
       "related": [
         "mr0p9cypbdku3"
-      ]
+      ],
+      "relatedWidgets": []
     },
     {
       "id": "mqfc76lvj0dhv",
@@ -6009,11 +6060,11 @@
       "img": "",
       "links": [
         {
-          "label": "C12A",
+          "label": "C12A Builds",
           "url": "http://source.iviva.com/EutechDevelopers/changieast"
         },
         {
-          "label": "DIC",
+          "label": "DIC Builds",
           "url": "http://source.iviva.com/EutechDevelopers/dic"
         },
         {
@@ -6059,11 +6110,16 @@
         {
           "label": "SSO",
           "url": "http://source.iviva.com/iviva-platform/lucylaunch/tree/master/apps/SimpleSSO"
+        },
+        {
+          "label": "Punggol Builds",
+          "url": "http://source.iviva.com/EutechDevelopers/punggol.git"
         }
       ],
       "langTag": "",
       "related": [],
-      "output": ""
+      "output": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqq5u5r3l14bu",
@@ -6505,12 +6561,14 @@
       "title": "Open VPN not working in Ubuntu 24.04",
       "desc": "",
       "error": "Open VPN not working in Ubuntu 24.04",
-      "solution": "edit below file\n\nsudo nano /etc/openvpn/client/client.conf\n\nadd below links\n\ndata-ciphers AES-128-CBC:AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305\ndata-ciphers-fallback AES-128-CBC\n\nif not work add\ncipher AES-128-CBC\n\nsudo systemctl restart openvpn-client@client",
+      "solution": "edit below file\n\nsudo nano /etc/openvpn/client/client.conf\n\nadd below links\n\ndata-ciphers AES-128-CBC:AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305\ndata-ciphers-fallback AES-128-CBC\n\nif not work add\ncipher AES-128-CBC\n\nsudo systemctl restart openvpn@client.service",
       "code": "Open VPN not working in Ubuntu 24.04",
       "catId": "mqly4dz7etror",
       "img": "",
       "links": [],
       "related": [],
+      "langTag": "",
+      "relatedWidgets": [],
       "output": ""
     },
     {
@@ -7389,6 +7447,156 @@
       "langTag": "",
       "related": [],
       "relatedWidgets": []
+    },
+    {
+      "id": "mseaiz0w0zud4",
+      "title": "IBMS- Insert Point Overrides Valid Range",
+      "desc": "",
+      "code": "Insert into IBMSPointOverrides (PointKey,ValidRange,PollingFrequency,DeadBand,EnableCOVTrend,IsControllerBasedTrend,CreatedDateTime,CreatedUserKey)\nselect P.PointKey,T.ValidRange,T.PollingFrequency,T.DeadBand,T.EnableCOVTrend,T.IsControllerBasedTrend,GETUTCDATE(),1\nfrom IBMSPointTemplates T\ninner join IBMSPoints P on P.PointTemplateKey=T.PointTemplateKey\nwhere P.PointKey not in (select O.PointKey from IBMSPointOverrides O)\nand isnull(T.ValidRange,'')!=''",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mseew5t5gncld",
+      "title": "iviva config yml",
+      "desc": "",
+      "table": {
+        "cols": 3,
+        "headers": [
+          "Attribute",
+          "Value",
+          "Description"
+        ],
+        "rows": [
+          [
+            "DB",
+            "user id=sa;pwd=sa123;data source=172.11.171.1;initial catalog=asp",
+            "ASP Database Connection String"
+          ],
+          [
+            "JobQueueDB",
+            "user id=sa;pwd=sa123;data source=172.11.171.1;initial catalog=JobQueueDB",
+            "Job Queue Database Connection String"
+          ],
+          [
+            "MessagingDB",
+            "user id=sa;pwd=sa123;data source=172.11.171.1;initial catalog=MessagingDB",
+            "Messaging Database Connection String"
+          ],
+          [
+            "LucyEventDB",
+            "user id=sa;pwd=sa123;data source=172.11.171.1;initial catalog=LucyEventDB",
+            "LucyEvent Database Connection String for Lucy"
+          ],
+          [
+            "GroupDB",
+            "user id=sa;pwd=sa123;data source=172.11.171.1;initial catalog=ProcessDB",
+            "Used for Process"
+          ],
+          [
+            "GroupADB",
+            "user id=sa;pwd=sa123;data source=172.11.171.1;initial catalog=ProcessDB",
+            "Used for Process"
+          ],
+          [
+            "RedisServer",
+            "172.12.130.8:6379",
+            "Redis Server and Port"
+          ],
+          [
+            "MongoDBServer",
+            "mongodb://172.16.123.1:27017",
+            "Mongo DB Server IP and Port"
+          ],
+          [
+            "FileServer",
+            "/iviva/uploads",
+            "Where the Uploads Folder Exists"
+          ],
+          [
+            "AccountUrl",
+            "https://ecl.iviva.com",
+            "Account URL (can be IP)"
+          ],
+          [
+            "BaseDomain",
+            "ecl.iviva.com",
+            "Domain of the site"
+          ],
+          [
+            "UrlPattern",
+            "SubDomain",
+            "Full Domain or Sub Domain"
+          ],
+          [
+            "MaxUploadFileSizeMB",
+            "100",
+            "Use to increase the upload file size which supports from the system when attachments are saved to file server"
+          ],
+          [
+            "SaveAttachmentsToFileServer",
+            "1",
+            "Now all uploads that will be done will be saved into a folder called 'System.Attachments' in the account's uploads folder. When you do this, all the existing attachments in the database will no longer be accessible"
+          ],
+          [
+            "MaxDBUploadFileSizeMB",
+            "1000",
+            "Use to increase the upload file size which supports from the system when attachments are saved to database"
+          ],
+          [
+            "LargeUploadFileSizeMB",
+            "100",
+            "Enable large-upload mechanism by set this to a non - zero number.This will support to upload huge files easily which are larger than this file size(in MB)."
+          ],
+          [
+            "MaxUploadChunkSizeMB",
+            "5",
+            "Maximum Chunk Upload Size"
+          ],
+          [
+            "Path",
+            "/iviva/apps",
+            "Main App Path"
+          ],
+          [
+            "SystemPath",
+            "/iviva/ivivaweb",
+            "Framework Path"
+          ],
+          [
+            "CustomAppsPath",
+            "/iviva/customapps,/iviva/customapps/C2O/C2O",
+            "Custom App Path"
+          ],
+          [
+            "LogPath",
+            "/var/log/iviva",
+            "Log Path"
+          ],
+          [
+            "LucyServer",
+            "172.12.130.6:9090",
+            "Lucy Server IP and Port"
+          ],
+          [
+            "LucyEngine.Clustered",
+            "0 or 1",
+            "1 means multiple lucyengine may run"
+          ]
+        ]
+      },
+      "output": "",
+      "catId": "mseet9tp5t6nw",
+      "img": "",
+      "links": [],
+      "related": [],
+      "relatedWidgets": [],
+      "langTag": ""
     }
   ],
   "parentCats": {
