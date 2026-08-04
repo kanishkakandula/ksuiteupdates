@@ -1,11 +1,7 @@
 {
-  "version": "6.2",
+  "version": "6.3",
   "changelog": [
-    "Intallation Guides",
-    "SQL- IBMS",
-    "Hypervisor",
-    "Repository Links",
-    "YML table structure added - new category"
+    "Added Quick Links - KSuite Product Links"
   ],
   "categories": [
     {
@@ -5855,35 +5851,29 @@
     },
     {
       "id": "mqnjdx28c8gr0",
-      "title": "DX App Compare",
-      "desc": "Click below link to Compare two apps",
+      "title": "K-Suite Products",
+      "desc": "",
       "code": "",
       "catId": "mqnjapmx24la1",
       "img": "",
       "links": [
         {
-          "label": "Compare Apps",
+          "label": "Compare DX Apps",
           "url": "https://json-compare-kk.tiiny.site/"
-        }
-      ],
-      "related": [],
-      "output": ""
-    },
-    {
-      "id": "mqnjm70galqle",
-      "title": "Resource Manager",
-      "desc": "Click below link to Open Resource Manager App",
-      "code": "",
-      "catId": "mqnjapmx24la1",
-      "img": "",
-      "links": [
+        },
+        {
+          "label": "Grab To Excel Petty Cash Claims",
+          "url": "https://grabtoexcel-ksuite.netlify.app/"
+        },
         {
           "label": "Resource Manager",
           "url": "https://resource-manager-kka.netlify.app/"
         }
       ],
       "related": [],
-      "output": ""
+      "output": "",
+      "langTag": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqnryc9l2bu2h",
@@ -7597,6 +7587,21 @@
       "related": [],
       "relatedWidgets": [],
       "langTag": ""
+    },
+    {
+      "id": "msehrw2cwpkit",
+      "title": "Delete Transactions Related Link",
+      "desc": "",
+      "code": "Click the related link below",
+      "output": "",
+      "catId": "mrbk4tx2sntoi",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [
+        "mrjcsuih2yv4x"
+      ],
+      "relatedWidgets": []
     }
   ],
   "parentCats": {
