@@ -1,6 +1,9 @@
 {
-  "version": "1.0",
-  "changelog": [],
+  "version": "8.1",
+  "changelog": [
+    "Lucy Blocks for get Transition ID added",
+    "Commands"
+  ],
   "categories": [
     {
       "id": "mqqd3zxibm1sp",
