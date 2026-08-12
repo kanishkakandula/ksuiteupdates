@@ -1,8 +1,10 @@
 {
-  "version": "8.1",
+  "version": "8.2",
   "changelog": [
-    "Lucy Blocks for get Transition ID added",
-    "Commands"
+    "Installations Added",
+    "SQL",
+    "DX",
+    "Docker Installations"
   ],
   "categories": [
     {
@@ -200,6 +202,307 @@
     }
   ],
   "commands": [
+    {
+      "id": "mspqyc3bq0996",
+      "title": "Install Docker Setup in Windows Machine",
+      "desc": "Run below commands on Powershell with admin rights",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mspqqhlkaq6fa",
+          "title": "Open the Related Card",
+          "content": "If Ubuntu is not installed in Windows Machine, Click on the Related Card to Get steps to install it.",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mspqsk670ynhl",
+          "title": "Verify Docker is running",
+          "content": "docker --version\ndocker compose version\ndocker ps",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspqt5873l5aa",
+          "title": "Create your project structure",
+          "content": "For example:\n\nC:\\\n └── iviva\\\n      ├── docker-compose.yml\n      ├── .env\n      ├── config\\\n      │     └── iviva.config.yaml\n      ├── logs\\\n      ├── uploads\\\n      ├── temp\\\n      ├── customapps\\\n      └── customapprepositories\\\n\t  └── data\\\n\t         └── redis\\",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspqtj4vqpc4c",
+          "title": "Update the volume mappings",
+          "content": "Your compose file appears to mount Linux directories like:\n\nvolumes:\n  - /opt/iviva/config:/iviva/config\n\nOn Windows, change these to Windows paths.\n\nFor example:\n\nvolumes:\n  - C:/iviva/config:/iviva/config\n  - C:/iviva/logs:/iviva/logs\n  - C:/iviva/uploads:/iviva/uploads\n  - C:/iviva/temp:/iviva/temp\n  - C:/iviva/customapps:/iviva/customapps\n  - C:/iviva/customapprepositories:/iviva/customapprepositories\n  - C:/iviva/data/redis\n\nDocker Desktop understands paths like:\n\nC:/iviva/config\n\nor\n\nD:/Docker/iviva/config",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspquddbjev3k",
+          "title": "Verify .env",
+          "content": "Example:\n\nIVIVA_ACCOUNT=cmms\nDB_HOST=10.0.0.147\nDB_PORT=1433\nDB_USERNAME=sa\nDB_PASSWORD=Welcome@123\n\nREDIS_HOST=10.0.0.147\nREDIS_PORT=6379\n\nIVIVA_CONFIG_PATH=/iviva/config/iviva.config.yaml\nIVIVA_BRE_URL=http://iviva-boldreports:5004\n\nNotice that IVIVA_CONFIG_PATH remains the container path (/iviva/config/...), not a Windows path. The container only sees the Linux path inside itself.",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspquu5zafvtj",
+          "title": "Login to AWS ECR (if required)",
+          "content": "If the image is private, install the AWS CLI and then:\n\naws configure\n\nThen log in:\n\naws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin getlicense.dkr.ecr.ap-southeast-1.amazonaws.com\n\n* If windws aws authentication failed, run below command and download all images\n\ncurl.exe -s \"https://license.iviva.com/login?key=getkey\" | docker login getlicense.dkr.ecr.ap-southeast-1.amazonaws.com -u AWS --password-stdin\n\nYou should see:\n\nLogin Succeeded\n",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspqwqd3tee5w",
+          "title": "Pull the image and upload to docker",
+          "content": "Navigate to the folder containing docker-compose.yml:\n\ncd C:\\iviva\n\nUpload images\ndocker load -i D:\\IvivaDockerImages\\ivivaweb.tar\ndocker load -i D:\\IvivaDockerImages\\sdm.tar\ndocker load -i D:\\IvivaDockerImages\\lucyengine.tar\ndocker load -i D:\\IvivaDockerImages\\cron.tar\ndocker load -i D:\\IvivaDockerImages\\hydra.tar\ndocker load -i D:\\IvivaDockerImages\\jobrunner.tar\ndocker load -i D:\\IvivaDockerImages\\sdtaskrunner.tar\ndocker load -i D:\\IvivaDockerImages\\ums.tar\ndocker load -i D:\\IvivaDockerImages\\ums-app.tar\ndocker load -i D:\\IvivaDockerImages\\boldreports.tar\n",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspqx62v0ze71",
+          "title": "Start the container",
+          "content": "docker compose --profile redis --env-file .env up -d\ndocker compose --profile ivivaweb --env-file .env up -d\ndocker compose --profile sdm --env-file .env up -d\ndocker compose --profile lucyengine --env-file .env up -d\ndocker compose --profile cron --env-file .env up -d\ndocker compose --profile hydra --env-file .env up -d\ndocker compose --profile jobrunner --env-file .env up -d\ndocker compose --profile sdtaskrunner --env-file .env up -d\ndocker compose --profile ums --env-file .env up -d\ndocker compose --profile umsapp --env-file .env up -d\ndocker compose --profile boldreports --env-file .env up -d",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspqxe53up1wc",
+          "title": "Check that it started",
+          "content": "docker ps",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspqyoyvddpax",
+          "title": "Commands to stop, remove and restart docker conatiners",
+          "content": "docker restart iviva-ivivaweb\ndocker restart iviva-lucyengine\ndocker restart iviva-cron\ndocker restart iviva-hydra\ndocker restart iviva-jobrunner\ndocker restart iviva-sdtaskrunner\ndocker restart iviva-ums-service\ndocker restart iviva-umsapp\ndocker restart iviva-boldreports\n\ndocker stop iviva-ivivaweb\ndocker stop iviva-lucyengine\ndocker stop iviva-cron\ndocker stop iviva-hydra\ndocker stop iviva-jobrunner\ndocker stop iviva-sdtaskrunner\ndocker stop iviva-ums-service\ndocker stop iviva-umsapp\ndocker stop iviva-boldreports\n\ndocker rm iviva-ivivaweb\ndocker rm iviva-lucyengine\ndocker rm iviva-cron\ndocker rm iviva-hydra\ndocker rm iviva-jobrunner\ndocker rm iviva-sdtaskrunner\ndocker rm iviva-ums-service\ndocker rm iviva-umsapp\ndocker rm iviva-boldreports",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1786518441911,
+      "related": [
+        "mspqpy9w0uuac"
+      ],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mspqpy9w0uuac",
+      "title": "Install Ubuntu on Windows For Docker",
+      "desc": "Run below commands on Powershell with admin rights",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mspqgjz291i7k",
+          "title": "",
+          "content": "wsl --install",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mspqjf6ggze1c",
+          "title": "",
+          "content": "Restart And Install Docker Desktop ",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mspqohf4t7dlp",
+          "title": "Enable WSL in Docker Desktop ",
+          "content": "Open docker desktop Settings >> resources >> WSL  Enable with Ubuntu",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mspqp9mv179g6",
+          "title": "",
+          "content": "Close and reopen docker desktop",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mspqpjp3shcrg",
+          "title": "",
+          "content": "docker --version",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "*** WSL Integration need to enabled on docker\nCheck -- Docker >> Settings >> Resources >> WSL integration",
+      "isGuide": true,
+      "createdAt": 1786518050756,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mso7b6dqwvthy",
+      "title": "BIM Installation",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mso71u7kqtv0c",
+          "title": "Get the PRSC App",
+          "content": "sdm <AccountName> enableapp PRSC 1.0",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso72up6hbh9d",
+          "title": "Check pm2 is there",
+          "content": "pm2 -v",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso733j40us6x",
+          "title": "If not install pm2",
+          "content": "npm install -g pm2",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso741a8h8ku4",
+          "title": "If Node.js not installed",
+          "content": "npm install -g pm2 (this will give an error: sudo: npm: command not found)",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mso74n5rkanfn",
+          "title": "Install Note.js",
+          "content": "sudo apt update\nsudo apt install -y nodejs npm\nnode -v\nnpm -v\ncurl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash\nsource ~/.bashrc\nnvm install --lts\nnvm use --lts\nnpm install -g npm\nnode -v\nnpm -v",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso75pzbz9by8",
+          "title": "Install pm2",
+          "content": "npm install -g pm2\npm2 -v",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso769y7lmgjg",
+          "title": "check process manager",
+          "content": "pm2\npm2 list",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso76p1bffm26",
+          "title": "Installation of BIM",
+          "content": "cd /home/ubuntu/twinlogic/Signal-Interface",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso76zp3vxngh",
+          "title": "if this runs without any error proceed",
+          "content": "node dist/server/server.js\n\nshows (signal-if is running on port 7106.)",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso77dx3ahw5c",
+          "title": "",
+          "content": "pm2 start dist/server/server.js --name signal-if\ncd /home/ubuntu/twinlogic/TwinViewer\n",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso77wfky6est",
+          "title": "if this runs without any error proceed",
+          "content": "node dist/server/server.js\n\nshows (TwinViewer 'v7.1' listening on port 7101)",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso786zznwphm",
+          "title": "",
+          "content": "pm2 start dist/server/server.js --name core",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso78dwvh9hbz",
+          "title": "",
+          "content": "pm2 save\n\n\n- Shows as below\n[PM2] Saving current process list...\n[PM2] Successfully saved in /home/ubuntu/.pm2/dump.pm2",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso78wh4847uu",
+          "title": "If need to stop the service",
+          "content": "pm2 stop all",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso791c01y4r5",
+          "title": "If need to start the service",
+          "content": "pm2 start all",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso79e5b3e3mf",
+          "title": "If ports are not available check reverse proxy (7106)",
+          "content": "sudo nano /etc/nginx/sites-available/ivivaweb",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso79rs71uj7v",
+          "title": "Add this",
+          "content": "add a location\n\t\t\t\tlocation /sbim/ {\n\t\t\t\t\tproxy_pass\thttp://Localhost:7101;\n\t\t\t\t\tproxy_set_header\tUpgrade $http_upgrade;\n\t\t\t\t\tproxy_set_header\tHost $host;\n\t\t\t\t}\n\t\t\t\tlocation /signal-if/ {\n\t\t\t\t\tproxy_pass\thttp://localhost:7106;\n\t\t\t\t\tproxy_set_header\tUpgrade $http_upgrade;\n\t\t\t\t\tproxy_set_header\tHost $host;\n\t\t\t\t}",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mso79yonbpmlf",
+          "title": "Reload Nginx",
+          "content": "sudo nginx -t \nsudo nginx -s reload",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso7a9ll1sdxh",
+          "title": "To check twin reaches, but gives error finding identification something",
+          "content": "abc.ivivacloud.com/sbim/",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mso7awg1c4u3g",
+          "title": "If page doesnt load and error check again the code and run this",
+          "content": "pm2 restart all",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1786424982542,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "mseaw9t9ucgns",
       "title": "Start from Scratch",
@@ -7659,6 +7962,45 @@
       "img": "",
       "links": [],
       "langTag": "bash",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "msob7rp5dnf5b",
+      "title": "Get as JSON Output without the Array",
+      "desc": "",
+      "code": "SELECT\n                CAST(A.AssetKey AS varchar(50)) AS [value],\n                NULL AS [alias],\n                A.AssetID AS [displayText],\n                'Asset' AS [objectType]\n            FOR JSON PATH, WITHOUT_ARRAY_WRAPPER",
+      "output": "{\"value\":\"2\",\"displayText\":\"Asset01\",\"objectType\":\"Asset\"}",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "cmd_1786431554495_k8zy8",
+      "title": "Get as JSON Output with the Array",
+      "desc": "",
+      "code": "SELECT\n                CAST(A.AssetKey AS varchar(50)) AS [value],\n                NULL AS [alias],\n                A.AssetID AS [displayText],\n                'Asset' AS [objectType]\n            FOR JSON PATH",
+      "output": "[{\"value\":\"2\",\"displayText\":\"Asset01\",\"objectType\":\"Asset\"}]",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mspoj373zl6lv",
+      "title": "Get App Stages in DX",
+      "desc": "",
+      "code": "[{\"app\":\"IvivaDX\",\"service\":\"DXAppInstance:GetAllAppStages\",\"parameters\":{\"AppKeys\":2032,\"q\":\"\",\"__includetotalcount__\":1,\"max\":20,\"last\":0,\"SkipScopeConfiguration\":0},\"id\":\"f2a47266-1bbf-4b78-9484-9e46885e8a90\"}]",
+      "output": "",
+      "catId": "mrbk4tx2sntoi",
+      "img": "",
+      "links": [],
+      "langTag": "",
       "related": [],
       "relatedWidgets": []
     }
