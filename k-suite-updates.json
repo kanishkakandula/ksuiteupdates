@@ -1,10 +1,12 @@
 {
-  "version": "8.2",
+  "version": "8.3",
   "changelog": [
     "Installations Added",
     "SQL",
     "DX",
-    "Docker Installations"
+    "Docker Installations",
+    "Docker",
+    "Troubleshoots"
   ],
   "categories": [
     {
@@ -7998,6 +8000,90 @@
       "code": "[{\"app\":\"IvivaDX\",\"service\":\"DXAppInstance:GetAllAppStages\",\"parameters\":{\"AppKeys\":2032,\"q\":\"\",\"__includetotalcount__\":1,\"max\":20,\"last\":0,\"SkipScopeConfiguration\":0},\"id\":\"f2a47266-1bbf-4b78-9484-9e46885e8a90\"}]",
       "output": "",
       "catId": "mrbk4tx2sntoi",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "msqx86ujm05e2",
+      "title": "Check the file size of the Docker Container Log",
+      "desc": "",
+      "code": "docker inspect --format='{{.LogPath}}' <Container ID>| xargs sudo du -h",
+      "output": "",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": [],
+      "langTag": "bash",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "msqxae6ugbptl",
+      "title": "Check the file size of the All the containers in the Docker Log",
+      "desc": "",
+      "code": "for c in $(docker ps -q); do\n  docker inspect --format='{{.LogPath}}' \"$c\" | xargs sudo du -h\ndone",
+      "output": "",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": [],
+      "langTag": "bash",
+      "related": [
+        "msqx86ujm05e2"
+      ],
+      "relatedWidgets": []
+    },
+    {
+      "id": "msqxbptupsd4l",
+      "title": "Delete all the Docker Container Logs (Truncate)",
+      "desc": "",
+      "code": "for c in $(docker ps -q); do\n  sudo truncate -s 0 \"$(docker inspect --format='{{.LogPath}}' \"$c\")\"\ndone",
+      "output": "",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": [],
+      "langTag": "bash",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "msqxczoeoqu8k",
+      "title": "Delete Docker Container Log",
+      "desc": "",
+      "code": "sudo truncate -s 0 \"$(docker inspect --format='{{.LogPath}}' <container_name_or_id>)\"",
+      "output": "",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": [],
+      "langTag": "bash",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "msqy074ci2kn7",
+      "title": "Delete only the files directly inside, Not Sub directories",
+      "desc": "",
+      "code": "sudo find /var/log -maxdepth 1 -type f -delete",
+      "output": "",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "msrahsrar8enc",
+      "title": "DX-If Transactions not shown in the search lists",
+      "desc": "",
+      "error": "If Transactions not shown in the search lists",
+      "solution": "1. Check the User Groups added in the DX App",
+      "solutionSteps": [
+        "Check the User Groups added in the DX App"
+      ],
+      "code": "If Transactions not shown in the search lists",
+      "catId": "mqly4dz7etror",
       "img": "",
       "links": [],
       "langTag": "",
