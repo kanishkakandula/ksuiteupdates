@@ -1,5 +1,5 @@
 {
-  "version": "8.4",
+  "version": "8.7",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -205,6 +205,69 @@
     }
   ],
   "commands": [
+    {
+      "id": "mswvkjk2elxln",
+      "title": "Install Hypervisor",
+      "desc": "",
+      "code": "",
+      "catId": "mqqd3zxibm1sp",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mswvce3jo9t57",
+          "title": "",
+          "content": "Install Mongodb",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "mswve40n9tyl7",
+          "title": "Connect the Mongo DB",
+          "content": "192.168.56.1:27017",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mswvezlbyef1g",
+          "title": "Copy the dth backend files",
+          "content": "And configured the Port and URL\n- URL\t\n   - 'mongodb://192.168.56.1:27017/3d-models'\n- Port\t\n   - 3000",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mswvgt6nezx6w",
+          "title": "Upload the bundle js files to UXP bundles",
+          "content": "bundle.json\nmain.js",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mswvi7hc5fbvo",
+          "title": "Run the nav.json",
+          "content": "chmod +x upload-nav.sh\nchmod +x upload-widget-categories.sh\nsudo ./upload-nav.sh nav.json\nsudo ./upload-widget-categories.sh widget-cats.json",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mswvj9lzl6gql",
+          "title": "",
+          "content": "Update HypervisorWidgets App",
+          "type": "note",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1786949459714,
+      "related": [
+        "mr0piv2qxhh7q",
+        "mseaw9t9ucgns"
+      ],
+      "relatedWidgets": []
+    },
     {
       "id": "mspqyc3bq0996",
       "title": "Install Docker Setup in Windows Machine",
@@ -8166,6 +8229,58 @@
       "title": "Archive Facility Query-PPM and Checklist",
       "desc": "",
       "code": "use pontiacland_facility\ngo\n\nIF OBJECT_ID('tempdb..#cte') IS NOT NULL\nbegin\n    drop table #cte\nend\n\n\nDeclare @MaxTransactionKey int,@MaxMapKey int,@PPMAppKey int=0\nselect @MaxTransactionKey=max(_TransactionKey) from pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive \nselect @MaxMapKey=max(_MapKey) from pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive_Checklists\n\n;with cte as (\nselect \nP.AWOKey,\nisnull(@MaxTransactionKey,0) + ROW_NUMBER() OVER (ORDER BY P.AWOKey) AS _TransactionKey\n,@PPMAppKey as _AppKey,\nP.Stage as _Stage,GETUTCDATE() as _ArchivedAt,'' as ReworkComments\n,case when P.VendorType='Organization.OrgDepartment' then V.VendorID else '' end as ServicerDepartment\n,'' as ClosedBySignature,'' as Tag, P.TargetCompleteDate as TargetEndDate, P.AWONo as Id, 'Web' as [Source],S.ServiceCategoryName as ServiceCategory\n,'Daily' as [Priority],V.VendorID as Servicer, '' as ReassignNotes,MU.FullName as ModifiedBy,'' as OrderReference,'' as ClosureComments, P.TargetCompleteDate as ScheduledEndDateTime,CU.FullName as CreatedBy,P.CreatedDateTime as Created,CordU.FullName as Coordinator,P.TargetStartDate as TargetStartDate, '' as ServiceItems,L.FullName as [Site],'' as CompletionNotes,'' as AcknowledgedAssignedRemarks\n,(\n        SELECT\n            TU.FullName AS displayText,\n            T.UserKey AS [value],\n\t\t\t'Member' as objectType\n        FROM PPMAuditWOTechMap T\n\t\tInner join UserMaster TU on TU.UserKey=T.UserKey\n        WHERE T.AWOKey = P.AWOKey\n        FOR JSON PATH\n    ) AS Technicians\n\t,P.ModifiedDateTime as Modified, P.TargetStartDate as ScheduledStartDateTime,P.IsActive as [Active],'Preventive Maintenance' as [Type],'' as ServiceContract, P.Stage, '' as CompletedBySignature, '' as CommenceNotes, V.VendorID as Supervisor, P.AMWOCode as Code,'' as StartBySignature, EL.FullName as [Location]\n\nfrom PPMAuditWorkOrder P\ninner join LocationMaster L on L.LocationKey=P.SiteKey\ninner join LocationMaster EL on EL.LocationKey=P.ExactLocationKey\ninner join FMServiceCategories S on S.ServiceCategoryKey=P.ServiceCategoryKey\nleft outer join UserMaster MU on MU.UserKey=P.ModifiedUserKey\nleft outer join UserMaster CU on CU.UserKey=P.CreatedUserKey\nleft outer join PPMWOVendorView V on V.ObjectKey=P.VendorKey and V.ObjectType=P.VendorType\nleft outer join UserMaster CordU on CordU.UserKey=P.CoordinatorKey\nwhere P.Stage='Closed'\n)\n\nselect * into #cte\nfrom cte\n\nInsert into pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive ([_TransactionKey],[_AppKey],[_Stage],[_ArchivedAt],[ReworkComments],[ServicerDepartment],[ClosedBySignature],[Tag],[TargetEndDate],[Id],[Source],[ServiceCategory],[Priority],[Servicer],[ReassignNotes],[ModifiedBy],[OrderReference],[ClosureComments],[ScheduledEndDateTime],[CreatedBy],[Created],[Coordinator],[TargetStartDate],[ServiceItems],[Site],[CompletionNotes],[AcknowledgedAssignedRemarks],[Technicians],[Modified],[ScheduledStartDateTime],[Active],[Type],[ServiceContract],[Stage],[CompletedBySignature],[CommenceNotes],[Supervisor],[Code],[StartBySignature],[Location])\nselect C.[_TransactionKey],C.[_AppKey],C.[_Stage],C.[_ArchivedAt],C.[ReworkComments],C.[ServicerDepartment],C.[ClosedBySignature],C.[Tag],C.[TargetEndDate],C.[Id],C.[Source],C.[ServiceCategory],C.[Priority],C.[Servicer],C.[ReassignNotes],C.[ModifiedBy],C.[OrderReference],C.[ClosureComments],C.[ScheduledEndDateTime],C.[CreatedBy],C.[Created],C.[Coordinator],C.[TargetStartDate],C.[ServiceItems],C.[Site],C.[CompletionNotes],C.[AcknowledgedAssignedRemarks],C.[Technicians],C.[Modified],C.[ScheduledStartDateTime],C.[Active],C.[Type],C.[ServiceContract],C.[Stage],C.[CompletedBySignature],C.[CommenceNotes],C.[Supervisor],C.[Code],C.[StartBySignature],C.[Location] from #cte C\nleft outer join pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive X on X.Id=C.Id\nwhere X.Id is null\n\n;with checklistcte as (\nselect \n P._TransactionKey\n,@PPMAppKey as _AppKey\n,S.ServiceGroupName as ChecklistName\n,'' as Topic,\ncase when SG.Stage='Completed' then 1 else 0 end as Completed,\n(select Count(1) from PPMAuditWOSGTaskMap X where X.SGWOMapKey=SG.SGWOMapKey) as TaskTotal\n,SG.IsTasksCompleted as TaskCompleted,\n(\n        SELECT\n\t\t\tdistinct\n            Z.TaskName AS TaskName,\n            1 AS AllowComments,\n\t\t\t1 as AllowImageProofing,\n\t\t\t1 as AllowToSkipMandatoryWithComment,\n\t\t\t'[]' as Attachments,\n\t\t\tX.SGTaskComment as Comments,\n\t\t\tZ.Duration,\n\t\t\t(SELECT\n                'TextArea' AS [type],\n                'DXI_TA_1775273196795P4WQX31KK' AS id,\n                'DXI_SID_1775273196795HXU602N8W3P' AS searchIndex,\n                'STRING' AS datatype,\n\t\t\t\t'' as placeholder,\n\t\t\t\t Z.TaskName as [name],\n\t\t\t\t X.IsReadingRequiredMandatory as isMandatory\n            FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) as FieldModel,\n\t\t\tcase when X.Stage='Completed' then 1 else 0 end as IsCompleted\n        FROM PPMAuditWOTaskMap Z\n\t\tInner join PPMAuditWOSGTaskMap X on X.TaskKey=Z.TaskKey\n        WHERE Z.AWOKey = P.AWOKey and X.SGWOMapKey=SG.SGWOMapKey\n        FOR JSON PATH\n    ) AS Tasks,\n\tSG.CreatedDateTime,GETUTCDATE() as _ArchivedAt,\n\t(SELECT\n        XX.ObjectID AS [displayText],\n        XX.ObjectType AS objectType,\n        XX.ObjectKey AS [value]\n\t\tfrom PPMAuditServiceGroupWOMap ZSG\n\t\tinner join (\n\t\t\tselect ZA.AssetKey as ObjectKey, ZA.AssetID as ObjectID, 'Asset' as ObjectType from AssetMaster ZA\n\t\t\tunion all\n\t\t\tselect ZL.LocationKey as ObjectKey, ZL.FullName as ObjectID, 'Location' as ObjectType from LocationMaster ZL\n\t\t) XX on XX.ObjectKey=ZSG.SGObjectKey and XX.ObjectType=ZSG.SGObjectType\n\n\t\twhere ZSG.SGWOMapKey=SG.SGWOMapKey\n    FOR JSON PATH) as [Objects]\n\t\n\tfrom #cte P\nleft outer join PPMAuditServiceGroupWOMap SG on SG.AWOKey=P.AWOKey\nleft outer join AuditServiceGroup S on S.ServiceGroupKey=SG.ServiceGroupKey\n) \n\n\n\n\nInsert into pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive_Checklists([_MapKey],[_TransactionKey],[_AppKey],[ChecklistName],[Topic],[Objects],[Completed],[TaskTotal],[TaskCompleted],[Tasks],[CreatedDateTime],[_ArchivedAt])\nselect isnull(@MaxMapKey,0) + ROW_NUMBER() OVER (ORDER BY C._TransactionKey) AS _MapKey,C.[_TransactionKey],C.[_AppKey],C.[ChecklistName],C.[Topic],C.[Objects],C.[Completed],C.[TaskTotal],C.[TaskCompleted],C.[Tasks],C.[CreatedDateTime],C.[_ArchivedAt] from checklistcte C\n\n--select * from  pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive_Checklists\n\n--select * from pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive_Checklists where ArchiveKey>12\n\n\n\n--select * from pontiaclanddx_archive.dbo.DX_Planned_Work_Order_Archive where _TransactionKey=1",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mswojifgmlllk",
+      "title": "Docker Bash File - Restart.sh",
+      "desc": "",
+      "code": "#!/bin/sh\n# Web1\nsudo docker compose   --profile ivivaweb  --profile lucyengine  --profile jobrunner  --profile sdtaskrunner  --profile emailgateway --profile hydra --profile boldreports     restart",
+      "output": "",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": [],
+      "langTag": "bash",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mswp0vhbid33u",
+      "title": "Update NewObjectID For OldObjectID in Point Address - IBMS",
+      "desc": "",
+      "code": "Declare  @tb TABLE(\n    [AssetCategoryID]\tVARCHAR(512),\n    [AssetID]\tVARCHAR(512),\n    [PointTemplateName]\tVARCHAR(512),\n    [PointAddress]\tVARCHAR(512),\n    [PointValue]\tVARCHAR(512),\n    [Units]\tVARCHAR(512),\n    [Remarks]\tVARCHAR(512)\n);\n\nINSERT INTO @tb ([AssetCategoryID], [AssetID], [PointTemplateName], [PointAddress], [PointValue], [Units], [Remarks]) VALUES ('Power Meter', 'PM-C7-1 Q2 INCOMING 2 (T/F 8)', 'Total Energy', 'I,192.168.1.22,47808,0,1024,522,0,3000296,85,-1,5,0,0,0', '998346000', 'kWh', '3000432');\n\n--select *,Replace(PointAddress,'',Remarks) from @tb where Remarks  LIKE '_______'  AND Remarks NOT LIKE '%[^0-9]%'; \n;with cte as (\nselect *,Replace(PointAddress,OldObjectID,Remarks) as NewPointAddress from (\nSELECT  \n    *\nFROM @tb t\nCROSS APPLY (\n        SELECT value AS OldObjectID\n        FROM (\n                SELECT value, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS rn\n                FROM STRING_SPLIT(t.PointAddress, ',')\n             ) s\n        WHERE rn = 8\n) x\nWHERE \n    x.OldObjectID NOT LIKE '%[^0-9]%' \n    AND LEN(x.OldObjectID) = 7\n\t) Z\n\twhere Remarks LIKE '_______' and Remarks NOT LIKE '%[^0-9]%'\n\t)\n--SELECT * FROM cte\n\n--Update P set P.PointAddress=X.NewPointAddress\nselect P.PointAddress,X.NewPointAddress \nfrom IBMSPoints P \ninner join cte X on X.PointAddress=P.PointAddress",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mswp27isizad9",
+      "title": "Influx Update Points",
+      "desc": "",
+      "code": "// List your pointKeys\npointKeys = [\"17147\",\"17150\",\"17153\"]\n\nfrom(bucket: \"mybucket\")\n  |> range(start: 0)  // adjust if you only want recent data\n  |> filter(fn: (r) => r._measurement == \"IBMSTrends\")\n  |> filter(fn: (r) => contains(value: r._field, set: [\"Trend_\" + pointKey for pointKey in pointKeys]))\n  |> map(fn: (r) => ({ r with _value: r._value / 1000.0 }))\n  |> to(\n    bucket: \"mybucket\",\n    org: \"myorg\",\n    timeColumn: \"_time\"\n  )\n\n\n🔹 Run this\nInfluxDB UI\nGo to Data Explorer → Script Editor\nPaste this script\nClick Submit",
+      "output": "",
+      "catId": "mqi0lof9fisx6",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mswpl1wof8637",
+      "title": "Update Space Seat Capacity on KPI Location Map- from child to parent",
+      "desc": "",
+      "code": ";WITH LocationHierarchy AS\n(\n    -- Start with leaf locations only\n    SELECT \n        L.LocationKey,\n        L.ParentLocationKey,\n        X.Value,\n        L.LocationKey AS LeafKey\n    FROM LocationMaster L\n    INNER JOIN KPIMetricLocationMapping X \n        ON X.LocationKey = L.LocationKey\n    WHERE X.KPIName = 'totalCapacity'\n    AND NOT EXISTS (\n        SELECT 1 \n        FROM LocationMaster C \n        WHERE C.ParentLocationKey = L.LocationKey\n    )\n\n    UNION ALL\n\n    -- Walk up the hierarchy\n    SELECT \n        P.LocationKey,\n        P.ParentLocationKey,\n        H.Value,\n        H.LeafKey\n    FROM LocationMaster P\n    JOIN LocationHierarchy H\n        ON H.ParentLocationKey = P.LocationKey\n)\n, Aggregated AS\n(\n    SELECT \n        LocationKey,\n        SUM(Value) AS TotalValue\n    FROM LocationHierarchy\n    GROUP BY LocationKey\n)\n\nUPDATE X\nSET X.Value = A.TotalValue\nFROM KPIMetricLocationMapping X\nJOIN Aggregated A \n    ON A.LocationKey = X.LocationKey\nWHERE X.KPIName = 'totalCapacity';\n\n\n--select C.Fullname,Z.* from (\n--select A.LocationKey,X.[Value],A.TotalValue\n--FROM KPIMetricLocationMapping X\n--JOIN Aggregated A \n--    ON A.LocationKey = X.LocationKey\n--WHERE X.KPIName = 'totalCapacity'\n--) Z\n--inner join LocationMaster C on C.LocationKey=Z.LocationKey\n--and C.LocationTypeKey=4\n--and C.FullName like '%DIC.Annex.L2%'\n\n--select * from LocationTypeMaster",
       "output": "",
       "catId": "mqly4dz764hce",
       "img": "",
