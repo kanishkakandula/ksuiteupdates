@@ -1,5 +1,5 @@
 {
-  "version": "8.8",
+  "version": "8.9",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -291,6 +291,110 @@
           "id": "msxd9y8l6un60",
           "title": "Run the Simulated Subsytem Interface (SSIF)",
           "content": "if linux:\nsudo systemctl start SimulatedSubystemInterface.service\n\nif Windows:\nSimulatedSubsytemInterface.exe -ui\n\nthis will open a UI to write and view points.",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1786979075726,
+      "related": [],
+      "relatedWidgets": [
+        "widget-pointaddr"
+      ]
+    },
+    {
+      "id": "cmd_1786979438275_p7uss",
+      "title": "BACNET - How to setup IBMS Equipment Point (Bacnet Subsystem Interface)",
+      "desc": "How to setup IBMS Equipment Point to get BMS Data (Bacnet Subsystem Interface)",
+      "code": "",
+      "catId": "mr397a439ezuj",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "msxbwqnfg9p66",
+          "title": "Create an Asset",
+          "content": "Eg: Asset-001",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "msxbxnd0e386x",
+          "title": "Create a Zone in IBMS",
+          "content": "Zone will be the Site name.\neg: Site1",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxbzckbcs33e",
+          "title": "Create other IBMS Configurations",
+          "content": "Configure Alarm Class\nConfigure Alarm Severity\nCreate Equipment Template\nCreate Point Templates for the Equipment Template",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxc1fbn2mc5o",
+          "title": "Create Equipment",
+          "content": "Select the Asset: Asset-001\nSelect that Equipment Template\nSelect the Zone configured",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxc2aaj5t0c7",
+          "title": "API Keys",
+          "content": "Create API Keys from System App",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "msxc42t782f95",
+          "title": "IBMS Interface",
+          "content": "Configure the Configuration.xml in the IBMSInterface\n\nUpdate the API Key\nUpdate the URL\n",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxc4k7vmgszk",
+          "title": "BACnet Interface",
+          "content": "Configure the Configuration.xml in the BACnet Interface\n\nUpdate the API Key\nUpdate the URL\n",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxc5gmrkwb1m",
+          "title": "Interfaces",
+          "content": "Create an Interface in the IBMS App.\n\nUse the same name of the service.",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxdgvqc5imub",
+          "title": "Interface - Cluster",
+          "content": "Add the Local IP in Inteface Cluster Settings.\n\nThis should be taken from the IP configured in the Gateway server to retrieve data from BMS.",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxc723gmq61v",
+          "title": "Configure the Point Address",
+          "content": "Go to the Point from the Equipment and configure the Point Address as Required. the format is updated in the readme file in the BACnetSSIF folder.",
+          "type": "note",
+          "img": ""
+        },
+        {
+          "id": "msxd7s7w27z4y",
+          "title": "Run the IBMS Interface",
+          "content": "if linux :\nsudo systemctl start IBMSInterface.service\n\nif windows:\nrun in command prompt:\nIBMSInterface.exe -c\n\nor install as service:\nIBMSInterface.exe -i",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msxd9y8l6un60",
+          "title": "Run the BACnet Subsytem Interface (SSIF)",
+          "content": "To Install as Service in Windows\nBACnetSubsystemInterface.exe -i\n\nto run in console\nBACnetSubsystemInterface.exe -c \n",
           "type": "cmd",
           "img": ""
         }
