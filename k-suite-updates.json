@@ -1,5 +1,5 @@
 {
-  "version": "8.9",
+  "version": "9.0",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -206,6 +206,52 @@
     }
   ],
   "commands": [
+    {
+      "id": "msy3vwumua3xf",
+      "title": "Setup IBMS on a Site (Point Data Retrieval Process)",
+      "desc": "(Point Data Retrieval Process)",
+      "code": "",
+      "catId": "mr397a439ezuj",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "msy3n644bs2qv",
+          "title": "Plug the Network Cable and Configure Connection Networks",
+          "content": "Go to \"View Connection Networks\"\nRight click the \"Ethernet\" Adapter (mostly Realteck PCIe GbE Family Controller)\nGo to Properties\nClick on \"Internet Protocol Version 4 (TCP/IPv4)\nGo to Properties\nClick on Advanced...\nEnable \"DHCP Enabled\"\nSet the IP to Automatically",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msy3rr7ojzvo0",
+          "title": "Once its connected",
+          "content": "It shows connected in the Connection Networks",
+          "type": "tip",
+          "img": ""
+        },
+        {
+          "id": "msy3u25g1pt3o",
+          "title": "Check the IP",
+          "content": "Open a Command Prompt \nType ipconfig\nGet the IPv4 Address",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "msy3sfur7y4xu",
+          "title": "Configure IBMS Interface",
+          "content": "Go to IBMS Interface\nGo to Clusters tab\nClick on Edit the Cluster ID\nSet the LocalIP to the IP which was taken from IPAddress in command prompt",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "Now Points should recieve the Data.",
+      "isGuide": true,
+      "createdAt": 1787023893262,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "msxd7bf2cdi3m",
       "title": "How to setup IBMS Equipment Point (Simulated Subsystem Interface)",
