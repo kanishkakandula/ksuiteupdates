@@ -1,5 +1,5 @@
 {
-  "version": "9.1",
+  "version": "9.2",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -206,6 +206,59 @@
     }
   ],
   "commands": [
+    {
+      "id": "mt6qxqd1f7fdm",
+      "title": "AFDD Full Test Scenario",
+      "desc": "",
+      "code": "",
+      "catId": "mrd84cpnu54vb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mt6qtw8p81p9m",
+          "title": "Go to CMAT App",
+          "content": "Click on Cog Wheel\nClick on Asset\nSearch you Asset eg: AHU-A-4-1\nClick on Unit Test Tab\n\nSelect Your Model Name eg: AHU-A-4-1 AHU Check FIlter Status with Pressure\n\nIt will open the Dashboard of \" AHU-A-4-1 AHU Check FIlter Status with Pressure\"",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mt6qxw9z0009c",
+          "title": "Set Max Wating Cycles",
+          "content": "Click on the \"i\" icon on the Automated Tests Record\nClick on the Title Name\nIn the Details > Change the Max Waiting Time to 2 seconds\n\nIn Issue Verification Process > Change the Re-Run Cycle No to 1 and  Wait Time for Cycle to 10000 milliseconds\n",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mt6r1a5biwr23",
+          "title": "Check the SQL Query taken for AFDD Trigger",
+          "content": "on same page, Click on \"Configure Event Trigger\" button in side bar.\n\nCheck the SQL Query below",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mt6r2pt46qqov",
+          "title": "To Change the Upper Limit and Lower Limit",
+          "content": "Go to the Dashboard \" AHU-A-4-1 AHU Check FIlter Status with Pressure\"\nClick on Back Arrow in the top right corner\n\nClick on Add Forms in the Functional Verification Section\n\nselect Add Forms\n\nScroll down until you find \"AHU Check Filter Status with Pressure\"\n\nClick on the Arrow button\n\nGo to Step 04: Form Template Tab\n\nChange the Upper Limit and Lower Limit\n\nClick Save",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mt6r7fxre9foj",
+          "title": "Sync the Forms",
+          "content": "Click Sync test Forms which is in the side bar of that page opened\n\nIf you are changing only one asset then Un-Select All and select only the asset you want and click on Sync test Forms.\n",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1787546338741,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "msy3vwumua3xf",
       "title": "Setup IBMS on a Site (Point Data Retrieval Process)",
@@ -8581,7 +8634,8 @@
       "links": [],
       "langTag": "",
       "related": [],
-      "relatedWidgets": []
+      "relatedWidgets": [],
+      "output": ""
     },
     {
       "id": "mszygw8o2cjeo",
@@ -8606,7 +8660,8 @@
         "msszvgfwprp46",
         "msqxae6ugbptl"
       ],
-      "relatedWidgets": []
+      "relatedWidgets": [],
+      "output": ""
     }
   ],
   "parentCats": {
