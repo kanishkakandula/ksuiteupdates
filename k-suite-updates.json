@@ -1,5 +1,5 @@
 {
-  "version": "9.2",
+  "version": "9.3",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -1005,7 +1005,7 @@
     },
     {
       "id": "ms5kzmaomya4a",
-      "title": "To check Real Issue",
+      "title": "To check whether the Issue still there - AFDD",
       "desc": "Check from Hypervisor",
       "code": "",
       "catId": "mrd84cpnu54vb",
@@ -6573,7 +6573,7 @@
           "url": "https://resource-manager-kka.netlify.app/"
         },
         {
-          "label": "GLB Viewer",
+          "label": "GLB Inspector - Mini Blender",
           "url": "https://glbviewerksuite.netlify.app/"
         }
       ],
@@ -8662,6 +8662,22 @@
       ],
       "relatedWidgets": [],
       "output": ""
+    },
+    {
+      "id": "mt9wnhckzt71g",
+      "title": "When Openvpn installed but, cannot git the 10.0.1.33",
+      "desc": "When Openvpn installed but, cannot git the 10.0.1.33",
+      "error": "git clone 'http://source.iviva.com/EutechDevelopers/iviva.dx.git' Cloning into 'iviva.dx'... fatal: unable to access 'http://source.iviva.com/EutechDevelopers/iviva.dx.git/': Failed to connect to source.iviva.com port 80 after 3056 ms: No route to host",
+      "solution": "sudo ip route add 10.0.1.33 via 10.8.0.21 dev tun0",
+      "code": "git clone 'http://source.iviva.com/EutechDevelopers/iviva.dx.git' Cloning into 'iviva.dx'... fatal: unable to access 'http://source.iviva.com/EutechDevelopers/iviva.dx.git/': Failed to connect to source.iviva.com port 80 after 3056 ms: No route to host",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [
+        "mql2blukhc7pv"
+      ],
+      "relatedWidgets": []
     }
   ],
   "parentCats": {
