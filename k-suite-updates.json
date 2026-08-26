@@ -1,5 +1,5 @@
 {
-  "version": "9.3",
+  "version": "9.4",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -8677,6 +8677,20 @@
       "related": [
         "mql2blukhc7pv"
       ],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mt9z5n91h4iu6",
+      "title": "DX-Added User Role is not showing",
+      "desc": "",
+      "error": "DX-Added User Role is not showing",
+      "solution": "Because of CPU high usage, it stucks. So type htop in ubuntu server and monitor the CPU usage. when it falls below 50% try adding the user role.",
+      "code": "DX-Added User Role is not showing",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
       "relatedWidgets": []
     }
   ],
