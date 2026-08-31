@@ -1,5 +1,5 @@
 {
-  "version": "9.5",
+  "version": "9.6",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -1934,7 +1934,7 @@
     },
     {
       "id": "cmd_1782452408660_hw3so",
-      "title": "Hypervisor-Map the Uploaded the Model and map the Floor or Building",
+      "title": "Hypervisor-Map the Uploaded Model and map the Floor or Building",
       "desc": "Hypervisor",
       "code": "",
       "catId": "mqqd3zxibm1sp",
@@ -6179,17 +6179,6 @@
       "output": ""
     },
     {
-      "id": "mqnhkxcgfnxj6",
-      "title": "Scroll for Tables",
-      "desc": "",
-      "code": "<FieldBlock style='height:50px;overflow:auto;margin:-3px;width:240px;'>\n\n</ FieldBlock >",
-      "catId": "mqgt4k04blf8g",
-      "img": "",
-      "links": [],
-      "related": [],
-      "output": ""
-    },
-    {
       "id": "mqnhl3rsxmnxb",
       "title": "Search Box in Fields",
       "desc": "",
@@ -8722,7 +8711,8 @@
       "links": [],
       "langTag": "",
       "related": [],
-      "relatedWidgets": []
+      "relatedWidgets": [],
+      "output": ""
     },
     {
       "id": "mtcjkoscobhao",
@@ -8731,6 +8721,59 @@
       "code": "sudo vim /opt/iviva/clean-logs.sh\n-----------------------------------------\ninside clean-logs.sh (add these :)\n#!/bin/bash\nfind /opt/iviva/logs -maxdepth 1 -type f -delete\n\nSave this file\n-------------------------------\nsudo chmod +x /opt/iviva/clean-logs.sh\n\n---------------------------------\nsudo crontab -e\n---------------------\n0 3 */3 * * /opt/iviva/clean-logs.sh",
       "output": "",
       "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mtgqzhh71mxg9",
+      "title": "IBMS - Update Alias in Trend Group Points",
+      "desc": "",
+      "code": "Update G set G.Alias=A.AssetID+'-'+T.PointTemplateName\nfrom IBMSTrendGroups G\n\n--select A.AssetID+'-'+T.PointTemplateName,* from IBMSTrendGroups G\ninner join IBMSPoints P on P.PointKey=G.PointKey\ninner join IBMSPointTemplates T on T.PointTemplateKey=P.PointTemplateKey\ninner join AssetMaster A on A.AssetKey=P.AssetKey",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mtgtofkw3x2ll",
+      "title": "Websocket issue in Lucy",
+      "desc": "",
+      "error": "Unable to execute block, connection to engine broken. Cause Websocket is still trying to discover",
+      "solution": "Restart Hydra",
+      "code": "Unable to execute block, connection to engine broken. Cause Websocket is still trying to discover",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mtgvann6f2wz1",
+      "title": "Run Commands in Docker Iviva",
+      "desc": "run commands in iviva which are inside the Docker",
+      "code": "docker exec -it iviva-ivivaweb bash",
+      "output": "",
+      "catId": "mqly4dz7oziom",
+      "img": "",
+      "links": [],
+      "langTag": "bash",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mth4bsyfh6822",
+      "title": "Add a Vertical Scroll Bar for the Repeater, or Search tables",
+      "desc": "",
+      "code": "<FieldBlock style='height:50px;overflow:auto;margin:-3px;width:240px;'>\n</FieldBlock",
+      "output": "",
+      "catId": "mqgt4k04blf8g",
       "img": "",
       "links": [],
       "langTag": "",
