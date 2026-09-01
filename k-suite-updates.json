@@ -1,5 +1,5 @@
 {
-  "version": "9.6",
+  "version": "9.7",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -8777,6 +8777,33 @@
       "img": "",
       "links": [],
       "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mti3ox2kcj46l",
+      "title": "Error When Opening the GLB after uploaded",
+      "desc": "",
+      "error": "Error loading model: Unable to load from file:1788229367521_Roof.glb: /meshes/0/primitives/0: Error status: 404 Not Found - Unable to load http://192.168.56.1:5000/content/Shaders/draco_decoder_gltf.wasm",
+      "solution": "Check whether this file exists under Uploads/Shaders folder\n\ndraco_decoder_gltf.wasm",
+      "code": "Error loading model: Unable to load from file:1788229367521_Roof.glb: /meshes/0/primitives/0: Error status: 404 Not Found - Unable to load http://192.168.56.1:5000/content/Shaders/draco_decoder_gltf.wasm",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mti3pqz4vt4yj",
+      "title": "Find the file name in the given Drive if you dont know the path. from Powershell",
+      "desc": "",
+      "code": "Get-ChildItem -Path D:\\ -Filter draco_decoder_gltf.wasm -Recurse -ErrorAction SilentlyContinue",
+      "output": "",
+      "catId": "mqly4dz7t3w8c",
+      "img": "",
+      "links": [],
+      "langTag": "powershell",
       "related": [],
       "relatedWidgets": []
     }
