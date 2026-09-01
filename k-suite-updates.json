@@ -1,5 +1,5 @@
 {
-  "version": "9.7",
+  "version": "9.8",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -206,6 +206,33 @@
     }
   ],
   "commands": [
+    {
+      "id": "mticcmmosgpl9",
+      "title": "To show Different Equipment Real Time Point Values in One Page",
+      "desc": "IBMS",
+      "code": "",
+      "catId": "mr397a439ezuj",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mtic8xppjha6l",
+          "title": "Go to Real Time Reports in IBMS App",
+          "content": "Under Configure",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1788247433616,
+      "related": [
+        "mtie3lzqhe0cv"
+      ],
+      "relatedWidgets": []
+    },
     {
       "id": "mt6qxqd1f7fdm",
       "title": "AFDD Full Test Scenario",
@@ -8805,6 +8832,21 @@
       "links": [],
       "langTag": "powershell",
       "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mtie3lzqhe0cv",
+      "title": "IBMS-Update Real Time Report Points Bulk",
+      "desc": "IBMS",
+      "code": "Declare @tb table ([ReportName] varchar(500),[Asset ID] varchar(1024),[Equipment Template] Varchar(1024),[Point Template] varchar(1024))\nINSERT INTO @tb ([ReportName], [Asset ID], [Equipment Template], [Point Template]) VALUES\n    (N'Other', N'AUX CWP-1', N'Cooling Water Pump', N'On/Off Status'),\n    (N'Other', N'AUX CWP-1', N'Cooling Water Pump', N'Trip Alarm'),\n    (N'Other', N'AUX CWP-1', N'Cooling Water Pump', N'Mode Switch');\n\n\nDeclare @ReportName varchar(500),@AssetID varchar(1024),@EquipmentTemplate Varchar(1024),@PointTemplate Varchar(1024)\nDECLARE cur CURSOR FOR\n\nSELECT [ReportName], [Asset ID], [Equipment Template], [Point Template] FROM @tb\n\nOPEN cur    \n    FETCH NEXT FROM cur\n    INTO @ReportName,@AssetID,@EquipmentTemplate,@PointTemplate\n    While @@FETCH_STATUS = 0\n    Begin\n       \n        Declare @ReportConfigKey int=0,@EquipmentKey int=0, @PointKey int=0,@DisplayName varchar(1024)\n\n        if not exists(select * from IBMSRealTimeReportConfiguration where RealTimeReportName=@ReportName)\n        begin\n       Insert into IBMSRealTimeReportConfiguration (RealTimeReportName,CreatedDateTime,CreatedUserKey)\n       Values (@ReportName,GETUTCDATE(),1)\n        end\n        select @ReportConfigKey=RTConfigKey from IBMSRealTimeReportConfiguration where RealTimeReportName=@ReportName\n\n        select @PointKey=P.PointKey,@EquipmentKey=P.AssetKey from IBMSPoints P\n        inner join AssetMaster A on A.AssetKey=P.AssetKey\n        inner join IBMSPointTemplates T on T.PointTemplateKey=P.PointTemplateKey\n        where A.AssetID=@AssetID and T.PointTemplateName=@PointTemplate\n\n        if isnull(@PointKey,0)!=0\n        begin\n            If not exists (select * from IBMSRealTimeReportPointMap where EquipmentKey=@EquipmentKey and PointKey=@PointKey)\n            begin\n\n                Insert into IBMSRealTimeReportPointMap (PointKey,RTConfigKey,CreatedDateTime,CreatedUserKey,DisplayName,EquipmentKey,PointKeys)\n                Values (@PointKey,@ReportConfigKey,GETUTCDATE(),1,@AssetID,@EquipmentKey,cast(@PointKey as varchar(1024)))\n            end\n        end\n       \n\n    FETCH NEXT FROM cur\n    INTO @ReportName,@AssetID,@EquipmentTemplate,@PointTemplate\n   END;\nCLOSE cur;\nDEALLOCATE cur;",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": [
+        "mticcmmosgpl9"
+      ],
       "relatedWidgets": []
     }
   ],
