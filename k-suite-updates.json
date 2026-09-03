@@ -1,5 +1,5 @@
 {
-  "version": "9.8",
+  "version": "9.9",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -6533,9 +6533,10 @@
       "img": "",
       "links": [],
       "error": "KeyError",
-      "solution": "Remove garbage data.Solution: May be no parent location exists in the table",
+      "solution": "Remove garbage data.\n\nMay be no parent location exists in the table",
       "related": [],
-      "output": ""
+      "langTag": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqni3074cx0xj",
@@ -7160,11 +7161,16 @@
         {
           "label": "Colorize Old Photos",
           "url": "https://colorize.cc/"
+        },
+        {
+          "label": "GLB Compress",
+          "url": "https://gltf-compressor.com/"
         }
       ],
       "related": [],
       "langTag": "",
-      "output": ""
+      "output": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqyqy0v51b762",
@@ -8779,7 +8785,8 @@
       "links": [],
       "langTag": "",
       "related": [],
-      "relatedWidgets": []
+      "relatedWidgets": [],
+      "output": ""
     },
     {
       "id": "mtgvann6f2wz1",
@@ -8819,7 +8826,8 @@
       "links": [],
       "langTag": "",
       "related": [],
-      "relatedWidgets": []
+      "relatedWidgets": [],
+      "output": ""
     },
     {
       "id": "mti3pqz4vt4yj",
@@ -8847,6 +8855,19 @@
       "related": [
         "mticcmmosgpl9"
       ],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mtik5diq6rhd7",
+      "title": "DX-Get Column names for search index in subsections field maps",
+      "desc": "",
+      "code": "DECLARE @AppKey int = 57;\n\nSELECT\n    M.AppName,\n    M.AppKey,\n    F.SearchIndex,\n    F.ColumnValue,\n    'SELECT ' \n        + QUOTENAME(F.ColumnValue)\n        + ', * FROM DXSubSectionItems_' \n        + CAST(@AppKey AS varchar(50)) AS SelectQuery\nFROM DXAppInstances A\nINNER JOIN DXAppMaster M \n    ON M.AppKey = A.AppKey\n\n-- Parse the top-level JSON\nCROSS APPLY OPENJSON(A.SubSections)\nWITH (\n    formModel NVARCHAR(MAX) '$.formModel'\n) S\n\n-- Parse formModel, which is a JSON string\nCROSS APPLY OPENJSON(S.formModel, '$.fields')\nWITH (\n    SearchIndex NVARCHAR(200) '$.searchIndex',\n    ColumnValue NVARCHAR(200) '$.column'\n) F\n\nWHERE A.Status = 'Online'\n  AND A.AppKey = @AppKey;",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "sql",
+      "related": [],
       "relatedWidgets": []
     }
   ],
