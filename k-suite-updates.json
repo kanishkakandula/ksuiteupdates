@@ -1,5 +1,5 @@
 {
-  "version": "9.9",
+  "version": "10.0",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -206,6 +206,73 @@
     }
   ],
   "commands": [
+    {
+      "id": "mtmibrixh38w6",
+      "title": "Redis - Make Password for Redis in Docker (Authenticating Redis)",
+      "desc": "#redispassword #redisauthenticating #password #docker #dockerredis",
+      "code": "",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mtmhtpptve5k0",
+          "title": "Edit Redis in docker-compose",
+          "content": "command: redis-server --requirepass \"mqt@321\"",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mtmhz5uaef4l1",
+          "title": "Edit in iviva.config.yaml",
+          "content": "RedisServer: 172.16.160.8:6379,password=mqt@321",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mtmi2tchtuadd",
+          "title": "Restart redis in docker",
+          "content": "sudo docker compose up -d --force-recreate redis\n\nExpectations:\ncontainer iviva-redis Started",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mtmi3yyxsrl8u",
+          "title": "Verify",
+          "content": "sudo docker exec -it iviva-redis redis-cli PING\n\nExpections:\nWarning: Using a password with '-a' or '-u' option on the command line interface may not be safe.\nPONG",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mtmiaruh79iq4",
+          "title": "Verify",
+          "content": "docker exec -it iviva-redis redis-cli PING\n\nExpectations:\nNOAUTH Authentication required.",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mtmib7xtvxrzs",
+          "title": "Restart Services",
+          "content": "sudo docker restart iviva-ivivaweb",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mts5nnkzx6z4s",
+          "title": "With Password",
+          "content": "sudo docker exec -it iviva-redis redis-cli -a 'mqt@321' PING",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1788499335705,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "mticcmmosgpl9",
       "title": "To show Different Equipment Real Time Point Values in One Page",
@@ -4371,13 +4438,15 @@
     {
       "id": "mqhyv397tenkz",
       "title": "Save Ports to the Table",
-      "desc": "",
+      "desc": "#ReloadPort #RefreshPort #PortTable",
       "code": "sudo /sbin/iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT\nsudo /sbin/iptables -I INPUT -p tcp -m tcp --dport 443 -j ACCEPT",
       "catId": "mqly4dz7iy550",
       "img": "",
       "links": [],
       "related": [],
-      "output": ""
+      "output": "",
+      "langTag": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqhyvkledc1le",
@@ -6536,7 +6605,8 @@
       "solution": "Remove garbage data.\n\nMay be no parent location exists in the table",
       "related": [],
       "langTag": "",
-      "relatedWidgets": []
+      "relatedWidgets": [],
+      "output": ""
     },
     {
       "id": "mqni3074cx0xj",
@@ -6592,6 +6662,10 @@
         {
           "label": "GLB Inspector - Mini Blender",
           "url": "https://glbviewerksuite.netlify.app/"
+        },
+        {
+          "label": "MongoDB JSON Generator",
+          "url": "https://ksuitemongo.staticdomains.app/mongocompasstool#skybox"
         }
       ],
       "related": [],
