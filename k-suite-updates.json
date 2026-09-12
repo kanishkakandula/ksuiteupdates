@@ -1,5 +1,5 @@
 {
-  "version": "10.0",
+  "version": "10.1",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -6665,7 +6665,7 @@
         },
         {
           "label": "MongoDB JSON Generator",
-          "url": "https://ksuitemongo.staticdomains.app/mongocompasstool#skybox"
+          "url": "https://share.htmlput.com/p/8xkddtmgh5/"
         }
       ],
       "related": [],
@@ -8941,6 +8941,19 @@
       "img": "",
       "links": [],
       "langTag": "sql",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mtwcc2tyadq5h",
+      "title": "SSL for Windows",
+      "desc": "",
+      "code": "ssh username@hostname\n\nEx: ssh john@192.168.1.100",
+      "output": "",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": [],
+      "langTag": "",
       "related": [],
       "relatedWidgets": []
     }
