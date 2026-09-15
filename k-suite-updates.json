@@ -1,5 +1,5 @@
 {
-  "version": "10.2",
+  "version": "10.3",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -8951,6 +8951,19 @@
       "code": "ssh username@hostname\n\nEx: ssh john@192.168.1.100",
       "output": "",
       "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mu2ablbpdg2k3",
+      "title": "Check whether the Influx is working properly",
+      "desc": "#cmat #optimization #chiller",
+      "code": "curl -X POST \"http://127.0.0.1:8200/getInfluxPointValues\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"input_time\": \"2026-09-15T08:00:00\"\n  }'",
+      "output": "localhost = ML Server IP",
+      "catId": "mqi0lof9fisx6",
       "img": "",
       "links": [],
       "langTag": "",
