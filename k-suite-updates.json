@@ -1,5 +1,5 @@
 {
-  "version": "10.3",
+  "version": "10.4",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -203,9 +203,185 @@
       "type": "table",
       "langTag": "",
       "cardStyle": "list"
+    },
+    {
+      "id": "muamr5a07adxb",
+      "name": "ML",
+      "color": "#475569",
+      "icon": "ti-brand-react",
+      "type": "guide",
+      "langTag": "",
+      "groupId": "mr4u90kxv64ch"
     }
   ],
   "commands": [
+    {
+      "id": "muany6dr7c35r",
+      "title": "Saving Optimization Task",
+      "desc": "",
+      "code": "",
+      "catId": "muamr5a07adxb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "muanx4vm9xw1i",
+          "title": "",
+          "content": "iviva AccountName execute HypervisorWidgets.EnergyOptimizationWidget:SaveHourlyDataToIntermediateTable",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "muanxxbmns4uy",
+          "title": "",
+          "content": "iviva AccountName execute HypervisorWidgets.EnergyOptimizationWidget:SaveSummeryDataToTempTable",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1789959967695,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "muanl3lt3rvap",
+      "title": "Tables for Energy Saving - Chiller",
+      "desc": "",
+      "code": "",
+      "catId": "muamr5a07adxb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "muanjrv66ogxa",
+          "title": "Intermediate Task running Table",
+          "content": "select * from EnergyOptimizationHourlyData",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "muanktmral1tj",
+          "title": "Temp Table",
+          "content": "Select * from SaveSummeryDataToTempTable",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1789959357569,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "muamw75tb9xmn",
+      "title": "Execute the Energy Optimization for Updated the Points",
+      "desc": "#update-actual-points-with-optimized-value #EnergyOPtimization #Chiller",
+      "code": "",
+      "catId": "muamr5a07adxb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "muamug9sb65ws",
+          "title": "Execute the Energy Optimization for Updated the Points",
+          "content": "http://MLServerIP/update-actual-points-with-optimized-value",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1789958195777,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "muamtriou0cwq",
+      "title": "Check whether can get Influx Data",
+      "desc": "#ML #Influx #getInfluxPointValues",
+      "code": "",
+      "catId": "muamr5a07adxb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "muamsw9k27837",
+          "title": "getInfluxPointValues",
+          "content": "curl -X POST \"http://127.0.0.1:8200/getInfluxPointValues\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"input_time\": \"2026-09-15T08:00:00\"\n  }'",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1789958082192,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mu3r3mduww2r2",
+      "title": "How to add a new BACnetSubsystemInterface",
+      "desc": "#BACnetSubsystemInterface #installBacnet #SSIF",
+      "code": "",
+      "catId": "mr397a439ezuj",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mu3qp9n7cl4ad",
+          "title": "Copy the BACnetSubsystemInterface to the Gateway Machine",
+          "content": "Rename the SSIF if you want. \nIf renameing:\n Rename all the names for example:\n\nBACnetSubsystemInterface rename to BACnetSubsystemInterface_8001\n\nFolder Name : BACnetSubsystemInterface_8001\nService Name: BACnetSubsystemInterface_8001.exe\nConfig Name: BACnetSubsystemInterface_8001.exe.config",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mu3qsqlnqi0gj",
+          "title": "Configure the SSIF",
+          "content": "Add Server URL and API Key in the Configuration.xml inside the SSIF",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mu3qw69mlrq2q",
+          "title": "Create an Interface in the IBMS App",
+          "content": "IBMS App > Cog Wheel > Interfaces\n\nAdd the same name used to configure the SSIF \nie: BACnetSubsystemInterface_8001\n\nselect Driver Type as BACnet-Native\n\nselect the Zone\n\nSelect any subsystem",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mu3qyjrn479g2",
+          "title": "Update the Cluster Settings",
+          "content": "Go to Edit the cluster\nGive a IP to the Local IP and set and Update",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mu3r1d22bc5ot",
+          "title": "Check the Local IP is configured in the Gateway Server",
+          "content": "Go the Network Adapter Settings\nGo to IPV4 properties \nGo to Advance button\nAdd the IP if not available\nOK",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1789541997330,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "mtmibrixh38w6",
       "title": "Redis - Make Password for Redis in Docker (Authenticating Redis)",
@@ -1215,7 +1391,7 @@
       "title": "Chiller Optimization No Data Coming",
       "desc": "",
       "code": "",
-      "catId": "mrd84cpnu54vb",
+      "catId": "muamr5a07adxb",
       "img": "",
       "images": [],
       "files": [],
@@ -2762,12 +2938,14 @@
       "id": "mqfcoxtff0ss3",
       "title": "DX-Get column names for search index in FieldsMap",
       "desc": "",
-      "code": "Declare @AppKey int=3\n\nSELECT M.AppName,M.AppKey,JSON_VALUE(j.value, '$.searchIndex') as SearchIndex, JSON_VALUE(j.value, '$.column') AS ColumnValue,\n'Select '+JSON_VALUE(j.value, '$.column')+',* from DXAppTransactions_'+cast(@AppKey as varchar(50)) as SelectQuery\nFROM DXAppInstances A\ninner join DXAppMaster M on M.AppKey=A.AppKey\nCROSS APPLY OPENJSON(A.FieldsMap) AS j\nwhere  A.Status='Online'\nand A.AppKey=@AppKey",
+      "code": "Declare @AppKey int=3\n\nSELECT M.AppName,M.AppKey,JSON_VALUE(j.value, '$.searchIndex') as SearchIndex, JSON_VALUE(j.value, '$.column') AS ColumnValue,\n'Select '+JSON_VALUE(j.value, '$.column')+',* from DXAppTransactions_'+cast(@AppKey as varchar(50)) as SelectQuery\nFROM DXAppInstances A\ninner join DXAppMaster M on M.AppKey=A.AppKey\nCROSS APPLY OPENJSON(A.FieldsMap) AS j\nwhere  A.Status='Online'\nand A.AppKey=@AppKey\n--and JSON_VALUE(j.value, '$.searchIndex')='ABC'",
       "catId": "mqly4dz764hce",
       "img": "",
       "links": [],
       "related": [],
-      "output": ""
+      "output": "",
+      "langTag": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqfdcjrwsrnd1",
@@ -7186,11 +7364,16 @@
         {
           "label": "Send Files Anywhere",
           "url": "https://send-anywhere.com/"
+        },
+        {
+          "label": "GLB Optimize",
+          "url": "https://optimizeglb.com/dashboard"
         }
       ],
       "related": [],
       "langTag": "",
-      "output": ""
+      "output": "",
+      "relatedWidgets": []
     },
     {
       "id": "mqtp8nzei08bz",
@@ -8964,6 +9147,20 @@
       "code": "curl -X POST \"http://127.0.0.1:8200/getInfluxPointValues\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"input_time\": \"2026-09-15T08:00:00\"\n  }'",
       "output": "localhost = ML Server IP",
       "catId": "mqi0lof9fisx6",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "muantfc4zh4x1",
+      "title": "ODBC Driver 17 for SQL Server Error",
+      "desc": "",
+      "error": "{\"detail\":\"Error during inference: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLExecDirectW)')\"}",
+      "solution": "Restart the Docker in ML server",
+      "code": "{\"detail\":\"Error during inference: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLExecDirectW)')\"}",
+      "catId": "mqly4dz7etror",
       "img": "",
       "links": [],
       "langTag": "",
