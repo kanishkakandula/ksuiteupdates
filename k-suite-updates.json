@@ -1,5 +1,5 @@
 {
-  "version": "10.4",
+  "version": "10.5",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -215,6 +215,31 @@
     }
   ],
   "commands": [
+    {
+      "id": "muao8p8ha7w9c",
+      "title": "Hangfire",
+      "desc": "Run in Host Machine",
+      "code": "",
+      "catId": "muamr5a07adxb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "muao7yuqjgadk",
+          "title": "",
+          "content": "http://MLServerIP:9589/hangfire",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1789960458689,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "muany6dr7c35r",
       "title": "Saving Optimization Task",
