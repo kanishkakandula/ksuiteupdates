@@ -1,5 +1,5 @@
 {
-  "version": "10.5",
+  "version": "10.6",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -212,6 +212,14 @@
       "type": "guide",
       "langTag": "",
       "groupId": "mr4u90kxv64ch"
+    },
+    {
+      "id": "muaoemoyovz7l",
+      "name": "Server Specs",
+      "color": "#f59e0b",
+      "icon": "ti-briefcase",
+      "type": "table",
+      "langTag": ""
     }
   ],
   "commands": [
@@ -293,7 +301,7 @@
         {
           "id": "muanktmral1tj",
           "title": "Temp Table",
-          "content": "Select * from SaveSummeryDataToTempTable",
+          "content": "Select * from TempEnergyOpt",
           "type": "cmd",
           "img": ""
         }
@@ -9185,6 +9193,104 @@
       "error": "{\"detail\":\"Error during inference: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLExecDirectW)')\"}",
       "solution": "Restart the Docker in ML server",
       "code": "{\"detail\":\"Error during inference: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLExecDirectW)')\"}",
+      "catId": "mqly4dz7etror",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "muaoiaxl9d2dw",
+      "title": "Punggol",
+      "desc": "",
+      "table": {
+        "cols": 6,
+        "headers": [
+          "VM Name",
+          "OS + Version",
+          "vCPU",
+          "Memory",
+          "Disk Total",
+          "Description"
+        ],
+        "rows": [
+          [
+            "prscwebserver",
+            "Ubuntu 22.04",
+            "4",
+            "16",
+            "2.4 TB",
+            "Web Server"
+          ],
+          [
+            "prscdbserver",
+            "Ubuntu 20.04",
+            "4",
+            "32",
+            "2.4 TB",
+            "DB Server"
+          ],
+          [
+            "prsctrendserver",
+            "Ubuntu 22.04",
+            "4",
+            "32",
+            "2.4 TB",
+            "Trend Server"
+          ],
+          [
+            "WIN-OI75BBUKGFC",
+            "Windows Server 2019",
+            "4",
+            "8",
+            "2.2 TB",
+            "172.20.10.3"
+          ],
+          [
+            "WIN-GIVO657RH0V",
+            "Windows Server 2019",
+            "4",
+            "8",
+            "2.2 TB",
+            "172.20.10.4"
+          ],
+          [
+            "ml-server",
+            "Ubuntu 20.04",
+            "16",
+            "64",
+            "2.2 TB",
+            "ML Server"
+          ]
+        ]
+      },
+      "output": "",
+      "catId": "muaoemoyovz7l",
+      "img": "",
+      "links": [],
+      "related": [],
+      "relatedWidgets": [],
+      "langTag": ""
+    },
+    {
+      "id": "muaqjn16esyee",
+      "title": "When the Saving Energy Optimization Task has not executed",
+      "desc": "#Saving #ChillerOptimization #TaskNotExecuted #IntermediateTable #Temp #ML",
+      "error": "When the Saving Energy Optimization Task has not executed",
+      "solution": "1. Check the File EnergyOptimization.py in the HypervisorWidgets App Model. If the same file will exists in both server web and app. check both are equal\n2. Check the SD Task Runner Running, and Restart it\n3. select * into dic.dbo.EnergyOptimizationHourlyData_21092026 from dic.dbo.EnergyOptimizationHourlyData\n4. select * from dic.dbo.EnergyOptimizationHourlyData where TimeStamp>='2026-09-09'\n5. Select * from dic.dbo.TempEnergyOpt where StartDate>='2026-09-09'\n6. delete from dic.dbo.EnergyOptimizationHourlyData where TimeStamp>='2026-09-09'\n7. delete from dic.dbo.TempEnergyOpt where StartDate>='2026-09-09'\n8. iviva dic execute HypervisorWidgets.EnergyOptimizationWidget:SaveHourlyDataToIntermediateTable\n9. iviva dic execute HypervisorWidgets.EnergyOptimizationWidget:SaveSummeryDataToTempTable",
+      "solutionSteps": [
+        "Check the File EnergyOptimization.py in the HypervisorWidgets App Model. If the same file will exists in both server web and app. check both are equal",
+        "Check the SD Task Runner Running, and Restart it",
+        "select * into dic.dbo.EnergyOptimizationHourlyData_21092026 from dic.dbo.EnergyOptimizationHourlyData",
+        "select * from dic.dbo.EnergyOptimizationHourlyData where TimeStamp>='2026-09-09'",
+        "Select * from dic.dbo.TempEnergyOpt where StartDate>='2026-09-09'",
+        "delete from dic.dbo.EnergyOptimizationHourlyData where TimeStamp>='2026-09-09'",
+        "delete from dic.dbo.TempEnergyOpt where StartDate>='2026-09-09'",
+        "iviva dic execute HypervisorWidgets.EnergyOptimizationWidget:SaveHourlyDataToIntermediateTable",
+        "iviva dic execute HypervisorWidgets.EnergyOptimizationWidget:SaveSummeryDataToTempTable"
+      ],
+      "code": "When the Saving Energy Optimization Task has not executed",
       "catId": "mqly4dz7etror",
       "img": "",
       "links": [],
