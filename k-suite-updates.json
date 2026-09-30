@@ -1,5 +1,5 @@
 {
-  "version": "10.8",
+  "version": "10.9",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -8118,13 +8118,14 @@
       "id": "mrvrdsjzbjzfn",
       "title": "CMAT - Delete AFDD - Test Results",
       "desc": "CMAT",
-      "code": "declare @tb table (TIMK int)\n\ninsert into @tb(TIMK)\n\nselect  TestInstanceMapKey from CMATFaultDetectionWidgetData \n\n\ndelete from CMATSOPNotificationUnit where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATSensorAbnormalities where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestIBMSPointHistory where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestFormNotifications where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATSavingsMaster where TestInstanceMapKey in (select TIMK from @tb)\ndelete from LucySOPTestFaultInstanceMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from LucySOPTestInstanceCycleMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPAssetCycleTestOIPointValues where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestFormCycleNotifications where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATDailySavingsMaster where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATFaultDetectionWidgetData where TestInstanceMapKey in (select TIMK from @tb)\ndelete from LucySOPTestRedisMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATTestCWODXMaps where TestInstanceMapKey in (select TIMK from @tb)\ndelete from C2OCWOMaster where TestInstanceMapKey in (select TIMK from @tb) \ndelete from LucySOPTestInstanceMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPAssetTestOIPointValues where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATFaultVarificationTestMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestInstanceMap where UniqueID in (select MessageBusID from LucySOPTestInstanceMap where TestInstanceMapKey in ( select TIMK from @tb))",
+      "code": "declare @tb table (TIMK int)\n\ninsert into @tb(TIMK)\n\nselect  TestInstanceMapKey from CMATFaultDetectionWidgetData \n\n\ndelete from CMATSOPNotificationUnit where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATSensorAbnormalities where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestIBMSPointHistory where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestFormNotifications where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATSavingsMaster where TestInstanceMapKey in (select TIMK from @tb)\ndelete from LucySOPTestFaultInstanceMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from LucySOPTestInstanceCycleMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPAssetCycleTestOIPointValues where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestFormCycleNotifications where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATDailySavingsMaster where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATFaultDetectionWidgetData where TestInstanceMapKey in (select TIMK from @tb)\ndelete from LucySOPTestRedisMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATTestCWODXMaps where TestInstanceMapKey in (select TIMK from @tb)\ndelete from C2OCWOMaster where TestInstanceMapKey in (select TIMK from @tb) \ndelete from LucySOPTestInstanceMap where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPAssetTestOIPointValues where TestInstanceMapKey in (select TIMK from @tb)\ndelete from CMATFaultVarificationTestMap  where TestInstanceMapKey in (select TIMK from @tb)\ndelete from SOPTestInstanceMap where UniqueID in (select MessageBusID from LucySOPTestInstanceMap where TestInstanceMapKey in ( select TIMK from @tb))",
       "catId": "mqly4dz764hce",
       "img": "",
       "links": [],
       "langTag": "sql",
       "related": [],
-      "output": ""
+      "output": "",
+      "relatedWidgets": []
     },
     {
       "id": "mrx5ucsgcf1av",
@@ -9366,6 +9367,20 @@
       "code": "Declare @tb TABLE  (\n    [ElementID] INT NULL,\n    [ElementName] NVARCHAR(50) NULL\n);\n\n\nINSERT INTO @tb ([ElementID], [ElementName]) VALUES\n    (13655951, N'PRSC.B1.DB.33'),\n    (13655969, N'PRSC.B1.EDB.25'),\n    (13661502, N'PRSC.B1.EDB.04'),\n    (11741257, N'PRSC.6.DB.7');\n\n\n\tselect  A.AssetKey as assetId,A.AssetID as buildingLabel,C.AssetCategoryID as category,A.InstalledLocationKey as LocationKey,'#42c25c' as capsuleColor,'#42c25c' as glowColor,0 as isAlarm, 1 as isAsset,'1784168581453_Basement.glb' as modelPath,0 as showModal from @tb T\n\tinner join AssetMaster A on A.AssetID = T.ElementName\n\tinner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\n\n\n\n\t\n\t--select  A.AssetKey as assetId,A.AssetID as buildingLabel,C.AssetCategoryID as category,A.InstalledLocationKey as LocationKey,'#42c25c' as capsuleColor,'#42c25c' as glowColor,0 as isAlarm, 1 as isAsset,'1784168581453_Basement.glb' as modelPath,0 as showModal,P.PointKey as runStatPoint, '#42c25c' as runStatColor,'#A9A9A9' as stopStatColor from @tb T\n\t--inner join AssetMaster A on A.AssetID = T.ElementName\n\t--inner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\n\t--inner join IBMSPoints P on P.AssetKey=A.AssetKey\n\t--left outer join IBMSPointTemplates X on X.PointTemplateKey=P.PointTemplateKey\n\t--where X.PointTemplateName in ('On/ Off Status','On/Off Status')\n\n\t--Declare @onoff table(Point varchar(max),AssetKey int,Asset Varchar(max))\n\t--insert into @onoff\n\t--\tselect X.PointTemplateName, A.AssetKey as assetId,A.AssetID as buildingLabel from @tb T\n\t--inner join AssetMaster A on A.AssetID = T.ElementName\n\t--inner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\n\t--inner join IBMSPoints P on P.AssetKey=A.AssetKey\n\t--left outer join IBMSPointTemplates X on X.PointTemplateKey=P.PointTemplateKey\n\t--where X.PointTemplateName='On/ Off Status'\n\t--UNION ALL\n\t--select X.PointTemplateName, A.AssetKey as assetId,A.AssetID as buildingLabel from @tb T\n\t--inner join AssetMaster A on A.AssetID = T.ElementName\n\t--inner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\n\t--inner join IBMSPoints P on P.AssetKey=A.AssetKey\n\t--left outer join IBMSPointTemplates X on X.PointTemplateKey=P.PointTemplateKey\n\t--where X.PointTemplateName='On/Off Status'\n\n\t--select * from @onoff O\n\t--left outer join @onoff T on T.Asset=O.ElementName\n\t--where T.AssetKey is null\n\n\t--On/ Off Status\n\t--On/Off Status\n\n\n\n\n\t--\tselect * from @tb T\n\t--left outer join AssetMaster A on A.AssetID = T.ElementName\n\t--where A.AssetKey is null",
       "output": "",
       "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "munubu41mab7i",
+      "title": "Error loading RT Pages",
+      "desc": "",
+      "error": "Not Authorized",
+      "solution": "\"ServiceConfiguration.xml\" in the C2ODemo folder. file overrides service permissions\n\nfind /var/data/iviva/customApps -type f -name \"ServiceConfiguration.xml\" -exec grep -rn \"OnDemandEquipmentPointKeys\" {}",
+      "code": "Not Authorized",
+      "catId": "mqly4dz7etror",
       "img": "",
       "links": [],
       "langTag": "",
