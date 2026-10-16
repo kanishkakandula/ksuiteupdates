@@ -1,5 +1,5 @@
 {
-  "version": "10.9",
+  "version": "11.0",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -223,6 +223,122 @@
     }
   ],
   "commands": [
+    {
+      "id": "mv0i72d7ig9vc",
+      "title": "Map Assets to GLB using Element IDs",
+      "desc": "",
+      "code": "",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mv0hw9mfevhz1",
+          "title": "Go to this site",
+          "content": "https://glbviewerksuite.netlify.app/",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0hx2snlrph6",
+          "title": "Upload the GLB file",
+          "content": "Click on Excel button, or scroll down to the Element Register (Excel) Section",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0hz78mqfu5i",
+          "title": "Upload the Excel File",
+          "content": "The Excel File should be in two columns\nElementID\nElementName",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0i0d3y532vy",
+          "title": "Once Upload the Excel file",
+          "content": "It will show its status, If the status shown in Red, that means no assets or elementid found for that model from the excel file. If found it shows how many has matched. ",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0i1mmv7o4su",
+          "title": "If Matched",
+          "content": "Again Scroll down to the Element Register (Excel) Section.\nand tick \"Skip a name already on another object\" and click on \"Update BuildingLabel\" button",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0i6127n07xd",
+          "title": "Export the Matched Excel File",
+          "content": "Click the button \"Match Report.xlsx\" button",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0i43tbvlhlu",
+          "title": "Export to JSON",
+          "content": "Click on Cog wheel Icon on top (Settings)\nClick on \"Export .JSON\" button\n\nThis will give you the json file which matches the MeshName with the ElementName\n\nRemember this JSON File. will be needed again. So I mark this as NUM-01",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0ip7dy5pra3",
+          "title": "Go to this site",
+          "content": "https://k-suite.netlify.app/",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0ipi1yh2lso",
+          "title": "Go to the SQL Dataset Viewer Widget",
+          "content": "Click on Widgets\nfind SQL Dataset Viewer Widget",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0ipmf2mc7ym",
+          "title": "Copy the ElementID and ElementName column data to here",
+          "content": "Click on Load Data\nScroll bit down until you find SQL Script Export section\nGive the Table name as @tb\nSelect Script type as \"Data Only\"\nUntick \"IDENTITY_INSERT ON/OFF\"\nClick the button \"Generate Script\"\nClick the button \"Copy SQL\"",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0ipu7iseszq",
+          "title": "Copy the SQL to the SQL for this query and find the ModelPath and update the modelPath in the SQL",
+          "content": "Declare @tb TABLE  (\n    [ElementID] INT NULL,\n    [ElementName] NVARCHAR(50) NULL\n);\n\n\nINSERT INTO @tb ([ElementID], [ElementName]) VALUES\n    (13655951, N'PRSC.B1.DB.33'),\n    (13655969, N'PRSC.B1.EDB.25'),\n    (13661502, N'PRSC.B1.EDB.04'),\n    (11741257, N'PRSC.6.DB.7');\n\n\tDeclare @modelPath varchar(max)='1784168581453_Basement.glb'\n\t\n\tselect  A.AssetKey as assetId,A.AssetID as buildingLabel,C.AssetCategoryID as category,A.InstalledLocationKey as LocationKey,'#42c25c' as capsuleColor,'#42c25c' as glowColor,0 as isAlarm, 1 as isAsset,@modelPath as modelPath,0 as showModal from @tb T\n\tinner join AssetMaster A on A.AssetID = T.ElementName\n\tinner join AssetCategoryMaster C on C.AssetCategoryKey=A.AssetCategoryKey\n\tinner join IBMSPoints P on P.AssetKey=A.AssetKey",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0iq3rsb475t",
+          "title": "Get the data and copy with headers",
+          "content": "Paste to the SQL Dataset Viewer in the https://k-suite.netlify.app/\nClick on Load Data\nClick on Export to Excel Button\n\nNeed this excel file so i mark as NUM-02",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0iqyuutip5d",
+          "title": "Go to this Site",
+          "content": "https://share.htmlput.com/p/8xkddtmgh5/#mesh\n\nif this is not opened. Open in Incognito browser",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mv0irtcuwjsfl",
+          "title": "Go to Fill the Mesh JSON section",
+          "content": "Upload the NUM-01 JSON file to left side\nUpload the NUM-02 Excel file to right side\n\nin Match Rules section\nCheck and verify whether spreadsheet column is buildingLabel and JSON Field is buildingLabel\n\nscroll down and click on Preview Changes button\n\nClick on Update JSON button\n\nand Click on Download updated JSON button\n\ntick the filter the records \n\nselect JSON Field dropdown as modelPath \nselect condition as \"has a value (not blank)\"\ntick on ignore case\n\nclick \"Download filtered JSON\" button\n\nThis JSON is the file need to upload the Mongo DB",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1791522425275,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "mugju2cs7cqsq",
       "title": "CCTV Configuration in Hypervisor",
@@ -7159,6 +7275,10 @@
         {
           "label": "Punggol Builds",
           "url": "http://source.iviva.com/EutechDevelopers/punggol.git"
+        },
+        {
+          "label": "All Widget Builds",
+          "url": "http://source.iviva.com/EutechDevelopers/all-widget-builds"
         }
       ],
       "langTag": "",
@@ -9385,7 +9505,8 @@
       "links": [],
       "langTag": "",
       "related": [],
-      "relatedWidgets": []
+      "relatedWidgets": [],
+      "output": ""
     }
   ],
   "parentCats": {
