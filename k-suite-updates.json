@@ -1,5 +1,5 @@
 {
-  "version": "11.0",
+  "version": "11.1",
   "changelog": [
     "Installations Added",
     "SQL",
@@ -223,6 +223,38 @@
     }
   ],
   "commands": [
+    {
+      "id": "mvkk5j9lvb1es",
+      "title": "How to connect server to Laptop via Network cable",
+      "desc": "",
+      "code": "",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mvkk3078q81il",
+          "title": "Configure the network settings",
+          "content": "Configure the network settings such as IP, Subnet, default gateway",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mvkk43kkbr3ts",
+          "title": "Go to the URL",
+          "content": "If there is a domain name configured for the URL, then need to add the ip and domain to the Host in Windows\n\n178.55.55.55 dic.iviva.com\n\n\nC:\\Windows\\System32\\drivers\\etc",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1792735036617,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "mv0i72d7ig9vc",
       "title": "Map Assets to GLB using Element IDs",
