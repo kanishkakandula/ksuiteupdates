@@ -1,5 +1,5 @@
 {
-  "version": "11.2",
+  "version": "11.3",
   "changelog": [],
   "categories": [
     {
@@ -211,9 +211,353 @@
       "icon": "ti-briefcase",
       "type": "table",
       "langTag": ""
+    },
+    {
+      "id": "mwn9rxb5qv2gb",
+      "name": "V5",
+      "color": "#c026d3",
+      "icon": "ti-target",
+      "type": "guide",
+      "langTag": ""
     }
   ],
   "commands": [
+    {
+      "id": "mwn9sczy218d7",
+      "title": "Install V5",
+      "desc": "",
+      "code": "",
+      "catId": "mwn9rxb5qv2gb",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mwn9s2c1iwzjn",
+          "title": "",
+          "content": "curl -v “https://install.iviva.com/v5-rc4/d94fc3bf-9dfe-40e2-9395-4166c8896a45” | sudo bash",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1795075806670,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mwn30bugq6ivt",
+      "title": "Install Docker",
+      "desc": "",
+      "code": "",
+      "catId": "mql28z70136be",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [
+        {
+          "label": "Chatgpt",
+          "url": "https://chatgpt.com/share/6afe6d7d-d250-83ec-8a66-114defb03fcb"
+        }
+      ],
+      "steps": [
+        {
+          "id": "mwn2yfh2w3q2w",
+          "title": "Check whether Docker is installed",
+          "content": "docker --version",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn2ysshuf0s4",
+          "title": "Install Docker on Ubuntu",
+          "content": "sudo apt update\nsudo apt upgrade -y",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn2yyago010k",
+          "title": "Install prerequisites",
+          "content": "sudo apt install ca-certificates curl -y",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn2z66094s2w",
+          "title": "Add Docker repository",
+          "content": "sudo install -m 0755 -d /etc/apt/keyrings\n\nsudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg \\\n-o /etc/apt/keyrings/docker.asc\n\nsudo chmod a+r /etc/apt/keyrings/docker.asc",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn2zd5kmvsld",
+          "title": "Configure Docker repository",
+          "content": "echo \\\n\"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \\\n$(. /etc/os-release && echo \"${UBUNTU_CODENAME:-$VERSION_CODENAME}\") stable\" | \\\nsudo tee /etc/apt/sources.list.d/docker.list > /dev/null",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn2zj483ykbm",
+          "title": "Install Docker Engine and Compose",
+          "content": "sudo apt update\n\nsudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn2zrm0bcqni",
+          "title": "Start Docker service",
+          "content": "sudo systemctl enable docker\nsudo systemctl start docker",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn2zv28h2856",
+          "title": "Check status:",
+          "content": "sudo systemctl status docker",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwn305hczls8f",
+          "title": "Verify Docker installation",
+          "content": "sudo docker --version\nsudo docker compose version",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1795064421112,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mwkftqkgnfg42",
+      "title": "How to upgrade PostgreSql in Docker (Offline)",
+      "desc": "",
+      "code": "",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mwkfo2j8v3r4h",
+          "title": "Download PostgreSQL 15 Docker image",
+          "content": "docker pull postgres:15",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfpflo57kiy",
+          "title": "Save the image into a TAR file:",
+          "content": "docker save -o postgres15.tar postgres:15",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfpp6jwf8i5",
+          "title": "Load PostgreSQL 15 image on the offline server",
+          "content": "docker load -i postgres15.tar",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfq1mkti24h",
+          "title": "Verify that the image is available:",
+          "content": "docker images",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfq8szk4sxk",
+          "title": "You can also verify the PostgreSQL version:",
+          "content": "docker run --rm postgres:15 postgres --version",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfqhi4on56j",
+          "title": "Back up your existing PostgreSQL 9.3 database",
+          "content": "docker ps",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfqx7ojjgvn",
+          "title": "Create a backup directory:",
+          "content": "mkdir -p /backup/postgres",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfr19w08eo9",
+          "title": "Then export all databases, users, roles and permissions:",
+          "content": "docker exec -t mlhub_postgres_db \\\n  pg_dumpall -U postgres \\\n  > /backup/postgres/postgres93_backup.sql",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfr8qblkpx8",
+          "title": "Check that the backup file exists:",
+          "content": "ls -lh /backup/postgres/postgres93_backup.sql",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfrf98g9wh4",
+          "title": "Start a fresh PostgreSQL 15 container",
+          "content": "docker stop mlhub_postgres_db",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfro04bkvxe",
+          "title": "Now update your docker-compose.yml",
+          "content": "services:\n  postgresdb:\n    image: postgres:15\n    container_name: mlhub_postgres_db\n    restart: unless-stopped\n    networks:\n      - mlhub_network\n    environment:\n      POSTGRES_DB: postgres\n      POSTGRES_USER: postgres\n      POSTGRES_PASSWORD: password\n    ports:\n      - \"5432:5432\"\n    volumes:\n      - pgdata15:/var/lib/postgresql/data\n\nnetworks:\n  mlhub_network:\n    external: true\n\nvolumes:\n  pgdata15:\n",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfrxqsb0u2j",
+          "title": "Start PostgreSQL 15:",
+          "content": "docker compose up -d postgresdb",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfs6ic59dfl",
+          "title": "Check the container:",
+          "content": "docker logs mlhub_postgres_db",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfscokhlkc5",
+          "title": "Check the PostgreSQL version:",
+          "content": "docker exec -it mlhub_postgres_db \\\n  psql -U postgres -c \"SELECT version();\"",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfsiq4etkqa",
+          "title": "Restore the PostgreSQL 9.3 backup",
+          "content": "docker cp /backup/postgres/postgres93_backup.sql \\\n  mlhub_postgres_db:/tmp/postgres93_backup.sql",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfspwz6cdbz",
+          "title": "Restore the database:",
+          "content": "docker exec -i mlhub_postgres_db \\\n  psql -U postgres -d postgres \\\n  -f /tmp/postgres93_backup.sql",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfswss3xf8v",
+          "title": "Check the restored databases:",
+          "content": "docker exec -it mlhub_postgres_db \\\n  psql -U postgres -c \"\\l\"",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkft7gs2zg2k",
+          "title": "Check the database version:",
+          "content": "docker exec -it mlhub_postgres_db \\\n  psql -U postgres -c \"SELECT version();\"",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkftecc8qhgb",
+          "title": "After restoring, run:",
+          "content": "docker exec -it mlhub_postgres_db \\\n  psql -U postgres -c \"ANALYZE;\"",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1794904550080,
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mwkfmbhi4niby",
+      "title": "How update Mongo DB in Offline Docker",
+      "desc": "",
+      "code": "",
+      "catId": "mqhua2r8h648x",
+      "img": "",
+      "images": [],
+      "files": [],
+      "links": [],
+      "steps": [
+        {
+          "id": "mwke80ktbmrzj",
+          "title": "",
+          "content": "cd /home/jciadmin/MongoDB",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkflfx0dmh09",
+          "title": "",
+          "content": "sudo docker load -i mongodb-8.0.tar",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkflj6j3w9xz",
+          "title": "",
+          "content": "sudo docker images",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkflp98dtnsz",
+          "title": "",
+          "content": "sudo docker run -d \\\n  --name mongodb \\\n  --restart unless-stopped \\\n  --network host \\\n  --user \"$(id -u mongodb):$(id -g mongodb)\" \\\n  -v /var/lib/mongodb:/var/lib/mongodb \\\n  -v /var/log/mongodb:/var/log/mongodb \\\n  -v /etc/mongod.conf:/etc/mongod.conf:ro \\\n  --entrypoint mongod \\\n  mongo:8.0 \\\n  --config /etc/mongod.conf",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkflqnwawpv7",
+          "title": "",
+          "content": "sudo docker ps",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkflu632i1rx",
+          "title": "",
+          "content": "sudo docker exec -it mongodb mongosh",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkflxakgxugl",
+          "title": "",
+          "content": "db.version()",
+          "type": "cmd",
+          "img": ""
+        },
+        {
+          "id": "mwkfm3pvs2vnx",
+          "title": "",
+          "content": "db.adminCommand({\n  setFeatureCompatibilityVersion: \"8.0\",\n  confirm: true\n})",
+          "type": "cmd",
+          "img": ""
+        }
+      ],
+      "notes": "",
+      "isGuide": true,
+      "createdAt": 1794904203942,
+      "related": [],
+      "relatedWidgets": []
+    },
     {
       "id": "mvkk5j9lvb1es",
       "title": "How to connect server to Laptop via Network cable",
@@ -9579,6 +9923,32 @@
           "url": "https://send-anywhere.com/"
         }
       ],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mwen1wjq1m7qv",
+      "title": "DXPPMWorkOrderView",
+      "desc": "",
+      "code": "DECLARE @AssetColumn VARCHAR(255),\n        @PPMAppKey INT,\n        @AssetSearchIndex VARCHAR(255) = 'Asset',\n        @LocationColumn VARCHAR(255),\n        @LocationSearchIndex VARCHAR(255) = 'Location',\n        @AssignRemarksColumn VARCHAR(255),\n        @AssignRemarksSearchIndex VARCHAR(255)='AcknowledgedAssignedRemarks',\n        @TableName VARCHAR(255),@CheckListMapTable varchar(255),@ActionTable varchar(255),\n        @ScheduleSTimeColumn varchar(255)='',\n        @ScheduleETimeColumn varchar(255)='',\n        @TechnicianColumn varchar(255)='',\n        @ServicerColumn varchar(255)='',\n\t\t@TotalCostColumn varchar(255)='',\n        @SQL NVARCHAR(MAX);\n\n        -- Get the AppKey\n        SELECT @PPMAppKey = DXPPMAppKey FROM CMATAppConfig;\n\n        -- Get Asset Column Name\n        SELECT @AssetColumn = JSONData.[column]\n        FROM DXAppInstances I\n        CROSS APPLY OPENJSON(I.FieldsMap) \n            WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n        WHERE JSONData.searchIndex = @AssetSearchIndex\n            AND I.AppKey = @PPMAppKey\n            AND I.Status = 'Online';\n\n        -- Get Location Column Name\n        SELECT @LocationColumn = JSONData.[column]\n        FROM DXAppInstances I\n        CROSS APPLY OPENJSON(I.FieldsMap) \n            WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n        WHERE JSONData.searchIndex = @LocationSearchIndex\n            AND I.AppKey = @PPMAppKey\n            AND I.Status = 'Online';\n\n\t\t-- Get Assign Remarks Column Name\n        SELECT @AssignRemarksColumn = JSONData.[column]\n        FROM DXAppInstances I\n        CROSS APPLY OPENJSON(I.FieldsMap) \n            WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n        WHERE JSONData.searchIndex = @AssignRemarksSearchIndex\n            AND I.AppKey = @PPMAppKey\n            AND I.Status = 'Online';\n\n\t\t-- Get Schedule Start Time Column Name\n    SELECT @ScheduleSTimeColumn = JSONData.[column]\n    FROM DXAppInstances I\n    CROSS APPLY OPENJSON(I.FieldsMap) \n        WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n    WHERE JSONData.searchIndex = 'ScheduledStartDateTime'\n        AND I.AppKey = @PPMAppKey\n        AND I.Status = 'Online';\n\n\t\t-- Get Schedule End Time Column Name\n    SELECT @ScheduleETimeColumn = JSONData.[column]\n    FROM DXAppInstances I\n    CROSS APPLY OPENJSON(I.FieldsMap) \n        WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n    WHERE JSONData.searchIndex = 'ScheduledEndDateTime'\n        AND I.AppKey = @PPMAppKey\n        AND I.Status = 'Online';\n\n\t\t-- Get Technician Column Name\n    SELECT @TechnicianColumn = JSONData.[column]\n    FROM DXAppInstances I\n    CROSS APPLY OPENJSON(I.FieldsMap) \n        WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n    WHERE JSONData.searchIndex = 'Technician'\n        AND I.AppKey = @PPMAppKey\n        AND I.Status = 'Online';\n\n\t\t-- Get Servicer Column Name\n    SELECT @ServicerColumn = JSONData.[column]\n    FROM DXAppInstances I\n    CROSS APPLY OPENJSON(I.FieldsMap) \n        WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n    WHERE JSONData.searchIndex = 'Servicer'\n        AND I.AppKey = @PPMAppKey\n        AND I.Status = 'Online';\n\n\t\t-- Get Servicer Column Name\n    SELECT @TotalCostColumn = JSONData.[column]\n    FROM DXAppInstances I\n    CROSS APPLY OPENJSON(I.FieldsMap) \n        WITH (searchIndex NVARCHAR(100), [column] NVARCHAR(100)) AS JSONData\n    WHERE JSONData.searchIndex = 'TotalExpenses'\n        AND I.AppKey = @PPMAppKey\n        AND I.Status = 'Online';\n\n        -- Set the table name\n        SET @TableName = 'DXAppTransactions_' + CAST(@PPMAppKey AS VARCHAR(5));\n\t\tSET @CheckListMapTable = 'DXTransactionChecklistMap_' + CAST(@PPMAppKey AS VARCHAR(5));\n\t\tSET @ActionTable = 'DXTransactionActivityHistory_' + CAST(@PPMAppKey AS VARCHAR(5));\n\n\t\t\n        -- Prepare the SQL statement to create the view\n        SET @SQL = N' Create VIEW DXPPMWorkOrderView AS\n        SELECT  \n            A.TransactionKey AS PPMWOKey,\n            A.TransactionID AS WOID,\n            A.Stage,\n            A.IsActive,\n            A.HasSLA,\n\t\t\tJSON_VALUE(A.' + @LocationColumn + ', ''$.Value'') AS LocationKey,\n            A.CreatedDateTime,\n            A.CreatedUserKey,\n            A.ModifiedDateTime,\n            A.ModifiedUserKey,\n\t\t\tA.TargetStartDate,\n\t\t\tA.TargetEndDate,\n\t\t\tA.SchedulerKey,\n\t\t\tA.' + @AssignRemarksColumn +'  as AssignRemarks,\n\t\t\tJSON_VALUE(B.Objects, ''$[0].value'') as AssetKey,\n\t\t\tA.' + @ScheduleSTimeColumn +'  as ScheduleStartTime,\n\t\t\tA.' + @ScheduleETimeColumn +'  as ScheduleEndTime,\n\t\t\t(select top(1) DXA.ActivityDateTime from '+@ActionTable+' DXA where DXA.TransactionKey=A.TransactionKey and [Description] like ''%Start Work%'' order by DXA.ActivityDateTime desc ) as ActualStartedTime,\n\t\t\t(select top(1) DXA.ActivityDateTime from '+@ActionTable+' DXA where DXA.TransactionKey=A.TransactionKey and [Description] like ''%Complete Work%'' order by DXA.ActivityDateTime desc ) as ActualCompleteTime,\n\t\t\tcase when DATEDIFF(MINUTE,(select top(1) DXA.ActivityDateTime from '+@ActionTable+' DXA where DXA.TransactionKey=A.TransactionKey and [Description] like ''%Start Work%'' order by DXA.ActivityDateTime desc ),\n\t\t\t(select top(1) DXA.ActivityDateTime from '+@ActionTable+' DXA where DXA.TransactionKey=A.TransactionKey and [Description] like ''%Complete Work%'' order by DXA.ActivityDateTime desc )) < 0 then null else\n\t\t\tDATEDIFF(MINUTE,(select top(1) DXA.ActivityDateTime from '+@ActionTable+' DXA where DXA.TransactionKey=A.TransactionKey and [Description] like ''%Start Work%'' order by DXA.ActivityDateTime desc ),\n\t\t\t(select top(1) DXA.ActivityDateTime from '+@ActionTable+' DXA where DXA.TransactionKey=A.TransactionKey and [Description] like ''%Complete Work%'' order by DXA.ActivityDateTime desc ))\n\t\t\t end as ActualDuration,\n\t\t\t\n\t\t\t--JSON_VALUE(A.' + @TechnicianColumn + ', ''$.DisplayText'') as Technician,\n\t\t\tJSON_VALUE(A.' + @ServicerColumn + ', ''$.DisplayText'') as Servicer,\n\t\t\tA.' + @TotalCostColumn +'  as TotalCost,\n\t\t\tJSON_VALUE(B.Checklist, ''$.ChecklistKey'') as ChecklistKey \n        FROM ' + QUOTENAME(@TableName) + ' A left outer join '+ QUOTENAME(@CheckListMapTable)+' B on A.TransactionKey=B.TransactionKey;';\n\n        -- Print the SQL to debug\n       -- select @SQL;\n\n        -- Execute the SQL to create the view\n        EXEC sp_executesql @SQL;",
+      "output": "",
+      "catId": "mqly4dz764hce",
+      "img": "",
+      "links": [],
+      "langTag": "",
+      "related": [],
+      "relatedWidgets": []
+    },
+    {
+      "id": "mwka052yzf6ay",
+      "title": "Sync Dates in Ubuntu",
+      "desc": "",
+      "code": "Set the Date and Time\n=============================\nsudo timedatectl set-time \"2026-11-17 05:07:30\"\n\nWatch the date and time live\n=====================================\nwatch -n 1 'date \"+%Y-%m-%d %H:%M:%S %Z\"'",
+      "output": "",
+      "catId": "mqly4dz7iy550",
+      "img": "",
+      "links": [],
       "langTag": "",
       "related": [],
       "relatedWidgets": []
